@@ -688,15 +688,21 @@ h6 {
 .navbar-light .navbar-nav .nav-link.active {
     background: #900c0c;
 }
-
 .navbar .dropdown-toggle::after {
     border: none;
-    content: "\f107";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 600;
+    content: "\F282"; /* Bootstrap Icons: chevron-down */
+    font-family: "bootstrap-icons";
+    font-size: 0.875rem;
+    margin-left: 8px;
     vertical-align: middle;
+}
+.navbar .dropdown-toggle::after {
+    border: none;
+    content: "\F229";
+    font-family: "bootstrap-icons";
     margin-left: 8px;
 }
+
 
 @media (min-width: 1200px) {
     .navbar .nav-item .dropdown-menu {
@@ -719,7 +725,7 @@ h6 {
 .navbar .nav-item:hover .dropdown-menu {
     transform: rotateX(0deg);
     visibility: visible;
-    background: var(--bs-light) !important;
+    background: var(--bs-primary) !important;
     transition: .5s;
     opacity: 1;
     right: 0px;
