@@ -72,7 +72,7 @@ a {
 .active,
 .nav-link:hover,
 .nav-link:focus {
-    background: #900c0c;
+    background: #900c0c !important; color: #fff !important;
 }
 
 /*** Topbar Start ***/
@@ -268,11 +268,35 @@ section,
     font-weight: 600;
     line-height: 1.4;
 }
+.bg-breadcrumb {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/breadcrumb-bg.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 250px 0 100px 0;
+}
+.breadcrumb-item .active{ color: var(--bs-white) !important; background: none !important;}
+.tab-content .active{ background: #fff !important;}
+.tab-class .active span{ color: #fff !important;}
+.tab-content.why-us:hover .icon-box i {
+    color: #fff !important;
+}
+.icon-box{
+    width:70px;
+    height:70px;
+    border-radius:16px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
 
+.card{
+    transition:all .3s ease;
+}
 
-
-
-
+.card:hover{
+    transform:translateY(-6px);
+}
 
 
 
@@ -316,10 +340,10 @@ section,
     }
 }
 
-.text-secondary {
+/* .text-secondary {
     --bs-text-opacity: 1;
     color: rgba(var(--bs-secondary-rgb), var(--bs-text-opacity)) !important;
-}
+} */
 
 .lead {
     font-size: 1.25rem;
@@ -692,7 +716,7 @@ h6 {
     border: none;
     content: "\F282"; /* Bootstrap Icons: chevron-down */
     font-family: "bootstrap-icons";
-    font-size: 0.875rem;
+    font-size: 12px;
     margin-left: 8px;
     vertical-align: middle;
 }
