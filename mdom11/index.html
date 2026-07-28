@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>MDOM</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link rel="stylesheet" href="lib/bootstrap-icons/bootstrap-icons.min.css">
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+    <!-- Navbar start -->
+    <div class="container-fluid fixed-top px-0">
+        <div class="container px-0">
+            <div class="topbar">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-md-7">
+
+                    </div>
+                    <div class="col-md-5">
+                        <div class="topbar d-flex align-items-center justify-content-end">
+                            <ul class="navbar">
+                                <li class="nav-item nav-link active"><a href="#">Home</a> </li>
+                                <li class="nav-item nav-link"><a href="#">About Us</a> </li>
+                                <li class="nav-item nav-link"><a href="#">Contact Us</a> </li>
+                                <li>
+                                    <div class="nav-item dropdown">
+                                        <a href="#" class="nav-link dropdown-toggle text-white"
+                                            data-bs-toggle="dropdown">Help </a>
+                                        <div class="dropdown-menu m-0 bg-secondary rounded-0">
+                                            <a href="#" target="_blank" class="dropdown-item">Webmail Help</a>
+                                            <a href="#" target="_blank" class="dropdown-item">Online Help/Support</a>
+                                            <a href="#" target="_blank" class="dropdown-item">Download Quick Start
+                                                Guide</a>
+                                            <a href="#" target="_blank" class="dropdown-item">iPhone Setup Guide</a>
+                                            <a href="#" target="_blank" class="dropdown-item">Android Setup Guide</a>
+                                            <a href="#" target="_blank">Support Request</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="nav-item dropdown">
+                                        <a href="#" class="nav-link dropdown-toggle text-white"
+                                            data-bs-toggle="dropdown">Login </a>
+                                        <div class="dropdown-menu m-0 bg-secondary rounded-0">
+                                            <a href="#" target="_blank" class="dropdown-item">Webmail Help</a>
+                                            <a href="#" target="_blank" class="dropdown-item">Online Help/Support</a>
+                                            <a href="#" target="_blank" class="dropdown-item">Download Quick Start
+                                                Guide</a>
+                                            <a href="#" target="_blank" class="dropdown-item">iPhone Setup Guide</a>
+                                            <a href="#" target="_blank" class="dropdown-item">Android Setup Guide</a>
+                                            <a href="#" target="_blank">Support Request</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar navbar-light bg-light navbar-expand-xl">
+                <a href="index.html" class="navbar-brand ms-3">
+                    <img src="img/site/logo.png" class="img-fluid w-100" />
+                </a>
+                <button class="navbar-toggler py-2 px-3 me-3" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars text-primary"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarCollapse">
+                    <div class="navbar-nav ms-auto">
+                        <a href="index.html" class="nav-item nav-link ">Features</a>
+                        <a href="#" class="nav-item nav-link">How It works</a>
+                        <a href="#" class="nav-item nav-link">HIPAA</a>
+                        <a href="#" class="nav-item nav-link">Customization</a>
+                        <a href="#" class="nav-item nav-link">FAQ</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Other Services</a>
+                            <div class="dropdown-menu m-0 bg-secondary rounded-0">
+                                <a href="blog.html" class="dropdown-item">Secure Fax<br><sub>HIPAA compliant digital fax
+                                        service</sub> </a>
+                                <a href="blog.html" class="dropdown-item">Secure Online Forms<br><sub>HIPAA compliant
+                                        web contact forms </sub> </a>
+                            </div>
+                        </div>
+                        <a href="#" class="nav-item nav-link">Pricing & Signup</a>
+                    </div>
+                    <div class="d-flex align-items-center flex-nowrap pt-xl-0" style="margin-left: 15px;">
+                        <a href="" class=" btn btn-primary text-dark py-2 px-4 me-3 bg-white rounded-pill"> Login</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+    <!-- Carousel Start -->
+    <div class="container-fluid carousel-header vh-100 px-0">
+        <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                    <img src="img/site/homebg.png" class="img-fluid" alt="Image">
+                    <div class="carousel-caption">
+                        <div class="p-3 slider-text" style="max-width: 42%;">
+                            <h4 class="text-dark text-uppercase fw-bold mb-4 titlehome" style="letter-spacing: 3px;">
+                                Secure & Convenient</h4>
+                            <h1 class="display-4 text-capitalize text-dark mb-4">Most Convenient
+                                HIPAA Compliant Email Service</h1>
+
+                            <div class="d-flex align-items-center justify-content-center">
+                                <a class="btn btn-primary btn-lg rounded-pill px-5" href="#">Readmore</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+
+        <div class="container">
+
+            <div class="row gy-4">
+
+                <div class="col-lg-4 col-md-6" data-aos-delay="100">
+                    <div class="service-item  position-relative">
+                        <div class="icon">
+                            <i class="bi bi-envelope-at-fill"></i>
+                        </div>
+                        <a href="#" class="stretched-link">
+                            <h3>HIPAA Email Hosting Service</h3>
+                        </a>
+                        <p>Majority of healthcare providers and patients use free email service or the one provided by
+                            the internet or web hosting service provider. </p>
+                    </div>
+                </div><!-- End Service Item -->
+
+                <div class="col-lg-4 col-md-6" data-aos-delay="200">
+                    <div class="service-item position-relative">
+                        <div class="icon">
+                            <i class="bi bi-motherboard-fill"></i>
+                        </div>
+                        <a href="#" class="stretched-link">
+                            <h3>HIPAA Compliant Digital Fax</h3>
+                        </a>
+                        <p>By simply accessing your secure email you can view all your office faxes anytime, anywhere.
+                            In addition you can send faxes from your email, web-portal, and smart phone. </p>
+                    </div>
+                </div><!-- End Service Item -->
+
+                <div class="col-lg-4 col-md-6" data-aos-delay="300">
+                    <div class="service-item position-relative">
+                        <div class="icon">
+                            <i class="bi bi-file-lock-fill"></i>
+                        </div>
+                        <a href="#" class="stretched-link">
+                            <h3>Secure Online Patient Forms</h3>
+                        </a>
+                        <p>A secure online form is necessary to collect Protected Health Information (PHI) and other
+                            sensitive, private information such as social security details, credit card details, legal
+                            information, etc.</p>
+                    </div>
+                </div><!-- End Service Item -->
+
+
+
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- services End -->
+
+
+    <section class="py-5 bg-light">
+        <div class="container">
+
+            <div class="text-center mb-5">
+                <h2 class="fw-bold display-8">
+                    Secure & Convenient HIPAA Compliant Email
+                </h2>
+
+                <p class="lead text-secondary">
+                    Welcome to MDofficeMail! HIPAA Compliant Email Hosting
+                    and
+                    HIPAA Compliant Fax service with no hassles !!
+                </p>
+
+                <span class="btn btn-primary btn-lg rounded-pill px-5">
+                    30-Day FREE Trial Available
+                </span>
+            </div>
+
+            <div class="card border-0 shadow-lg rounded-4">
+                <div class="card-body p-5">
+
+                    <div class="row g-4">
+
+                        <div class="col-md-6">
+                            <div class="d-flex">
+                                <div class="me-3">
+                                    <i class="bi bi-envelope-check-fill fs-4"></i>
+                                </div>
+                                <div>
+                                    <h5 class="fw-bold">Easy to Use</h5>
+                                    <p class="text-muted mb-0">
+                                        Most convenient and user-friendly HIPAA compliant email service.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="d-flex">
+                                <div class="me-3">
+                                    <i class="bi bi-database-fill fs-4"></i>
+                                </div>
+                                <div>
+                                    <h5 class="fw-bold">Legal Archival</h5>
+                                    <p class="text-muted mb-0">
+                                        Emails are securely stored and cannot be edited or deleted.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="d-flex">
+                                <div class="me-3">
+                                    <i class="bi bi-lock-fill fs-4"></i>
+                                </div>
+                                <div>
+                                    <h5 class="fw-bold">End-to-End Encryption</h5>
+                                    <p class="text-muted mb-0">
+                                        Forced message expiration, encryption, customization and automation.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="d-flex">
+                                <div class="me-3">
+                                    <i class="bi bi-shield-shaded fs-4"></i>
+                                </div>
+                                <div>
+                                    <h5 class="fw-bold">Two-Factor Authentication</h5>
+                                    <p class="text-muted mb-0">
+                                        Additional security layer for enhanced account protection.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="d-flex">
+                                <div class="me-3">
+                                    <i class="bi bi-send-fill fs-4"></i>
+                                </div>
+                                <div>
+                                    <h5 class="fw-bold">Flexible Sending</h5>
+                                    <p class="text-muted mb-0">
+                                        Send encrypted or unencrypted emails as needed.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="d-flex">
+                                <div class="me-3">
+                                    <i class="bi  bi-pencil-square fs-4"></i>
+                                </div>
+                                <div>
+                                    <h5 class="fw-bold">EmailYourDoc</h5>
+                                    <p class="text-muted mb-0">
+                                        Anyone can securely send documents to MDofficeMail users.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="d-flex">
+                                <div class="me-3">
+                                    <i class="bi bi-gift-fill fs-4"></i>
+                                </div>
+                                <div>
+                                    <h5 class="fw-bold">30-Day FREE Trial</h5>
+                                    <p class="text-muted mb-0">
+                                        Fully functional with absolutely no obligation.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="d-flex">
+                                <div class="me-3">
+                                    <i class="bi bi-clipboard2-plus-fill fs-4"></i>
+                                </div>
+                                <div>
+                                    <h5 class="fw-bold">Patient Forms</h5>
+                                    <p class="text-muted mb-0">
+                                        Secure online patient forms and contact forms.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="why-us" class="why-us section">
+
+        <div class="container">
+
+            <div class="row gy-4">
+
+                <div class="col-lg-4" data-aos-delay="100">
+                    <div class="why-box">
+                        <h3>Three convenient and HIPAA Compliant services</h3>
+                        <p class="text-white">
+                            Some of the important features of MDofficeMail that is secure and efficient.
+                        </p>
+                        <div class="text-center">
+                            <a href="#" class="more-btn btn btn-primary"><span>Learn More</span> <i
+                                    class="bi bi-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div><!-- End Why Box -->
+
+                <div class="col-lg-8 d-flex align-items-stretch">
+                    <div class="row gy-4">
+
+                        <div class="col-xl-4">
+                            <div class="icon-box d-flex flex-column justify-content-center align-items-center">
+                                <i class="bi bi-globe-americas-fill"></i>
+                                <h4>MDofficeMail</h4>
+                                <p>Secure, Efficient, and Economical HIPAA Compliant Email Service! All aspects of
+                                    compliance are taken care.</p>
+                            </div>
+                        </div><!-- End Icon Box -->
+
+                        <div class="col-xl-4">
+                            <div class="icon-box d-flex flex-column justify-content-center align-items-center">
+                                <i class="bi bi-shield-shaded"></i>
+                                <h4>Secure Digital Fax</h4>
+                                <p>HIPAA Compliant Digital Fax Service, Faxtone. Make your faxes available all the time.
+                                    Free Legal Archival and secure email account.</p>
+                            </div>
+                        </div><!-- End Icon Box -->
+
+                        <div class="col-xl-4">
+                            <div class="icon-box d-flex flex-column justify-content-center align-items-center">
+                                <i class="bi bi-clipboard2-check-fill"></i>
+                                <h4>Secure Forms</h4>
+                                <p>HIPAA Compliant and secure form for your website. Customized header to match your
+                                    website and customized fields to suit your requirement.</p>
+                            </div>
+                        </div><!-- End Icon Box -->
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <section class="services section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold display-8">
+                    Features of Email Hosting
+                </h2>
+            </div>
+
+            <div class="hosting-features">
+                <div class="email-feature-list">
+
+                    <a href="#" class="email-feature-card">
+                        <i class="bi bi-shield-shaded"></i>
+                        <span>Legal Archival</span>
+                    </a>
+
+                    <a href="#" class="email-feature-card">
+                        <i class="bi bi-copy"></i>
+                        <span>BCC Archiving</span>
+                    </a>
+
+                    <a href="#" class="email-feature-card">
+                        <i class="bi bi-file-text-fill"></i>
+                        <span>HIPAA Business Agreement</span>
+                    </a>
+
+                    <a href="#" class="email-feature-card">
+                        <i class="bi bi-arrow-counterclockwise"></i>
+                        <span>Facility to delete already sent message</span>
+                    </a>
+
+                    <a href="#" class="email-feature-card">
+                        <i class="bi bi-lock-fill"></i>
+                        <span>Security is strictly enforced</span>
+                    </a>
+
+                    <a href="#" class="email-feature-card">
+                        <i class="bi bi-phone-fill"></i>
+                        <span>Outlook, webmail, and mobile access</span>
+                    </a>
+
+                    <a href="#" class="email-feature-card">
+                        <i class="bi bi-robot"></i>
+                        <span>Intelligent Automation</span>
+                    </a>
+
+                    <a href="#" class="email-feature-card">
+                        <i class="bi bi-person-fill-check"></i>
+                        <span>Facility to validate new recipient</span>
+                    </a>
+
+                    <a href="#" class="email-feature-card email-feature-special">
+                        <span class="email-feature-badge">NEW</span>
+                        <span>"Email Your Doc" - <small>Anyone can initiate secure message to MDofficeMail user. Go to
+                                the webpage, compose and send!</small></span>
+                    </a>
+
+                    <a href="#" class="email-feature-card">
+                        <i class="bi bi-palette-fill"></i>
+                        <span>Customization</span>
+                    </a>
+
+                    <a href="#" class="email-feature-card">
+                        <i class="bi bi-gift"></i>
+                        <span>Free Trial Available</span>
+                    </a>
+
+                    <a href="#" class="email-feature-card">
+                        <i class="bi bi-user-shield"></i>
+                        <span>Strict Privacy Policy</span>
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="call-to-action" class="call-to-action section dark-background">
+
+        <img src="img/site/cta-bg.jpg" alt="">
+
+        <div class="container">
+
+            <div class="row aos-init aos-animate" data-aos="zoom-in" data-aos-delay="100">
+                <div class="col-xl-9 text-center text-xl-start">
+                    <h3>Compliance is your responsibility</h3>
+                    <p>"Office for Civil Rights may impose a penalty on a covered entity for a failure to comply with a
+                        requirement of the Privacy Rule. Penalties will vary significantly depending on... or whether
+                        the covered entity’s failure to comply was due to willful neglect."</p>
+                </div>
+                <div class="col-xl-3 cta-btn-container text-center">
+                    <a class="cta-btn align-middle" href="#">Read More</a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="pricing-section py-5">
+        <div class="container">
+
+            <div class="text-center mb-5">
+
+                <span class="badge2 bg-success-subtle text-success px-4 py-2 rounded-pill fs-6">
+                    <i class="fa-solid fa-shield-heart me-2"></i>Affordable & Reliable
+                </span>
+
+                <h1 class="display-4 fw-bold mt-4">
+                    Plans Starting From
+                </h1>
+
+                <div class="price">
+                    <span class="currency">$</span>
+                    2.91
+                </div>
+
+                <p class="text-muted fs-4">
+                    Per Mail Box / Month
+                </p>
+
+                <h3 class="fw-semibold mt-4">
+                    <i class="bi bi-shield-shaded text-success me-2"></i>
+                    Legal Archival for 7 Years Included
+                </h3>
+
+            </div>
+
+            <div class="card shadow-lg border-0 rounded-5">
+
+                <div class="card-body p-5">
+
+                    <div class="row g-4">
+
+                        <div class="col-lg-3 col-md-6">
+                            <div class="feature-box">
+                                <i class="bi bi-clipboard-check-fill"></i>
+                                <h5>No Contract</h5>
+                                <p>No Setup Fee</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6">
+                            <div class="feature-box">
+                                <i class="bi bi-cloud-arrow-up-fill"></i>
+                                <h5>5GB Storage</h5>
+                                <p>Cloud Backup</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6">
+                            <div class="feature-box">
+                                <i class="bi bi-gift-fill"></i>
+                                <h5>Free Trial</h5>
+                                <p>Try Before Buy</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6">
+                            <div class="feature-box">
+                                <i class="bi bi-cash-stack"></i>
+                                <h5>30-Day</h5>
+                                <p>Money Back</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6">
+                            <div class="feature-box">
+                                <i class="bi bi-calculator-fill"></i>
+                                <h5>Online Calendar</h5>
+                                <p>Sync Anywhere</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6">
+                            <div class="feature-box">
+                                <i class="bi bi-envelope-paper-fill"></i>
+                                <h5>EmailYourDoc</h5>
+                                <p>Secure Documents</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6">
+                            <div class="feature-box">
+                                <i class="bi bi-shield-fill-check"></i>
+                                <h5>Spam Protection</h5>
+                                <p>Advanced Security</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6">
+                            <div class="feature-box">
+                                <i class="bi bi-sliders"></i>
+                                <h5>Customization</h5>
+                                <p>Easy Settings</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="text-center mt-5">
+
+                        <a href="#" class="btn btn-primary btn-lg rounded-pill px-5">
+                            Learn More
+                            <i class="bi bi-arrow-right ms-2 text-white"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid footer bg-dark text-body">
+        <div class="container py-5 pb-2">
+            <div class="row g-5">
+                <div class="col-md-3 col-lg-3 col-xl-4">
+                    <div class="footer-item">
+                        <img src="img/site/logo.png" class="img-fluid w-75" />
+                        <p class="mb-4">The one stop solution for all your office communication. We are secure, we are
+                            encrypted and the best part - we make your communication HIPAA Compliant.</p>
+                        <div class="d-flex">
+                            <a class="btn btn-secondary btn-md-square rounded-circle me-3" href=""><i
+                                    class="bi bi-facebook text-white"></i></a>
+                            <a class="btn btn-secondary btn-md-square rounded-circle me-3" href=""><i
+                                    class="bi bi-twitter text-white"></i></a>
+                            <a class="btn btn-secondary btn-md-square rounded-circle me-3" href=""><i
+                                    class="bi bi-instagram text-white"></i></a>
+                            <a class="btn btn-secondary btn-md-square rounded-circle me-0" href=""><i
+                                    class="bi bi-linkedin text-white"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3 col-xl-2">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="mb-4 text-white">Useful Links </h4>
+                        <a href=""><i class="fas fa-angle-right me-2"></i> FPrivacy Policy</a>
+                        <a href=""><i class="fas fa-angle-right me-2"></i>
+                            Quick Start Guide</a>
+                        <a href=""><i class="fas fa-angle-right me-2"></i>
+                            Online Support</a>
+                        <a href=""><i class="fas fa-angle-right me-2"></i>
+                            Webmail Help</a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3 col-xl-2">
+                    <img src="img/site/HIPAA.png" class="img-fluid w-100" />
+                    <img src="img/site/30-day-refund1.png" class="img-fluid w-100" />
+                </div>
+                <div class="col-md-3 col-lg-2 col-xl-4">
+                    <div class="footer-item">
+                        <h4 class="mb-4 text-white">Contact Info</h4>
+                        <div class="row g-2">
+                            <a href="#"><i class="bi bi-geo-alt-fill me-2"></i> 2055 Comprehensive Dr, Aurora, IL
+                                60505</a>
+                            <a href="mailto:info@example.com"><i class="bi bi-envelope-fill me-2"></i>
+                                info@mdofficemail.com</a>
+                            <a href="tel:+"><i class="bi bi-telephone-fill me-2"></i> 1 (877) 477 8999 ext 2
+                                (Mon-Fri, 8-5 central) </a>
+                            <a href="tel:+012 345 67890" class="mb-3"><i class="bi bi-printer me-2"></i>
+                                1-630-778-0634</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright py-4">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-md-0">
+                    <span class="text-white"><a href="#" class="text-white"><i
+                                class="fas fa-copyright text-white me-2"></i>
+                            Copyright 2016. MD Office Mail.</a>, All Rights Reserved</span>
+                </div>
+
+                <div class="col-md-6 text-center text-md-end text-body">
+
+                    Designed By <a class="border-bottom text-white" href="https://vinfonet.com/"> vinfonet</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-secondary btn-primary-outline-0 btn-md-square back-to-top"><i
+            class="fa fa-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
