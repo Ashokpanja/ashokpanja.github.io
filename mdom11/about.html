@@ -5,12 +5,13 @@
     <meta charset="utf-8">
     <title>HIPAA Compliant Email</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-   
-<meta name="description" content="HIPAA Compliant Email with encryption for Healthcare Professionals. Email with Legal Archival. Free trial.">
- <meta name="keywords" content="hipaa compliant email">
- <meta name="HIPAA Compliant email" content="HIPAA Compliant Email">
- <meta property="og:title" content="HIPAA Compliant Email">
- <meta name="title" content="HIPAA Compliant Email"> 
+
+    <meta name="description"
+        content="HIPAA Compliant Email with encryption for Healthcare Professionals. Email with Legal Archival. Free trial.">
+    <meta name="keywords" content="hipaa compliant email">
+    <meta name="HIPAA Compliant email" content="HIPAA Compliant Email">
+    <meta property="og:title" content="HIPAA Compliant Email">
+    <meta name="title" content="HIPAA Compliant Email">
     <link rel="stylesheet" href="lib/bootstrap-icons/bootstrap-icons.min.css">
     <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
@@ -32,35 +33,41 @@
         <div class="container px-0">
             <div class="topbar">
                 <div class="row align-items-center justify-content-center">
-                    <div class="col-md-7">
-
-                    </div>
-                    <div class="col-md-5">
+                    <div class="col-lg-12">
                         <div class="topbar d-flex align-items-center justify-content-end">
                             <ul class="navbar">
-                                <li class="nav-item nav-link "><a href="index.html">Home  </a> </li>
+                                <li class="nav-item nav-link "><a href="index.html">Home </a> </li>
                                 <li class="nav-item nav-link active"><a href="about.html">About Us</a> </li>
-                                <li class="nav-item nav-link"><a href="#">Contact Us</a> </li>
-                                <li>
+                                <li class="nav-item nav-link"><a href="contactus.html">Contact Us</a> </li>
+                                <li class="nav-item nav-link">
                                     <div class="nav-item dropdown">
-                                        <a href="#" class="nav-link dropdown-toggle text-white"
-                                        >Help </a>
+                                        <a href="#" class="nav-link dropdown-toggle text-white">Help </a>
                                         <div class="dropdown-menu m-0 bg-secondary rounded-0">
-                                            <a href="#" target="_blank" class="dropdown-item">Webmail Help</a>
-                                            <a href="#" target="_blank" class="dropdown-item">Online Help/Support</a>
-                                            <a href="#" target="_blank" class="dropdown-item">Download Quick Start
+                                            <a href="https://mdofficemail.com/help/index.html" target="_blank"
+                                                class="dropdown-item">Webmail Help</a>
+                                            <a href="https://mdofficemail.com/support/index.html" target="_blank"
+                                                class="dropdown-item">Online Help/Support</a>
+                                            <a href="https://mdofficemail.com/pdf/quick-start-guide-mdofficemail.pdf"
+                                                target="_blank" class="dropdown-item">Download Quick Start
                                                 Guide</a>
-                                            <a href="#" target="_blank" class="dropdown-item">iPhone Setup Guide</a>
-                                            <a href="#" target="_blank" class="dropdown-item">Android Setup Guide</a>
-                                            <a href="#" target="_blank" class="dropdown-item">Support Request</a>
+                                            <a href="https://mdofficemail.com/pdf/mdom-iphone-configuration-guide.pdf"
+                                                target="_blank" class="dropdown-item">iPhone Setup Guide</a>
+                                            <a href="https://mdofficemail.com/pdf/mdom-android-configuration-guide.pdf"
+                                                target="_blank" class="dropdown-item">Android Setup Guide</a>
+                                            <a href="https://cryptnsend.com/supportrequest/SupportRequest.html"
+                                                target="_blank" class="dropdown-item">Support Request</a>
                                         </div>
                                     </div>
                                 </li>
-                                <li>
+                                <li class="nav-item nav-link">
                                     <div class="nav-item dropdown">
                                         <a href="#" class="nav-link dropdown-toggle text-white">Login </a>
                                         <div class="dropdown-menu m-0 bg-secondary rounded-0">
-                                            <a href="#" target="_blank" class="dropdown-item">Account Administration/Billing</a>
+                                            <a href="https://drmail.mdofficemail.com/" target="_blank"
+                                                class="dropdown-item">Webmail Login</a>
+                                            <a href="https://mdofficemail.com/subscriptions/accountadministration.aspx"
+                                                target="_blank" class="dropdown-item">Account Administration/Billing</a>
+
                                         </div>
                                     </div>
                                 </li>
@@ -85,254 +92,328 @@
                         <a href="#" class="nav-item nav-link">Customization</a>
                         <a href="#" class="nav-item nav-link">FAQ</a>
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Other Services</a>
+                            <a class="nav-link dropdown-toggle">
+                                Other Services
+                            </a>
+
                             <div class="dropdown-menu m-0 bg-secondary rounded-0">
-                                <a href="blog.html" class="dropdown-item">Secure Fax<br><sub>HIPAA compliant digital fax
-                                        service</sub> </a>
-                                <a href="blog.html" class="dropdown-item">Secure Online Forms<br><sub>HIPAA compliant
-                                        web contact forms </sub> </a>
+                                <a href="blog.html" class="dropdown-item">
+                                    Secure Fax<br>
+                                    <sub>HIPAA compliant digital fax service</sub>
+                                </a>
+                                <a href="blog.html" class="dropdown-item">
+                                    Secure Online Forms<br>
+                                    <sub>HIPAA compliant web contact forms</sub>
+                                </a>
                             </div>
                         </div>
+                        <script>
+                            function toggleDropdownBehavior() {
+                                const dropdowns = document.querySelectorAll('.dropdown-toggle');
+
+                                dropdowns.forEach(function (item) {
+                                    if (window.innerWidth >= 992) {
+                                        item.removeAttribute('data-bs-toggle');
+                                    } else {
+                                        item.setAttribute('data-bs-toggle', 'dropdown');
+                                    }
+                                });
+                            }
+
+                            toggleDropdownBehavior();
+                            window.addEventListener('resize', toggleDropdownBehavior);
+                        </script>
                         <a href="#" class="nav-item nav-link">Pricing & Signup</a>
                     </div>
-            
+
                 </div>
             </nav>
         </div>
     </div>
     <!-- Navbar End -->
-        <!-- Header Start -->
-        <div class="container-fluid bg-breadcrumb">
-            <div class="container text-center " style="max-width: 900px;">
-                <h3 class="text-white display-3 mb-4">About Us</h1>
-              
-                <ol class="breadcrumb justify-content-center mb-0">
-                    <li class="breadcrumb-item "><a href="index.html" class="text-secondary">Home</a></li>
-              
-                    <li class="breadcrumb-item"><span class="active"> About Us </span></li>
-                </ol>    
-            </div>
-        </div>
-        <!-- Header End -->
+    <!-- Header Start -->
+    <div class="container-fluid bg-breadcrumb" style="background-color: #ffffff;">
+        <div class="container text-center" style="max-width: 900px;">
 
-        <!-- About Start -->
-        <div class="container-fluid about  py-5">
-            <div class="container py-5">
-                <div class="row g-5">
-                    <div class="col-xl-5">
-                        <div class="h-100">
-                            <img src="img/about-1.jpg" class="img-fluid w-100 h-100" alt="Image">
-                        </div>
-                    </div>
-                    <div class="col-xl-7">
-                        <h5 class="text-uppercase text-secondary">About </h5>
-                        <h2 class="fw-bold display-8"> MD Office Mail LLC</h2>
-                        <p class="fs-5 mb-4">
-                            The one stop solution for all your office communication. We are secure, we are encrypted and the best part - we make your
-                             communication HIPAA Compliant. Our customers are located all over the USA and our servers are located in Illinois with
-                              local 2nd level mirroring and 3rd level remote backup in California giving you the utmost protection.
-                              </p>
-                        <div class="tab-class bg-light border p-4">
-                            <ul class="nav d-flex mb-2">
-                                <li class="nav-item">
-                                    <a class="d-flex py-2 text-center bg-white active px-4 py-2 fs-5" data-bs-toggle="pill" href="#tab-1">
-                                        <span class="text-dark">MDVault</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="d-flex py-2 mx-3 text-center bg-white  px-4 py-2 fs-5" data-bs-toggle="pill" href="#tab-2">
-                                        <span class="text-dark" >Secure Web-contact Forms</span>
-                                    </a>
-                                </li>
-                            
-                            </ul>
-                            <div class="tab-content why-us">
-                                <div id="tab-1" class="tab-pane fade show p-0 active">
-                                    <div class="row">
-                                        <div class="col-12 ">
-                                            <div class="d-flex">
-                                                <div class="text-start my-auto">
-                                                   
-                                                   
-                                                    <div class="icon-box d-flex flex-column justify-content-center align-items-center">
-                                <i class="bi bi-shield-shaded text-dark"></i>
-                                <h4 class="mb-2">MDVault</h4>
-                                <p class="fs-6 text-dark">  MDVault helps to send HIPAA-compliant, encrypted messages to any recipient, for end-to-end protection..
-                                                   </p>
-                           <div class="d-flex align-items-center justify-content-start">
-                                                        <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="#">Read More</a>
-                                                    </div>
-                                                </div>
-                                                    
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="tab-2" class="tab-pane fade show p-0">
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <div class="d-flex">
-                                                <div class="text-start my-auto">
-                                                    
-                                                    <div class="icon-box d-flex flex-column justify-content-center align-items-center">
-                                <i class="bi bi-file-earmark-lock-fill text-dark"></i>
-                                <h4 class="mb-2">Secure Web-contact Forms</h4>
-                                <p class="fs-6 text-dark">  
-                                    Secure and HIPAA compliant Contact Forms for your website. Forms are Dynamic, Responsive, customized to suit your website.
-                                 </p>
-                           <div class="d-flex align-items-center justify-content-start">
-                                                        <a class="btn-hover-bg btn btn-primary text-white py-2 px-4" href="#">Read More</a>
-                                                    </div>
-                                                </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                      
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- About End -->
+            <div class="secure-badge">
+                <svg viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <clipPath id="shieldClip">
+                            <path d="M75 8 L134 30 V72 C134 108 110 132 75 144 C40 132 16 108 16 72 V30 Z" />
+                        </clipPath>
+                    </defs>
 
-<section class="py-5 bg-light">
-    <div class="container">
+                    <!-- Shield -->
+                    <path d="M75 8 L134 30 V72 C134 108 110 132 75 144 C40 132 16 108 16 72 V30 Z"
+                        fill="rgba(10,31,56,0.15)" stroke="#ffffff" stroke-width="2.5" />
 
-        <!-- Heading -->
-        <div class="text-center mb-5">
-           
+                    <g clip-path="url(#shieldClip)">
+                        <rect class="scan-line" x="16" y="35" width="118" height="6" fill="#900c0c " opacity="0.55" />
+                    </g>
 
-          <h2 class="fw-bold display-8">Why MDOM for HIPAA Compliant Email</h2>
-
-            <p class="lead text-secondary mx-auto" >
-               Email, Protected Health Information, and HIPAA
-            </p>
-        </div>
-
-        <!-- Features -->
-        <div class="row g-4">
-
-            <div class="col-lg-4 col-md-6">
-                <div class="card border-0 shadow-sm h-100">
-                    <div class="card-body p-4">
-                        <div class="icon-box bg-primary bg-opacity-10 text-primary mb-3">
-                            <i class="bi-award-fill fs-4 text-white"></i>
-                        </div>
-                        <h5 class="fw-bold">Experience </h5>
-                        <p class="text-muted mb-0">
-                            We bring with us a world of experience, with our partner having over 50 years in the Healthcare industry,
-                             and our staff having 20+ years in the IT security space, we command a strong industry expertise.
-                        </p>
-                    </div>
-                </div>
+                    <g transform="translate(46,56)">
+                        <rect x="0" y="6" width="58" height="40" rx="5" fill="none" stroke="#ffffff" stroke-width="3" />
+                        <path d="M2 10 L29 32 L56 10" fill="none" stroke="#ffffff" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </g>
+                </svg>
             </div>
 
-            <div class="col-lg-4 col-md-6">
-                <div class="card border-0 shadow-sm h-100">
-                    <div class="card-body p-4">
-                        <div class="icon-box bg-primary bg-opacity-10 text-primary mb-3">
-                            <i class="bi-people-fill fs-4 text-white"></i>
-                        </div>
-                        <h5 class="fw-bold">Team </h5>
-                        <p class="text-muted mb-0">
-                           We are a small team of developers, designers and technical experts following a “lean” model in running our firm.
-                        </p>
-                    </div>
-                </div>
-            </div>
+            <h3 class="text-white display-3 mb-4">About Us</h3>
 
-            <div class="col-lg-4 col-md-6">
-                <div class="card border-0 shadow-sm h-100">
-                    <div class="card-body p-4">
-                        <div class="icon-box bg-primary bg-opacity-10 text-primary mb-3">
-                            <i class="bi-lightbulb-fill fs-4 text-white"></i>
-                        </div>
-                        <h5 class="fw-bold">Fresh Approach</h5>
-                        <p class="text-muted mb-0">
-                          We are young, agile and proactive, always keeping up with the compliance requirements and client expectations.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="card border-0 shadow-sm h-100">
-                    <div class="card-body p-4">
-                        <div class="icon-box bg-primary bg-opacity-10 text-primary mb-3">
-                           <i class="bi-shield-lock-fill fs-4 text-white"></i>
-                        </div>
-                        <h5 class="fw-bold">The Product</h5>
-                        <p class="text-muted mb-0">
-                           Our industry-standard encryption software, secure servers and safe transmission of data lock down your data protecting it from intruders
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="card border-0 shadow-sm h-100">
-                    <div class="card-body p-4">
-                        <div class="icon-box bg-primary bg-opacity-10 text-primary mb-3">
-                           <i class="bi-headset fs-4 text-white"></i>
-                        </div>
-                        <h5 class="fw-bold">Our Service</h5>
-                        <p class="text-muted mb-0">
-                           Ask us for a trial run on our product, ask to sign up, or ask us anything, we get you going within minutes. And yes, we provide customer service round the clock 24 X 7
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="card border-0 shadow-sm h-100">
-                    <div class="card-body p-4">
-                        <div class="icon-box bg-primary bg-opacity-10 text-primary mb-3">
-                            <i class="bi-patch-check-fill fs-4 text-white"></i>
-                        </div>
-                        <h5 class="fw-bold">Customers </h5>
-                        <p class="text-muted mb-0">
-                           We are growing quickly and adding many customers every day. Our customers love us which is proved from the 99% retention rate that we proudly boast of. We can’t wait to have you join us!
-                        </p>
-                    </div>
-                </div>
-            </div>
+            <ol class="breadcrumb justify-content-center mb-0">
+                <li class="breadcrumb-item">
+                    <a href="index.html" class="text-secondary">Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <span class="active text-white">About Us</span>
+                </li>
+            </ol>
 
         </div>
-
-       
-    
-
     </div>
-</section>
-<section class="py-3">
-    <div class="container">
-            <div class="row ">
-            <div class="col-12">
-                <div class="p-4 p-lg-5 rounded-4 bg-primary text-white shadow">
+    <!-- Header End -->
 
-                    <div class="row align-items-center">
+    <!-- About Start -->
+    <div class="container-fluid about  py-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-xl-5">
+                    <div class="h-100">
+                        <img src="img/about-1.jpg" class="img-fluid w-100 h-100" alt="Image">
+                    </div>
+                </div>
+                <div class="col-xl-7">
+                    <h5 class="text-uppercase text-secondary">About </h5>
+                    <h2 class="section-title"> MD Office Mail LLC</h2>
+                    <p class="fs-5 mb-4">
+                        The one stop solution for all your office communication. We are secure, we are encrypted and the
+                        best part - we make your
+                        communication HIPAA Compliant. Our customers are located all over the USA and our servers are
+                        located in Illinois with
+                        local 2nd level mirroring and 3rd level remote backup in California giving you the utmost
+                        protection.
+                    </p>
+                    <div class="tab-class bg-light border p-4">
+                        <ul class="nav d-flex mb-2">
+                            <li class="nav-item">
+                                <a class="d-flex py-2 text-center bg-white active px-4 py-2 fs-5" data-bs-toggle="pill"
+                                    href="#tab-1">
+                                    <span class="text-dark">MDVault</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="d-flex py-2 mx-3 text-center bg-white  px-4 py-2 fs-5" data-bs-toggle="pill"
+                                    href="#tab-2">
+                                    <span class="text-dark">Secure Web-contact Forms</span>
+                                </a>
+                            </li>
 
-                        <div class="col-lg-4 mb-4 mb-lg-0">
-                            <h2 class="fw-bold mb-0 text-white">Who We Are</h2>
+                        </ul>
+                        <div class="tab-content why-us">
+                            <div id="tab-1" class="tab-pane fade show p-0 active">
+                                <div class="row">
+                                    <div class="col-12 ">
+                                        <div class="d-flex">
+                                            <div class="text-start my-auto">
+
+
+                                                <div
+                                                    class="icon-box d-flex flex-column justify-content-center align-items-center">
+                                                    <i class="bi bi-shield-shaded text-dark"></i>
+                                                    <h4 class="mb-2">MDVault</h4>
+                                                    <p class="fs-6 text-dark"> MDVault helps to send HIPAA-compliant,
+                                                        encrypted messages to any recipient, for end-to-end protection..
+                                                    </p>
+                                                    <div class="d-flex align-items-center justify-content-start">
+                                                        <a class="btn-hover-bg btn btn-primary text-white py-2 px-4"
+                                                            href="#">Read More</a>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="tab-2" class="tab-pane fade show p-0">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="d-flex">
+                                            <div class="text-start my-auto">
+
+                                                <div
+                                                    class="icon-box d-flex flex-column justify-content-center align-items-center">
+                                                    <i class="bi bi-file-earmark-lock-fill text-dark"></i>
+                                                    <h4 class="mb-2">Secure Web-contact Forms</h4>
+                                                    <p class="fs-6 text-dark">
+                                                        Secure and HIPAA compliant Contact Forms for your website. Forms
+                                                        are Dynamic, Responsive, customized to suit your website.
+                                                    </p>
+                                                    <div class="d-flex align-items-center justify-content-start">
+                                                        <a class="btn-hover-bg btn btn-primary text-white py-2 px-4"
+                                                            href="#">Read More</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
 
-                        <div class="col-lg-8">
-                            <p class="mb-0 fs-6 text-white">
-                               When one of our major clients asked us to look around for a HIPAA Compliant email service that is affordable for their budget and reliable for the business communication of their 2000+ clients – we were surprised that we could not find any good options. That is when the idea for our encrypted email service germinated.
+    <section class="py-5 bg-light">
+        <div class="container">
+
+            <!-- Heading -->
+            <div class="text-center mb-5">
+
+
+                <h2 class="section-title">Why MDOM for HIPAA Compliant Email</h2>
+
+                <p class="lead text-secondary mx-auto">
+                    Email, Protected Health Information, and HIPAA
+                </p>
+            </div>
+
+            <!-- Features -->
+            <div class="row g-4">
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <div class="icon-box bg-primary bg-opacity-10 text-primary mb-3">
+                                <i class="bi-award-fill fs-4 text-white"></i>
+                            </div>
+                            <h5 class="sub-title">Experience </h5>
+                            <p class="text-muted mb-0">
+                                We bring with us a world of experience, with our partner having over 50 years in the
+                                Healthcare industry,
+                                and our staff having 20+ years in the IT security space, we command a strong industry
+                                expertise.
                             </p>
                         </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <div class="icon-box bg-primary bg-opacity-10 text-primary mb-3">
+                                <i class="bi-people-fill fs-4 text-white"></i>
+                            </div>
+                            <h5 class="sub-title">Team </h5>
+                            <p class="text-muted mb-0">
+                                We are a small team of developers, designers and technical experts following a “lean”
+                                model in running our firm.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <div class="icon-box bg-primary bg-opacity-10 text-primary mb-3">
+                                <i class="bi-lightbulb-fill fs-4 text-white"></i>
+                            </div>
+                            <h5 class="sub-title">Fresh Approach</h5>
+                            <p class="text-muted mb-0">
+                                We are young, agile and proactive, always keeping up with the compliance requirements
+                                and client expectations.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <div class="icon-box bg-primary bg-opacity-10 text-primary mb-3">
+                                <i class="bi-shield-lock-fill fs-4 text-white"></i>
+                            </div>
+                            <h5 class="sub-title">The Product</h5>
+                            <p class="text-muted mb-0">
+                                Our industry-standard encryption software, secure servers and safe transmission of data
+                                lock down your data protecting it from intruders
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <div class="icon-box bg-primary bg-opacity-10 text-primary mb-3">
+                                <i class="bi-headset fs-4 text-white"></i>
+                            </div>
+                            <h5 class="sub-title">Our Service</h5>
+                            <p class="text-muted mb-0">
+                                Ask us for a trial run on our product, ask to sign up, or ask us anything, we get you
+                                going within minutes. And yes, we provide customer service round the clock 24 X 7
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <div class="icon-box bg-primary bg-opacity-10 text-primary mb-3">
+                                <i class="bi-patch-check-fill fs-4 text-white"></i>
+                            </div>
+                            <h5 class="sub-title">Customers </h5>
+                            <p class="text-muted mb-0">
+                                We are growing quickly and adding many customers every day. Our customers love us which
+                                is proved from the 99% retention rate that we proudly boast of. We can’t wait to have
+                                you join us!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+    </section>
+    <section class="py-3">
+        <div class="container">
+            <div class="row ">
+                <div class="col-12">
+                    <div class="p-4 p-lg-5 rounded-4 bg-primary text-white shadow">
+
+                        <div class="row align-items-center">
+
+                            <div class="col-lg-4 mb-4 mb-lg-0">
+                                <h2 class="fw-bold mb-0 text-white">Who We Are</h2>
+                            </div>
+
+                            <div class="col-lg-8">
+                                <p class="mb-0 fs-6 text-white">
+                                    When one of our major clients asked us to look around for a HIPAA Compliant email
+                                    service that is affordable for their budget and reliable for the business
+                                    communication of their 2000+ clients – we were surprised that we could not find any
+                                    good options. That is when the idea for our encrypted email service germinated.
+                                </p>
+                            </div>
+
+                        </div>
 
                     </div>
-
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
     <!-- Footer Start -->
     <div class="container-fluid footer bg-dark text-body">
         <div class="container py-5 pb-2">
@@ -402,7 +483,8 @@
 
                 <div class="col-md-6 text-center text-md-end text-body">
 
-                    Designed By <a class="border-bottom text-white" href="https://vinfonet.com/" target="_blank"> vinfonet</a>
+                    Designed By <a class="border-bottom text-white" href="https://vinfonet.com/" target="_blank">
+                        vinfonet</a>
                 </div>
             </div>
         </div>
@@ -414,19 +496,19 @@
             class="bi bi-arrow-up"></i></a>
 
 
-        <!-- JavaScript Libraries -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="lib/easing/easing.min.js"></script>
-        <script src="lib/waypoints/waypoints.min.js"></script>
-        <script src="lib/counterup/counterup.min.js"></script>
-        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-        <script src="lib/lightbox/js/lightbox.min.js"></script>
-        
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
 
-        <!-- Template Javascript -->
-        <script src="js/main.js"></script>
 
-    </body>
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+</body>
 
 </html>
