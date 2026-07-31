@@ -91,13 +91,13 @@ a {
 
 .topbar ul li {
     list-style: none;
-    float: left; padding:0px;
+    float: left; padding:5px 0px;
     
 }
 
 .topbar ul li a{
     color: #fff;
-    padding:5px 15px;
+    padding:0px 15px;
     font-size: 16px;
     transition: .5s;
 }
@@ -308,18 +308,14 @@ section,
 } */
 .bg-breadcrumb-home{
  
+background: rgba(255, 255, 255, 0.8);
+    border: 7px solid rgb(225 225 225 / 80%);
+    border-radius: 32px;
+    padding: 22px;
+    box-shadow: 0 25px 60px rgba(194, 165, 132, .25), 0 8px 20px rgba(0, 0, 0, .08), inset 0 1px 1px rgba(255, 255, 255, .9);
 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    padding:0px;
-background:rgb(204, 204, 204) 0px 0px 3px 10px;
-    border-radius: 30px;
-    overflow: hidden;
-
-        box-shadow: 0px 0px 3px 20px #ccc;  
 }
+
 .contact-page{  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/contact.jpg);
 background-position: top;
     background-repeat: no-repeat;
@@ -576,7 +572,7 @@ background-position: top;
 .why-us .why-box .more-btn {
     display: inline-block;
     background: color-mix(in srgb, var(--contrast-color), transparent 85%);
-    padding: 8px 40px 10px 40px;
+    padding: 8px 20px 10px 20px;
     color: var(--contrast-color);
     transition: all ease-in-out 0.4s;
     border-radius: 50px;
@@ -1362,6 +1358,7 @@ h6 {
     top: -50%;
 }
 
+
     .navbar .nav-item .dropdown-menu {
         display: block;
         visibility: hidden;
@@ -1372,7 +1369,10 @@ h6 {
         transition: .5s;
         opacity: 0;
     }
-      .topbar  .navbar .nav-item .dropdown-menu{ top: 135%;}
+       .topbar  .navbar .nav-item .dropdown-menu {
+      top: 120%;
+    }
+      /* .topbar  .navbar .nav-item .dropdown-menu{ top: 135%;} */
 }
 @media (min-width: 1365px) {
     .services .service-item:hover {
