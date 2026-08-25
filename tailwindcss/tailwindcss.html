@@ -18,483 +18,589 @@
 
 
     <div class="w-full">
-        <header class="w-full bg-amber-200 border border-amber-300">
-            <div class="container mx-auto ">
 
-                <div class="h-24 flex items-center justify-between">
 
-                    <!-- Logo -->
-                    <div class="flex-shrink-0">
-                        <img src="logo.png" alt="Logo" class="w-56 h-24 object-contain">
+
+
+        
+       <header class="w-full bg-amber-200 border border-amber-300">
+    <div class="container mx-auto px-4">
+        
+        <!-- Header Top -->
+        <div class="h-24 flex items-center justify-between">
+
+            <!-- Logo -->
+            <div class="flex-shrink-0">
+                <img src="logo.png"
+                    alt="Logo"
+                    class="w-40 sm:w-48 md:w-56 h-20 md:h-24 object-contain">
+            </div>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center gap-8 lg:gap-12">
+                <a href="#"
+                    class="text-neutral-600 text-base font-normal font-['Lexend'] tracking-wide hover:text-black transition">
+                    HOME
+                </a>
+
+                <a href="#"
+                    class="text-neutral-600 text-base font-normal font-['Lexend'] tracking-wide hover:text-black transition">
+                    ABOUT
+                </a>
+
+                <a href="#"
+                    class="text-neutral-600 text-base font-normal font-['Lexend'] tracking-wide hover:text-black transition">
+                    SHOP
+                </a>
+            </nav>
+
+            <!-- Menu Button -->
+            <button type="button"
+                id="menu"
+                class="md:hidden flex items-center justify-center w-10 h-10 text-neutral-600 hover:text-black"
+                aria-label="Open menu"
+                aria-expanded="false">
+
+                <!-- Hamburger Icon -->
+                <svg id="menuIcon"
+                    class="w-8 h-8"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor">
+
+                    <path stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+
+                <!-- Close Icon -->
+                <svg id="closeIcon"
+                    class="hidden w-8 h-8"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor">
+
+                    <path stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <nav id="mobileMenu"
+            class="hidden md:hidden border-t border-amber-300 py-4">
+
+            <div class="flex flex-col">
+
+                <a href="#"
+                    class="px-3 py-3 text-neutral-600 text-base font-normal font-['Lexend'] tracking-wide hover:bg-amber-300 hover:text-black transition">
+                    HOME
+                </a>
+
+                <a href="#"
+                    class="px-3 py-3 text-neutral-600 text-base font-normal font-['Lexend'] tracking-wide hover:bg-amber-300 hover:text-black transition">
+                    ABOUT
+                </a>
+
+                <a href="#"
+                    class="px-3 py-3 text-neutral-600 text-base font-normal font-['Lexend'] tracking-wide hover:bg-amber-300 hover:text-black transition">
+                    SHOP
+                </a>
+
+            </div>
+        </nav>
+
+    </div>
+</header>
+
+<script>
+    const menuButton = document.getElementById("menu");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const menuIcon = document.getElementById("menuIcon");
+    const closeIcon = document.getElementById("closeIcon");
+
+    menuButton.addEventListener("click", () => {
+        const isOpen = !mobileMenu.classList.contains("hidden");
+
+        mobileMenu.classList.toggle("hidden");
+
+        menuIcon.classList.toggle("hidden");
+        closeIcon.classList.toggle("hidden");
+
+        menuButton.setAttribute("aria-expanded", !isOpen);
+        menuButton.setAttribute(
+            "aria-label",
+            isOpen ? "Open menu" : "Close menu"
+        );
+    });
+</script>
+
+      <div class="container mx-auto px-4 py-5">
+    <div class="grid grid-cols-1 lg:grid-cols-[30%_minmax(0,1fr)_30%] gap-5 items-start">
+
+        <!-- ================= SIDEBAR ================= -->
+        <div class="w-full">
+            <div class="w-full min-h-[486px] bg-white shadow-sm rounded-lg overflow-hidden">
+
+                <!-- Profile Header -->
+                <div class="flex items-center gap-5 px-5 pt-7 pb-7">
+                    <svg
+                        class="w-20 h-20 shrink-0 rounded-full text-[#DEECDD]"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor">
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                    </svg>
+
+                    <div>
+                        <h2 class="text-zinc-800 text-xl sm:text-2xl font-semibold font-['Lexend'] leading-tight">
+                            Hi, John Doe
+                        </h2>
+
+                        <p class="text-neutral-400 text-lg sm:text-xl font-normal font-['Lexend'] mt-1">
+                            Good morning
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Profile Menu -->
+                <nav class="px-4">
+
+                    <a href="#"
+                       class="flex items-center gap-5 min-h-16 px-3 border-b-2 border-[#E9F6E8]">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             viewBox="0 0 24 24"
+                             fill="currentColor"
+                             class="w-7 h-7 shrink-0 bg-[#2A552F] text-white p-1 rounded-xl">
+                            <path
+                                d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                        </svg>
+
+                        <span class="text-zinc-800 text-lg sm:text-xl font-bold font-['Lexend']">
+                            Your Profile
+                        </span>
+                    </a>
+
+                    <a href="#"
+                       class="flex items-center gap-5 min-h-16 px-3 border-b-2 border-[#E9F6E8]">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             fill="none"
+                             viewBox="0 0 24 24"
+                             stroke-width="1.5"
+                             stroke="currentColor"
+                             class="w-7 h-7 shrink-0 bg-[#2A552F] text-white p-1 rounded-xl">
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                        </svg>
+
+                        <span class="text-zinc-800 text-lg sm:text-xl font-light font-['Lexend']">
+                            Address
+                        </span>
+                    </a>
+
+                    <a href="#"
+                       class="flex items-center gap-5 min-h-16 px-3 bg-[#E9F6E8] border-b-2 border-[#E9F6E8]">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             fill="none"
+                             viewBox="0 0 24 24"
+                             stroke-width="1.5"
+                             stroke="currentColor"
+                             class="w-7 h-7 shrink-0 bg-[#2A552F] text-white p-1 rounded-xl">
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1-1.5 0Z" />
+                        </svg>
+
+                        <span class="text-zinc-800 text-lg sm:text-xl font-light font-['Lexend']">
+                            Orders
+                        </span>
+                    </a>
+
+                    <a href="#"
+                       class="flex items-center gap-5 min-h-16 px-3 border-b-2 border-[#E9F6E8]">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             fill="none"
+                             viewBox="0 0 24 24"
+                             stroke-width="1.5"
+                             stroke="currentColor"
+                             class="w-7 h-7 shrink-0 bg-[#2A552F] text-white p-1 rounded-xl">
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                        </svg>
+
+                        <span class="text-zinc-800 text-lg sm:text-xl font-light font-['Lexend']">
+                            Wishlist
+                        </span>
+                    </a>
+
+                    <a href="#"
+                       class="flex items-center gap-5 min-h-16 px-3">
+                        <img src="logout.png"
+                             class="w-7 h-7 object-contain"
+                             alt="Logout">
+
+                        <span class="text-zinc-800 text-lg sm:text-xl font-light font-['Lexend']">
+                            Logout
+                        </span>
+                    </a>
+
+                </nav>
+            </div>
+        </div>
+
+
+        <!-- ================= ORDERS ================= -->
+        <main class="w-full space-y-4">
+
+            <!-- ORDER CARD -->
+            <div class="bg-white shadow-sm rounded-lg overflow-hidden p-4 sm:p-5">
+
+                <div class="grid grid-cols-1 sm:grid-cols-[150px_minmax(0,1fr)] gap-5">
+
+                    <!-- Product Image -->
+                    <div class="w-full sm:w-[150px] h-[150px] rounded-lg overflow-hidden bg-neutral-200">
+                        <img
+                            src="Orthor.png"
+                            alt="Ortho Latex Mattress"
+                            class="w-full h-full object-cover">
                     </div>
 
-                    <!-- Navigation -->
-                    <nav class="hidden md:flex items-center gap-12">
-                        <a href="#"
-                            class="text-neutral-600 text-base font-normal font-['Lexend'] tracking-wide hover:text-black transition">
-                            HOME
-                        </a>
+                    <!-- Product Info -->
+                    <div class="min-w-0">
 
-                        <a href="#"
-                            class="text-neutral-600 text-base font-normal font-['Lexend'] tracking-wide hover:text-black transition">
-                            ABOUT
-                        </a>
+                        <h2 class="text-zinc-800 text-xl sm:text-2xl font-semibold font-['Lexend']">
+                            Ortho Latex Mattress
+                        </h2>
 
-                        <a href="#"
-                            class="text-neutral-600 text-base font-normal font-['Lexend'] tracking-wide hover:text-black transition">
-                            SHOP
-                        </a>
-                    </nav>
+                        <p class="text-neutral-500 text-sm sm:text-base font-semibold font-['Lexend'] mt-3">
+                            Single, 72x72 Inch, 6 Inch
+                        </p>
 
-                    <!-- Menu Icon -->
-                    <button type="button" id="menu"
-                        class="flex items-center justify-center w-10 h-8 text-neutral-600 hover:text-black"
-                        aria-label="Open menu">
-                        <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                            stroke-width="1.5" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                        </svg>
+                        <p class="text-neutral-500 text-sm sm:text-base font-semibold font-['Lexend'] mt-2">
+                            Qty: 1
+                        </p>
+
+                        <p class="text-green-900 text-xl sm:text-2xl font-bold mt-2">
+                            ₹44,480
+                        </p>
+
+                        <div class="flex items-center gap-2 mt-3 text-green-900">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 fill="none"
+                                 viewBox="0 0 24 24"
+                                 stroke-width="1.5"
+                                 stroke="currentColor"
+                                 class="w-7 h-7">
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 0 0-3.213-9.193 2.056 2.056 0 0 0-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 0 0-10.026 0 1.106 1.106 0 0 0-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
+                            </svg>
+
+                            <span class="text-sm sm:text-base text-green-900">
+                                Expected Delivery:
+                                <strong>30 Dec 2025</strong>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order Details -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+
+                    <div class="bg-green-100 rounded-lg p-4">
+                        <p class="text-zinc-800 text-sm sm:text-base">
+                            Order number
+                        </p>
+
+                        <p class="text-zinc-800 text-base sm:text-lg font-medium mt-1">
+                            ORD 784038
+                        </p>
+                    </div>
+
+                    <div class="bg-[#F5F2E1] rounded-lg p-4">
+                        <p class="text-zinc-800 text-sm sm:text-base">
+                            Order placed on
+                        </p>
+
+                        <p class="text-zinc-800 text-base sm:text-lg font-medium mt-1">
+                            26 December 2025
+                        </p>
+                    </div>
+
+                </div>
+
+                <a href="#"
+                   class="mt-4 w-full min-h-12 bg-[#2A552F] text-amber-200 rounded-lg flex items-center justify-center text-lg sm:text-xl font-normal font-['Cal_Sans']">
+                    View order details
+                </a>
+
+            </div>
+
+
+            <!-- SECOND ORDER -->
+            <div class="bg-white shadow-sm rounded-lg overflow-hidden p-4 sm:p-5">
+
+                <div class="grid grid-cols-1 sm:grid-cols-[150px_minmax(0,1fr)] gap-5">
+
+                    <div class="w-full sm:w-[150px] h-[150px] rounded-lg overflow-hidden bg-neutral-200">
+                        <img
+                            src="Orthor.png"
+                            alt="Ortho Latex Mattress"
+                            class="w-full h-full object-cover">
+                    </div>
+
+                    <div class="min-w-0">
+                        <h2 class="text-zinc-800 text-xl sm:text-2xl font-semibold font-['Lexend']">
+                            Ortho Latex Mattress
+                        </h2>
+
+                        <p class="text-neutral-500 text-sm sm:text-base font-semibold mt-3">
+                            Single, 72x72 Inch, 6 Inch
+                        </p>
+
+                        <p class="text-neutral-500 text-sm sm:text-base font-semibold mt-2">
+                            Qty: 1
+                        </p>
+
+                        <p class="text-green-900 text-xl sm:text-2xl font-bold mt-2">
+                            ₹44,480
+                        </p>
+
+                        <div class="flex items-center gap-2 mt-3 text-green-900">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 fill="none"
+                                 viewBox="0 0 24 24"
+                                 stroke-width="1.5"
+                                 stroke="currentColor"
+                                 class="w-7 h-7 shrink-0">
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 0 0-3.213-9.193 2.056 2.056 0 0 0-1.58-.86H14.25" />
+                            </svg>
+
+                            <span class="text-sm sm:text-base">
+                                Expected Delivery:
+                                <strong>30 Dec 2025</strong>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+
+                    <div class="bg-green-100 rounded-lg p-4">
+                        <p class="text-zinc-800 text-sm">Order number</p>
+                        <p class="text-zinc-800 text-lg font-medium">
+                            ORD 784038
+                        </p>
+                    </div>
+
+                    <div class="bg-[#F5F2E1] rounded-lg p-4">
+                        <p class="text-zinc-800 text-sm">Order placed on</p>
+                        <p class="text-zinc-800 text-lg font-medium">
+                            26 December 2025
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
+
+                    <button
+                        class="min-h-12 rounded-lg border border-[#2A552F] bg-white text-[#2A552F] text-lg font-medium">
+                        Download invoice
+                    </button>
+
+                    <button
+                        class="min-h-12 rounded-lg bg-[#2A552F] text-amber-200 text-lg font-medium">
+                        Return/Exchange
                     </button>
 
                 </div>
+
             </div>
-        </header>
-        <div class="container mx-auto px-4 py-5">
-            <div class="row flex gap-5">
-                <div class=" w-[30%]">
 
-                    <div class="w-full max-w-md min-h-[486px] bg-white shadow-sm relative rounded-lg overflow-hidden">
 
-                        <!-- Profile Header -->
-                        <div class="flex items-center gap-6 px-3 pt-8 pb-8">
+            <!-- THIRD ORDER / CANCELLED -->
+            <div class="bg-white shadow-sm rounded-lg overflow-hidden p-4 sm:p-5 border border-[#DC0202]">
 
-                            <!-- User Image -->
+                <div class="grid grid-cols-1 sm:grid-cols-[150px_minmax(0,1fr)] gap-5">
 
-                            <svg class="w-20 h-20 rounded-full object-cover text-[#DEECDD]"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class="size-8">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                    <div class="w-full sm:w-[150px] h-[150px] rounded-lg overflow-hidden bg-neutral-200">
+                        <img
+                            src="Orthor.png"
+                            alt="Ortho Latex Mattress"
+                            class="w-full h-full object-cover">
+                    </div>
+
+                    <div class="min-w-0">
+
+                        <h2 class="text-zinc-800 text-xl sm:text-2xl font-semibold font-['Lexend']">
+                            Ortho Latex Mattress
+                        </h2>
+
+                        <p class="text-neutral-500 text-sm sm:text-base font-semibold mt-3">
+                            Single, 72x72 Inch, 6 Inch
+                        </p>
+
+                        <p class="text-neutral-500 text-sm sm:text-base font-semibold mt-2">
+                            Qty: 1
+                        </p>
+
+                        <p class="text-green-900 text-xl sm:text-2xl font-bold mt-2">
+                            ₹44,480
+                        </p>
+
+                        <div class="flex items-center gap-2 mt-3 text-green-900">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 fill="none"
+                                 viewBox="0 0 24 24"
+                                 stroke-width="1.5"
+                                 stroke="currentColor"
+                                 class="w-7 h-7 shrink-0">
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25" />
                             </svg>
 
-                            <!-- Greeting -->
-                            <div>
-                                <h2 class="text-zinc-800 text-2xl font-semibold font-['Lexend'] leading-8">
-                                    Hi, John Doe
-                                </h2>
-
-                                <p class="text-neutral-400 text-2xl font-normal font-['Lexend'] leading-7">
-                                    Good morning
-                                </p>
-                            </div>
-
+                            <span class="text-sm sm:text-base">
+                                Expected Delivery:
+                                <strong>30 Dec 2025</strong>
+                            </span>
                         </div>
+                    </div>
+                </div>
 
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
 
-                        <!-- Profile Menu -->
-                        <div class="px-5">
+                    <div class="bg-green-100 rounded-lg p-4">
+                        <p class="text-zinc-800 text-sm">
+                            Order number
+                        </p>
 
-                            <!-- Your Profile -->
-                            <a href="#"
-                                class="flex items-center gap-7 h-16 px-3  border-b border-[#E9F6E8]  border-b-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                    class="w-6 h-6 bg-[#2A552F] text-[#fff] py-1 rounded-xl">
-                                    <path strokeLinecap="round" strokeLinejoin="round"
-                                        d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
-                                </svg>
+                        <p class="text-zinc-800 text-lg font-medium">
+                            ORD 784038
+                        </p>
+                    </div>
 
+                    <div class="bg-[#F5F2E1] rounded-lg p-4">
+                        <p class="text-zinc-800 text-sm">
+                            Order placed on
+                        </p>
 
-
-                                <span class="text-zinc-800 text-xl font-bold font-['Lexend']">
-                                    Your Profile
-                                </span>
-                            </a>
-
-
-                            <!-- Address -->
-                            <a href="#"
-                                class="flex items-center gap-7 h-16 px-3  border-b border-[#E9F6E8]  border-b-2">
-
-
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    strokeWidth={1.5} stroke="currentColor"
-                                    class="w-6 h-6 bg-[#2A552F] text-[#fff]  py-1 rounded-xl">
-                                    <path strokeLinecap="round" strokeLinejoin="round"
-                                        d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                                    <path strokeLinecap="round" strokeLinejoin="round"
-                                        d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
-                                </svg>
-
-                                <span class="text-zinc-800 text-xl font-light font-['Lexend']">
-                                    Address
-                                </span>
-                            </a>
-
-
-                            <!-- Orders -->
-                            <a href="#"
-                                class="flex items-center gap-7 h-16 bg-[#E9F6E8] px-3  border-b border-[#E9F6E8]  border-b-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor"
-                                    class="w-6 h-6 bg-[#2A552F] text-[#fff] py-1 rounded-xl">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                </svg>
-
-
-                                <span class="text-zinc-800 text-xl font-light font-['Lexend']">
-                                    Orders
-                                </span>
-                            </a>
-
-
-                            <!-- Wishlist -->
-                            <a href="#"
-                                class="flex items-center gap-7 h-16 px-3  border-b border-[#E9F6E8]  border-b-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor"
-                                    class="w-6 h-6 bg-[#2A552F] text-[#fff] py-1 rounded-xl">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
-                                </svg>
-
-                                <span class="text-zinc-800 text-xl font-light font-['Lexend']">
-                                    Wishlist
-                                </span>
-                            </a>
-
-
-                            <!-- Logout -->
-                            <a href="#" class="flex items-center gap-7 h-16 px-3  ">
-
-                                <img src="logout.png" class="w-6 w-6 h-6 text-[#2A552F]" />
-                                 <span class="text-zinc-800 text-xl font-light font-['Lexend'] tracking-tight">
-                                    Logout
-                                </span>
-                            </a>
-
-                        </div>
-
+                        <p class="text-zinc-800 text-lg font-medium">
+                            26 December 2025
+                        </p>
                     </div>
 
                 </div>
 
-                <div class=" w-[38%] ">
-                    <div data-layer="Group 7"
-                        class="Group7 w-[100%] h-96 shadow-sm relative rounded-lg overflow-hidden mb-3">
-                        <div data-layer="Rectangle 43"
-                            class="Rectangle43 w-[100%] h-96 left-0 top-0 absolute bg-white "></div>
-                        <div data-layer="Rectangle 43 copy 7"
-                            class="Rectangle43Copy7 w-64 h-24 left-[15px] top-[205px] absolute bg-green-100 rounded-lg overflow-hidden">
-                        </div>
-                        <div data-layer="Rectangle 43 copy 9"
-                            class="Rectangle43Copy9 w-85 h-10 left-[203px] top-[146px] absolute rounded-sm  shadow-sm bg-[#F5F2E1]">
-                        </div>
-                        <div data-layer="Rectangle 43 copy 8"
-                            class="Rectangle43Copy8 w-[45%] h-24 left-[548px] top-[303px] absolute origin-top-left rotate-180 bg-green-100 rounded-lg overflow-hidden">
-                        </div>
-                        <div data-layer="Single, 72x72 Inch, 6 Inch"
-                            class="Single72x72Inch6Inch left-[208.86px] top-[55.26px] absolute justify-start"><span
-                                class="text-neutral-500 text-base font-semibold font-['Lexend'] leading-4">Single, 72x72
-                                Inch</span><span
-                                class="text-neutral-500 text-base font-light font-['Lexend'] leading-4">, </span><span
-                                class="text-neutral-500 text-base font-semibold font-['Lexend'] leading-4">6
-                            </span><span
-                                class="text-neutral-500 text-base font-light font-['Lexend'] leading-4">Inch</span>
-                        </div>
-                        <div data-layer="Order number"
-                            class="OrderNumber left-[93.86px] top-[233.56px] absolute justify-start text-zinc-800 text-lg font-light font-['Lexend'] leading-5">
-                            Order number</div>
-                        <div data-layer="Order placed on"
-                            class="OrderPlacedOn left-[349.44px] top-[233.56px] absolute justify-start text-zinc-800 text-lg font-light font-['Lexend'] leading-5 tracking-tight">
-                            Order placed on</div>
-                        <div data-layer="ORD 784038"
-                            class="Ord784038 left-[99.86px] top-[258.56px] absolute justify-start text-zinc-800 text-lg font-medium font-['Lexend'] leading-5">
-                            ORD 784038</div>
-                        <div data-layer="Expected Delivery: 30 Dec 2025"
-                            class="ExpectedDelivery30Dec2025 left-[271.86px] top-[155.26px] absolute justify-start">
-                            <span
-                                class="text-zinc-800 text-base font-light font-['Lexend'] leading-4 tracking-tight">Expected
-                                Delivery:</span><span
-                                class="text-green-900 text-base font-medium font-['Lexend'] leading-4 tracking-tight">
-                            </span><span
-                                class="text-green-900 text-base font-semibold font-['Lexend'] leading-4 tracking-tight">30
-                                Dec 2025</span></div>
-                        <div data-layer="26 December 2025"
-                            class="December2025 left-[336.33px] top-[258.56px] absolute justify-start text-zinc-800 text-lg font-medium font-['Lexend'] leading-5">
-                            26 December 2025</div>
-                        <div data-layer="Rectangle 30 copy 32"
-                            class="Rectangle30Copy32 w-[523px] h-12 left-[22.99px] top-[322.99px] absolute bg-[#2A552F] overflow-hidden rounded-lg">
-                            <a
-                                class="text-amber-200 text-2xl font-normal font-['Cal_Sans'] leading-6 tracking-wide flex items-center justify-center h-full">
-                                View order details </a>
-                        </div>
-                        <div data-layer="Qty: 1"
-                            class="Qty1 left-[208.86px] top-[82.26px] absolute justify-start text-neutral-500 text-base font-semibold font-['Lexend'] leading-4">
-                            Qty: 1</div>
-                        <div data-layer="₹44,480" class="44480 left-[209.52px] top-[108.12px] absolute justify-start">
-                            <span class="text-green-900 text-2xl font-normal font-['Inter'] leading-6">₹</span><span
-                                class="text-green-900 text-2xl font-bold font-['Cal_Sans'] leading-6">44,480</span>
-                        </div>
-                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor"
-                            class="VectorSmartObject w-7 h-7 left-[225px] top-[152px] absolute  size-10">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 0 0-3.213-9.193 2.056 2.056 0 0 0-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 0 0-10.026 0 1.106 1.106 0 0 0-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
-                        </svg>
-                        <div data-layer="Ortho Latex Mattress"
-                            class="OrthoLatexMattress left-[207.80px] top-[21.46px] absolute justify-start text-zinc-800 text-2xl font-semibold font-['Lexend'] leading-6 tracking-tight">
-                            Ortho Latex Mattress</div>
-                        <div data-layer="Clipping - Rectangle 37"
-                            class="ClippingRectangle37 w-44 h-40 left-[14px] top-[25px] absolute">
-                            <div data-layer="Rectangle 37"
-                                class="Rectangle37 size-40 left-[10.98px] top-0 absolute bg-neutral-400 outline outline-1 outline-offset-[-0.50px]">
-                            </div>
-                            <div data-layer="Mask - Rectangle 37"
-                                class="MaskRectangle37 size-40 left-[10.98px] top-0 absolute bg-neutral-400 outline outline-1 outline-offset-[-0.50px]">
-                            </div>
-                            <img data-layer="Gemini_Generated_Image_n1answn1answn1an"
-                                class="GeminiGeneratedImageN1answn1answn1an w-44 h-40 left-0 top-0 absolute overflow-hidden rounded-lg"
-                                src="Orthor.png" />
-                        </div>
-                    </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
 
-                    <div data-layer="Group 7"
-                        class="Group7 w-[100%] h-96 shadow-sm relative rounded-lg overflow-hidden mb-3 ">
-                        <div data-layer="Rectangle 43"
-                            class="Rectangle43 w-[100%] h-96 left-0 top-0 absolute bg-white "></div>
-                        <div data-layer="Rectangle 43 copy 7"
-                            class="Rectangle43Copy7 w-64 h-24 left-[15px] top-[205px] absolute bg-green-100 rounded-lg overflow-hidden">
-                        </div>
-                        <div data-layer="Rectangle 43 copy 9"
-                            class="Rectangle43Copy9 w-85 h-10 left-[203px] top-[146px] absolute rounded-sm  shadow-sm bg-[#F5F2E1]">
-                        </div>
-                        <div data-layer="Rectangle 43 copy 8"
-                            class="Rectangle43Copy8 w-64 h-24 left-[548px] top-[303px] absolute origin-top-left rotate-180 bg-green-100 rounded-lg overflow-hidden">
-                        </div>
-                        <div data-layer="Single, 72x72 Inch, 6 Inch"
-                            class="Single72x72Inch6Inch left-[208.86px] top-[55.26px] absolute justify-start"><span
-                                class="text-neutral-500 text-base font-semibold font-['Lexend'] leading-4">Single, 72x72
-                                Inch</span><span
-                                class="text-neutral-500 text-base font-light font-['Lexend'] leading-4">, </span><span
-                                class="text-neutral-500 text-base font-semibold font-['Lexend'] leading-4">6
-                            </span><span
-                                class="text-neutral-500 text-base font-light font-['Lexend'] leading-4">Inch</span>
-                        </div>
-                        <div data-layer="Order number"
-                            class="OrderNumber left-[93.86px] top-[233.56px] absolute justify-start text-zinc-800 text-lg font-light font-['Lexend'] leading-5">
-                            Order number</div>
-                        <div data-layer="Order placed on"
-                            class="OrderPlacedOn left-[349.44px] top-[233.56px] absolute justify-start text-zinc-800 text-lg font-light font-['Lexend'] leading-5 tracking-tight">
-                            Order placed on</div>
-                        <div data-layer="ORD 784038"
-                            class="Ord784038 left-[99.86px] top-[258.56px] absolute justify-start text-zinc-800 text-lg font-medium font-['Lexend'] leading-5">
-                            ORD 784038</div>
-                        <div data-layer="Expected Delivery: 30 Dec 2025"
-                            class="ExpectedDelivery30Dec2025 left-[271.86px] top-[155.26px] absolute justify-start">
-                            <span
-                                class="text-zinc-800 text-base font-light font-['Lexend'] leading-4 tracking-tight">Expected
-                                Delivery:</span><span
-                                class="text-green-900 text-base font-medium font-['Lexend'] leading-4 tracking-tight">
-                            </span><span
-                                class="text-green-900 text-base font-semibold font-['Lexend'] leading-4 tracking-tight">30
-                                Dec 2025</span></div>
-                        <div data-layer="26 December 2025"
-                            class="December2025 left-[336.33px] top-[258.56px] absolute justify-start text-zinc-800 text-lg font-medium font-['Lexend'] leading-5">
-                            26 December 2025</div>
-                        <div data-layer="Rectangle 30 copy 32"
-                            class="Rectangle30Copy32 w-[45%] h-12 left-[22.99px] top-[322.99px] absolute bg-[#fff] border-[#2A552F] border-1 overflow-hidden rounded-lg ">
-                            <div
-                                class=" text-2xl font-normal font-['Cal_Sans'] leading-6 tracking-wide flex items-center justify-center h-full">
-                                Download invoice
-                            </div>
-                        </div>
-                        <div data-layer="Rectangle 30 copy 32"
-                            class="Rectangle30Copy32 w-[48%] h-12 right-[0px] top-[322.99px] absolute bg-[#2A552F] overflow-hidden rounded-lg mr-1">
-                            <div
-                                class="text-amber-200 text-2xl font-normal font-['Cal_Sans'] leading-6 tracking-wide flex items-center justify-center h-full">
-                                Return/Exchange
-                            </div>
-                        </div>
-                           <div data-layer="Qty: 1"
-                            class="Qty1 left-[208.86px] top-[82.26px] absolute justify-start text-neutral-500 text-base font-semibold font-['Lexend'] leading-4">
-                            Qty: 1</div>
-                        <div data-layer="₹44,480" class="44480 left-[209.52px] top-[108.12px] absolute justify-start">
-                            <span class="text-green-900 text-2xl font-normal font-['Inter'] leading-6">₹</span><span
-                                class="text-green-900 text-2xl font-bold font-['Cal_Sans'] leading-6">44,480</span>
-                        </div>
-                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor"
-                            class="VectorSmartObject w-7 h-7 left-[225px] top-[152px] absolute  size-10">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 0 0-3.213-9.193 2.056 2.056 0 0 0-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 0 0-10.026 0 1.106 1.106 0 0 0-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
-                        </svg>
-                         <div data-layer="Ortho Latex Mattress"
-                            class="OrthoLatexMattress left-[207.80px] top-[21.46px] absolute justify-start text-zinc-800 text-2xl font-semibold font-['Lexend'] leading-6 tracking-tight">
-                            Ortho Latex Mattress</div>
-                        <div data-layer="Clipping - Rectangle 37"
-                            class="ClippingRectangle37 w-44 h-40 left-[14px] top-[25px] absolute">
-                            <div data-layer="Rectangle 37"
-                                class="Rectangle37 size-40 left-[10.98px] top-0 absolute bg-neutral-400 outline outline-1 outline-offset-[-0.50px]">
-                            </div>
-                            <div data-layer="Mask - Rectangle 37"
-                                class="MaskRectangle37 size-40 left-[10.98px] top-0 absolute bg-neutral-400 outline outline-1 outline-offset-[-0.50px]">
-                            </div>
-                            <img data-layer="Gemini_Generated_Image_n1answn1answn1an"
-                                class="GeminiGeneratedImageN1answn1answn1an w-44 h-40 left-0 top-0 absolute overflow-hidden rounded-lg"
-                                src="Orthor.png" />
-                        </div>
-                    </div>
+                    <button
+                        class="min-h-12 rounded-lg border border-[#2A552F] bg-white text-[#2A552F] text-lg font-medium">
+                        Download invoice
+                    </button>
 
+                    <button
+                        class="min-h-12 rounded-lg bg-[#DC0202] text-white text-lg font-medium">
+                        Return/Exchange
+                    </button>
 
-                    <div data-layer="Group 7"
-                        class="Group7 w-[100%] h-96 shadow-sm relative rounded-lg overflow-hidden mb-3 border-[#DC0202] border-1">
-                        <div data-layer="Rectangle 43"
-                            class="Rectangle43 w-[100%] h-96 left-0 top-0 absolute bg-white "></div>
-                        <div data-layer="Rectangle 43 copy 7"
-                            class="Rectangle43Copy7 w-64 h-24 left-[15px] top-[205px] absolute bg-green-100 rounded-lg overflow-hidden">
-                        </div>
-                        <div data-layer="Rectangle 43 copy 9"
-                            class="Rectangle43Copy9 w-85 h-10 left-[203px] top-[146px] absolute rounded-sm  shadow-sm bg-[#F5F2E1]">
-                        </div>
-                        <div data-layer="Rectangle 43 copy 8"
-                            class="Rectangle43Copy8 w-64 h-24 left-[548px] top-[303px] absolute origin-top-left rotate-180 bg-green-100 rounded-lg overflow-hidden">
-                        </div>
-                        <div data-layer="Single, 72x72 Inch, 6 Inch"
-                            class="Single72x72Inch6Inch left-[208.86px] top-[55.26px] absolute justify-start"><span
-                                class="text-neutral-500 text-base font-semibold font-['Lexend'] leading-4">Single, 72x72
-                                Inch</span><span
-                                class="text-neutral-500 text-base font-light font-['Lexend'] leading-4">, </span><span
-                                class="text-neutral-500 text-base font-semibold font-['Lexend'] leading-4">6
-                            </span><span
-                                class="text-neutral-500 text-base font-light font-['Lexend'] leading-4">Inch</span>
-                        </div>
-                        <div data-layer="Order number"
-                            class="OrderNumber left-[93.86px] top-[233.56px] absolute justify-start text-zinc-800 text-lg font-light font-['Lexend'] leading-5">
-                            Order number</div>
-                        <div data-layer="Order placed on"
-                            class="OrderPlacedOn left-[349.44px] top-[233.56px] absolute justify-start text-zinc-800 text-lg font-light font-['Lexend'] leading-5 tracking-tight">
-                            Order placed on</div>
-                        <div data-layer="ORD 784038"
-                            class="Ord784038 left-[99.86px] top-[258.56px] absolute justify-start text-zinc-800 text-lg font-medium font-['Lexend'] leading-5">
-                            ORD 784038</div>
-                        <div data-layer="Expected Delivery: 30 Dec 2025"
-                            class="ExpectedDelivery30Dec2025 left-[271.86px] top-[155.26px] absolute justify-start">
-                            <span
-                                class="text-zinc-800 text-base font-light font-['Lexend'] leading-4 tracking-tight">Expected
-                                Delivery:</span><span
-                                class="text-green-900 text-base font-medium font-['Lexend'] leading-4 tracking-tight">
-                            </span><span
-                                class="text-green-900 text-base font-semibold font-['Lexend'] leading-4 tracking-tight">30
-                                Dec 2025</span></div>
-                        <div data-layer="26 December 2025"
-                            class="December2025 left-[336.33px] top-[258.56px] absolute justify-start text-zinc-800 text-lg font-medium font-['Lexend'] leading-5">
-                            26 December 2025</div>
-                        <div data-layer="Rectangle 30 copy 32"
-                            class="Rectangle30Copy32 w-[45%] h-12 left-[22.99px] top-[322.99px] absolute bg-[#fff] border-[#2A552F] border-1 overflow-hidden rounded-lg ">
-                            <div
-                                class=" text-2xl font-normal font-['Cal_Sans'] leading-6 tracking-wide flex items-center justify-center h-full">
-                                Download invoice
-                            </div>
-                        </div>
-                        <div data-layer="Rectangle 30 copy 32"
-                            class="Rectangle30Copy32 w-[48%] h-12 right-[0px] top-[322.99px] absolute bg-[#DC0202] overflow-hidden rounded-lg mr-1">
-                            <div
-                                class=" text-2xl font-normal font-['Cal_Sans'] leading-6 tracking-wide flex items-center justify-center h-full text-[#fff]">
-                                Return/Exchange
-                            </div>
-                        </div>
-                        <div data-layer="Qty: 1"
-                            class="Qty1 left-[208.86px] top-[82.26px] absolute justify-start text-neutral-500 text-base font-semibold font-['Lexend'] leading-4">
-                            Qty: 1</div>
-                        <div data-layer="₹44,480" class="44480 left-[209.52px] top-[108.12px] absolute justify-start">
-                            <span class="text-green-900 text-2xl font-normal font-['Inter'] leading-6">₹</span><span
-                                class="text-green-900 text-2xl font-bold font-['Cal_Sans'] leading-6">44,480</span>
-                        </div>
-
-
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor"
-                            class="VectorSmartObject w-7 h-7 left-[225px] top-[152px] absolute  size-10">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 0 0-3.213-9.193 2.056 2.056 0 0 0-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 0 0-10.026 0 1.106 1.106 0 0 0-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
-                        </svg>
-
-
-
-                        <div data-layer="Ortho Latex Mattress"
-                            class="OrthoLatexMattress left-[207.80px] top-[21.46px] absolute justify-start text-zinc-800 text-2xl font-semibold font-['Lexend'] leading-6 tracking-tight">
-                            Ortho Latex Mattress</div>
-                        <div data-layer="Clipping - Rectangle 37"
-                            class="ClippingRectangle37 w-44 h-40 left-[14px] top-[25px] absolute">
-                            <div data-layer="Rectangle 37"
-                                class="Rectangle37 size-40 left-[10.98px] top-0 absolute bg-neutral-400 outline outline-1 outline-offset-[-0.50px]">
-                            </div>
-                            <div data-layer="Mask - Rectangle 37"
-                                class="MaskRectangle37 size-40 left-[10.98px] top-0 absolute bg-neutral-400 outline outline-1 outline-offset-[-0.50px]">
-                            </div>
-                            <img data-layer="Gemini_Generated_Image_n1answn1answn1an"
-                                class="GeminiGeneratedImageN1answn1answn1an w-44 h-40 left-0 top-0 absolute overflow-hidden rounded-lg"
-                                src="Orthor.png" />
-                        </div>
-                    </div>
                 </div>
-                <div class="w-[32%]">
-                    <div data-layer="Group 8" class="Group8 w-80 h-[461px] relative overflow-hidden rounded-lg">
-                        <div data-layer="Rectangle 43 copy 6"
-                            class="Rectangle43Copy6 w-80 h-[461px] left-0 top-0 absolute bg-white outline outline-1 outline-offset-[-0.50px] outline-neutral-400">
-                        </div>
-                        <div data-layer="Rectangle 30 copy 30"
-                            class="Rectangle30Copy30 w-48 h-12 left-[71.98px] top-[307.99px] absolute bg-green-900 outline outline-1 outline-offset-[-0.50px]">
-                        </div>
-                        <div data-layer="Call us"
-                            class="CallUs left-[140.27px] top-[320.74px] absolute justify-start text-amber-200 text-2xl font-normal font-['Cal_Sans'] leading-6 tracking-wide">
-                            Call us</div>
-                        <div data-layer="Rectangle 30 copy 31"
-                            class="Rectangle30Copy31 w-48 h-12 left-[71.98px] top-[366.99px] absolute bg-green-900 outline outline-1 outline-offset-[-0.50px]">
-                        </div>
-                        <div data-layer="Email us"
-                            class="EmailUs left-[139.27px] top-[379.74px] absolute justify-start text-amber-200 text-2xl font-normal font-['Cal_Sans'] leading-6 tracking-wide">
-                            Email us</div>
+
+            </div>
+
+        </main>
 
 
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                            class="size-6 Email left-[96px] top-[383px] absolute  size-6 PhoneReceiverSilhouette w-4 h-5 text-[#86BD8D]">
+        <!-- ================= HELP CARD ================= -->
+        <div class="w-full">
+
+            <div class="bg-white rounded-lg shadow-sm border border-neutral-200 p-6 min-h-[461px] flex flex-col items-center justify-center text-center">
+
+                <img
+                    src="msg.png"
+                    alt="Message"
+                    class="w-24 h-20 sm:w-28 sm:h-24 object-contain mb-6">
+
+                <h2 class="text-green-900 text-xl sm:text-2xl font-semibold font-['Lexend'] leading-7">
+                    Need help choosing<br class="hidden sm:block">
+                    the right mattress?
+                </h2>
+
+                <p class="text-zinc-500 text-base sm:text-lg font-normal font-['Lexend'] leading-6 mt-5">
+                    Get in touch with our<br class="hidden sm:block">
+                    sleep experts
+                </p>
+
+                <div class="w-full max-w-[200px] space-y-3 mt-8">
+
+                    <a href="tel:+910000000000"
+                       class="w-full h-12 bg-green-900 rounded-lg flex items-center justify-center gap-3 text-amber-200 text-lg font-medium">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             fill="none"
+                             viewBox="0 0 24 24"
+                             stroke-width="1.5"
+                             stroke="currentColor"
+                             class="w-5 h-5 text-[#86BD8D]">
                             <path
-                                d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" />
-                            <path
-                                d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
-                        </svg>
-
-
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
                                 d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
                         </svg>
 
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                            class="size-6 PhoneReceiverSilhouette w-4 h-5 left-[99px] top-[323px] absolute text-[#86BD8D]">
-                            <path fill-rule="evenodd"
-                                d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z"
-                                clip-rule="evenodd" />
+                        Call us
+                    </a>
+
+                    <a href="mailto:support@example.com"
+                       class="w-full h-12 bg-green-900 rounded-lg flex items-center justify-center gap-3 text-amber-200 text-lg font-medium">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             fill="none"
+                             viewBox="0 0 24 24"
+                             stroke-width="1.5"
+                             stroke="currentColor"
+                             class="w-5 h-5 text-[#86BD8D]">
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25H4.5a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5H4.5a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0l-7.5-4.615A2.25 2.25 0 0 1 2.25 6.993V6.75" />
                         </svg>
 
+                        Email us
+                    </a>
 
-                        <img data-layer="phone-receiver-silhouette" src="https://placehold.co/18x20" />
-                        <div data-layer="Need help choosing the right mattress?"
-                            class="NeedHelpChoosingTheRightMattress left-[46.09px] top-[170.46px] absolute text-center justify-start text-green-900 text-2xl font-semibold font-['Lexend'] leading-7">
-                            Need help choosing<br />the right mattress?</div>
-                        <img data-layer="Layer 50" class="Layer50 w-28 h-24 left-[108px] top-[43px] absolute"
-                            src="msg.png" />
-                        <div data-layer="Get in touch with our sleep experts"
-                            class="GetInTouchWithOurSleepExperts left-[73.55px] top-[238.56px] absolute text-center justify-start text-zinc-500 text-lg font-normal font-['Lexend'] leading-6">
-                            Get in touch with our<br />sleep experts</div>
-                    </div>
                 </div>
+
             </div>
+
         </div>
+
+    </div>
+</div>
+
 
 
     </div>
