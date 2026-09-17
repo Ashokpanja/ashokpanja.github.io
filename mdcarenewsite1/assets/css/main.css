@@ -585,6 +585,12 @@ a:hover {
   --nav-color: #3a3939;
   --nav-hover-color: #00aeef;
 }
+.logo-normal{ display: none;}
+.logo-w{ display: none;}
+.index-page .logo-w{ display: block;}
+.index-page.scrolled .logo-normal{ display: block;}
+.index-page.scrolled .logo-w { display: none;}
+
 .navmenu .dropdown ul a:hover, .navmenu .dropdown ul .active:hover, .navmenu .dropdown ul li:hover>a{  color: var(--text-secondary) !important;}
 /*--------------------------------------------------------------
 # Navigation Menu
