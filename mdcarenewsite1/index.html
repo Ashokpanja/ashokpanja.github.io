@@ -174,12 +174,12 @@
         data-bs-pause="false">
 
         <!-- Carousel Indicators -->
-        <div class="carousel-indicators">
+        <!-- <div class="carousel-indicators">
           <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true"
             aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
           <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
+        </div> -->
 
         <!-- Carousel Items -->
         <div class="carousel-inner">
@@ -189,16 +189,16 @@
             <img src="assets/img/slider/hero-bg2.png" class="slider-home-bg" alt="Welcome to Our Website">
 
             <div class="carousel-caption">
-              <div class="container">
+              <div class="container-fluid">
                 <div class="row align-items-center">
 
-                  <div class="col-lg-10" data-aos="fade-in" data-aos-delay="500">
+                  <div class="col-lg-12" data-aos="fade-in" data-aos-delay="500" style="    background: rgb(0 0 0 / 40%);   padding-bottom: 4%; padding-top: 4%; padding-left: 8%;">
                     <div class="hero-badges">
                       <span class="badge-pill">2025 MIPS Certified</span>
                       <span class="badge-pill">ONC Certified HIT</span>
                       <span class="badge-pill">HIPAA Compliant</span>
                     </div>
-                    <h1>Simplifying your practice, one visit at a time.</h1>
+                    <h1 style="font-size: 2.3rem;">Simplifying your practice, one visit at a time.</h1>
                     <p class="lead-text mt-3 mb-4">MDCare is a web-based, ONC-certified EMR and practice management
                       system that streamlines outpatient workflows — EMR, billing, AR, labs and eRx, all in a single
                       platform.</p>
@@ -317,14 +317,14 @@
     </section>
     <!-- /Hero Section -->
     <!-- About Section -->
-    <section id="about" class="about section">
+    <section id="about" class="about section ">
 
       <div class="container">
 
         <div class="row align-items-center gy-5">
 
           <!-- Left Content -->
-          <div class="col-lg-5">
+          <div class="col-lg-6">
             <div class="about-content">
 
               <span class="about-label">
@@ -333,56 +333,57 @@
               </span>
 
               <h2>
-                Building a better
-                <span class="text-primary">digital future</span>
-                together.
+               Technology That Connects
+                <span class="text-primary" style="    text-transform: initial;">Every Part of your Practice</span>
+               
               </h2>
 
               <p>
-                We create innovative, reliable, and user-friendly solutions
-                that help businesses grow, simplify their workflow, and
-                achieve lasting success.
+              MDCare is a comprehensive healthcare technology platform designed to support the clinical, administrative, and business needs of medical practices.
+
               </p>
 
               <p>
-                Our focus is on combining modern technology with practical
-                solutions to deliver meaningful results for every client.
+               
+From EMR and practice management to billing, revenue cycle, labs, eRx, interoperability, and more MDCare brings essential workflows together in one connected platform.
+
               </p>
 
-              <a href="#" class="about-btn">
-                Discover More
-                <i class="bi bi-arrow-up-right"></i>
-              </a>
-
+              
+<a href="#" class="btn-primary btn ">read More</a>
             </div>
           </div>
-
-          <!-- Right Content -->
-          <div class="col-lg-7">
-
-            <div class="about-right">
-
-              <!-- Experience Card -->
-              <div class="about-highlight">
+<div class="col-lg-6">
+       <div class="about-highlight">
                 <div class="highlight-icon">
                   <i class="bi bi-award"></i>
                 </div>
 
                 <div>
-                  <h3>Trusted Experience</h3>
+                  <h3>Trusted Technology& Certifications</h3>
                   <p>
-                    Delivering dependable solutions with a commitment
-                    to quality, innovation, and customer satisfaction.
+                  MDCARE combines certified health IT and integrated healthcare technologies to support secure, connected, and efficient practice workflows.
                   </p>
                 </div>
 
                 <i class="bi bi-arrow-up-right highlight-arrow"></i>
               </div>
 
+</div>
+          <!-- Right Content -->
+          <div class="col-lg-12">
+
+            <div class="about-right">
+
+             
               <!-- Feature Cards -->
               <div class="row g-4">
-
-                <div class="col-md-6">
+<div class="container section-title">
+        <span class="about-label"> <i class="bi bi-heart-pulse"></i> Trusted  </span>
+        <h2>Technology & <span class="text-primary"> Certifications</span> </h2>
+        <p>MDCARE combines certified health IT and integrated healthcare technologies to support secure, connected, and efficient practice workflows.</p>
+      </div>
+                <div class="col-md-3">
                   <div class="about-card">
                     <h3 class="text-center fw-bold">
                       MU3 Certified
@@ -390,21 +391,28 @@
                     <div class="about-card-icon">
                       <!-- <i class="bi bi-lightbulb"></i> -->
                       <img src="assets/img/onc.png" class="img-fluid 100" />
+                     
                     </div>
+                     <p>
+                        ONC certified health IT designed to support modern healthcare workflows and interoperability.
+                      </p>
                   </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-3">
                   <div class="about-card">
                     <h3 class="text-center fw-bold">
-                      AI Based Coding
+                     AI-Powered Coding
                     </h3>
                     <div class="about-card-icon">
                       <!-- <i class="bi bi-lightbulb"></i> -->
                       <img src="assets/img/class-ai.png" class="img-fluid 100" />
                     </div>
+                    <p>
+                      Intelligent coding assistance designed to improve coding efficiency and streamline practice workflows.
+                    </p>
                   </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-3">
                   <div class="about-card">
                     <h3 class="text-center fw-bold">
                       Integrated HIPAA Email
@@ -413,9 +421,12 @@
                       <!-- <i class="bi bi-lightbulb"></i> -->
                       <img src="assets/img/class-3.png" class="img-fluid 100" />
                     </div>
+                    <p>
+                      Secure email communication designed for healthcare workflows and protected information exchange
+                    </p>
                   </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-3">
                   <div class="about-card">
                     <h3 class="text-center fw-bold">
                       Integrated Faxtone
@@ -424,6 +435,9 @@
                       <!-- <i class="bi bi-lightbulb"></i> -->
                       <img src="assets/img/class-aibackup.png" class="img-fluid 100" />
                     </div>
+                    <p>
+                      Secure digital faxing integrated into your workflows for convenient document exchange.
+                    </p>
                   </div>
                 </div>
 
@@ -442,14 +456,15 @@
 
 
 
-    <!-- Services Section -->
+    <!-- way mdcare Section -->
     <section id="services" class="services section">
 
       <!-- Section Title -->
       <div class="container section-title">
-        <span class="about-label"> <i class="bi bi-heart-pulse"></i> Why </span>
-        <h2>MDCARE</h2>
-        <p>Built for healthcare professionals. Trusted by practices.</p>
+        <span class="about-label"> <i class="bi bi-heart-pulse"></i> Why MDCARE </span>
+        <h2>Simplifying Healthcare</h2>
+        <h2 class="text-primary">Empowering Practices</h2>
+        <p>A modern, all-in-one platform designed to help your practice work smarter, stay compliant, and focus on what matters most – your patients.</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -458,11 +473,10 @@
 
           <div class="col-lg-6 ">
             <div class="service-item d-flex">
-              <div class="icon flex-shrink-0"><i class="bi bi-briefcase"></i></div>
+              <div class="icon flex-shrink-0"><i class="bi bi-laptop"></i></div>
               <div>
-                <h4 class="title"><a href="#" class="stretched-link">Web & Device Agnostic</a></h4>
-                <p class="description">Lorem ipsum is a scrambled, nonsensical passage of pseudo-Latin used
-                  as placeholder or dummy text in graphic design, publishing, and web development.</p>
+                <h4 class="title"><a href="#" class="stretched-link">All-in-One Platform</a></h4>
+                <p class="description">EMR, billing, AR, labs, eRx, and practice management in one connected system</p>
               </div>
             </div>
           </div>
@@ -470,12 +484,11 @@
 
           <div class="col-lg-6 ">
             <div class="service-item d-flex">
-              <div class="icon flex-shrink-0"><i class="bi bi-card-checklist"></i></div>
+              <div class="icon flex-shrink-0"><i class="bi bi-gear"></i></div>
               <div>
-                <h4 class="title"><a href="#" class="stretched-link">Dolor Sitema</a></h4>
+                <h4 class="title"><a href="#" class="stretched-link">Flexible & Customizable</a></h4>
                 <p class="description">
-                  Lorem ipsum is a scrambled, nonsensical passage of pseudo-Latin used universally as placeholder or
-                  dummy text in graphic design, publishing, and web development.
+                 Adapt workflows and functionality to your specialty and practice needs
                 </p>
               </div>
             </div>
@@ -483,44 +496,40 @@
 
           <div class="col-lg-6 ">
             <div class="service-item d-flex">
-              <div class="icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
+              <div class="icon flex-shrink-0"><i class="bi  bi-pc-display"></i></div>
               <div>
-                <h4 class="title"><a href="#" class="stretched-link">Sed ut perspiciatis</a></h4>
-                <p class="description">Lorem ipsum is a scrambled, nonsensical passage of pseudo-Latin used universally
-                  as placeholder or dummy text in graphic design, publishing, and web development.</p>
+                <h4 class="title"><a href="#" class="stretched-link">Anytime, Anywhere Access</a></h4>
+                <p class="description">A web-based platform designed for seamless access across devices</p>
               </div>
             </div>
           </div><!-- End Service Item -->
 
           <div class="col-lg-6 ">
             <div class="service-item d-flex">
-              <div class="icon flex-shrink-0"><i class="bi bi-binoculars"></i></div>
+              <div class="icon flex-shrink-0"><i class="bi bi-share"></i></div>
               <div>
-                <h4 class="title"><a href="#" class="stretched-link">Magni Dolores</a></h4>
-                <p class="description">Lorem ipsum is a scrambled, nonsensical passage of pseudo-Latin used universally
-                  as placeholder or dummy text in graphic design, publishing, and web development.</p>
+                <h4 class="title"><a href="#" class="stretched-link">Connected & Interoperable</a></h4>
+                <p class="description">Built around healthcare standards including HL7, FHIR, DICOM, and more</p>
               </div>
             </div>
           </div><!-- End Service Item -->
 
           <div class="col-lg-6 ">
             <div class="service-item d-flex">
-              <div class="icon flex-shrink-0"><i class="bi bi-brightness-high"></i></div>
+              <div class="icon flex-shrink-0"><i class="bi bi-shield-check"></i></div>
               <div>
-                <h4 class="title"><a href="#" class="stretched-link">Nemo Enim</a></h4>
-                <p class="description">Lorem ipsum is a scrambled, nonsensical passage of pseudo-Latin used universally
-                  as placeholder or dummy text in graphic design, publishing, and web development.</p>
+                <h4 class="title"><a href="#" class="stretched-link">Secure & Compliance-Ready</a></h4>
+                <p class="description">Designed with healthcare security, privacy, and regulatory requirements in mind</p>
               </div>
             </div>
           </div><!-- End Service Item -->
 
           <div class="col-lg-6 ">
             <div class="service-item d-flex">
-              <div class="icon flex-shrink-0"><i class="bi bi-calendar4-week"></i></div>
+              <div class="icon flex-shrink-0"><i class="bi bi bi-graph-up-arrow"></i></div>
               <div>
-                <h4 class="title"><a href="#" class="stretched-link">Eiusmod Tempor</a></h4>
-                <p class="description">Lorem ipsum is a scrambled, nonsensical passage of pseudo-Latin used universally
-                  as placeholder or dummy text in graphic design, publishing, and web development.</p>
+                <h4 class="title"><a href="#" class="stretched-link">Built to Scale</a></h4>
+                <p class="description">From small practices to multi-provider organizations, MDCARE grows with your practice.</p>
               </div>
             </div>
           </div><!-- End Service Item -->
@@ -528,25 +537,30 @@
         </div>
 
       </div>
-      <!-- Call To Action Section -->
+      <!-- Take Advantage with MDCARE AI Section -->
       <section id="call-to-action" class="call-to-action section dark-background mt-5">
 
-        <img src="assets/img/cta-bg.jpg" alt="">
+        <img src="assets/img/aibg-home2.png" alt="">
 
         <div class="container">
           <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
             <div class="col-xl-10">
-              <div class="text-center">
-                <h3>Use MDCARE EMR for 6 months absolutely free!</h3>
+              <div class="section-title text-center"> <span class="about-label"> <i class="bi bi-grid-3x3-gap"></i> Take Advantage </span>
 
-                <a class="cta-btn" href="#"> Contact Us </a>
+                <h2>
+                with MDCARE AI
+              </h2>
+                <p> Lorem ipsum is a scrambled, nonsensical passage of pseudo-Latin used universally
+                  as placeholder or dummy text in graphic design, publishing, and web development. </p>
               </div>
+          
             </div>
           </div>
         </div>
 
-      </section><!-- /Call To Action Section -->
-    </section><!-- /Services Section -->
+      </section><!-- /Take Advantage with MDCARE AI Section -->
+    </section>
+    <!-- /way mdcare Section -->
     <section class="mdcare-modules section">
       <div class="container">
 
@@ -560,6 +574,7 @@
           <p>
             Everything your practice needs, connected in one intelligent platform.
           </p>
+          
         </div>
 
         <div class="modules-grid">
@@ -629,8 +644,8 @@
       </div>
     </section>
 
-    <!-- Take Advantage Section -->
-    <section class="Take-Advantage ps-lg-5">
+   
+    <!-- <section class="Take-Advantage ps-lg-5">
       <div class="container-fluid">
         <div class="row gy-4">
           <div class="col-lg-6">
@@ -691,7 +706,7 @@
 
 
 
-              <!-- Copy -->
+             
 
               <h1 class="pt-5">Reimagine your practice with smart, integrated EMR</h1>
               <p class="lead">
@@ -724,9 +739,27 @@
           </div>
         </div>
       </div>
-    </section><!-- /Faq Section -->
+    </section> -->
+  
 
+ <!-- Call To Action Section -->
+      <section id="call-to-action" class="call-to-action section dark-background mt-5">
 
+        <img src="assets/img/cta-bg.jpg" alt="">
+
+        <div class="container">
+          <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
+            <div class="col-xl-10">
+              <div class="text-center">
+                <h3>Use MDCARE EMR for 6 months absolutely free!</h3>
+
+                <a class="cta-btn" href="#"> Contact Us </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section><!-- /Call To Action Section -->
 
 
 
