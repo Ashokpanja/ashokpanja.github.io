@@ -431,7 +431,7 @@ body {
   color: var(--default-color);
   background-color: #f5f5f5;
   font-family: var(--default-font);
-      text-transform: capitalize;
+     
 }
 
 a {
@@ -1265,7 +1265,7 @@ section,
   padding-right: 35px;
 }
 
-.about-label {
+.about-label { font-weight: bold;
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -1274,8 +1274,8 @@ section,
   border-radius: 50px;
   background: #eaf2ff;
   color: #2563eb;
-  font-size: 13px;
-  font-weight: 600;
+  font-size: 14px;
+
   letter-spacing: 0.5px;
 }
 
@@ -1285,7 +1285,7 @@ section,
 
 .about-content h2 {
   margin-bottom: 24px;
-  font-size: 34px;
+  font-size: 30px;
   line-height: 1.2;
   font-weight: 700;
   color: var(--secondary-color);
@@ -1352,7 +1352,7 @@ section,
   background: #172033;
   overflow: hidden;
 }
-
+/* 
 .about-highlight::after {
   content: "";
   position: absolute;
@@ -1362,25 +1362,25 @@ section,
   top: -80px;
   border-radius: 50%;
   border: 1px solid rgba(255, 255, 255, 0.12);
-}
+} */
 
 .highlight-icon {
-  flex-shrink: 0;
-  width: 65px;
-  height: 65px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 14px;
-  background: #2563eb;
-  color: #ffffff;
-  font-size: 28px;
+      flex-shrink: 0;
+    width: 125px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 70px;
 }
 
 .about-highlight h3 {
   margin: 0 0 8px;
   color: #ffffff;
-  font-size: 21px;
+  font-size: 18px;
   font-weight: 600;
 }
 
@@ -1605,7 +1605,7 @@ section,
 
 .services .service-item .icon i {
   color: color-mix(in srgb, var(--default-color), transparent 30%);
-  font-size: 56px;
+  font-size: 35px;
   transition: ease-in-out 0.3s;
   z-index: 2;
   position: relative;
@@ -1629,8 +1629,8 @@ section,
   );
   border-radius: 50px;
   z-index: 1;
-  bottom: -15px;
-  right: -15px;
+  bottom: -5px;
+  right: -5px;
   transition: 0.3s;
 }
 :root {
@@ -3894,7 +3894,37 @@ section,
   }
   /* Reimagine your section End */
 
+.home-slider-s-ul{
+  width: 100%;
+}
+  .home-slider-s-ul li {  list-style: none; float: left; font-size: 16px; }
+.home-slider-s-ul li {
+  position: relative;
+  display: inline-block;
+  padding: 0px 12px;
+}
+.home-slider-s-ul li::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 14px;          /* length of the small vertical line */
+  background-color: #ccc; /* line color */
+}
 
+.home-slider-s-ul li:last-child::after {
+  display: none;          /* remove line after the last item */
+}
+.home-slider-s-ul {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    padding: 0px;
+    /* margin: 0px; */
+}
 
 
 
