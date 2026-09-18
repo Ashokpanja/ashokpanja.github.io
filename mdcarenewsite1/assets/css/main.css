@@ -585,11 +585,11 @@ a:hover {
   --nav-color: #3a3939;
   --nav-hover-color: #00aeef;
 }
-.logo-normal{ display: none;}
+/* .logo-normal{ display: none;}
 .logo-w{ display: none;}
 .index-page .logo-w{ display: block;}
 .index-page.scrolled .logo-normal{ display: block;}
-.index-page.scrolled .logo-w { display: none;}
+.index-page.scrolled .logo-w { display: none;} */
 
 .navmenu .dropdown ul a:hover, .navmenu .dropdown ul .active:hover, .navmenu .dropdown ul li:hover>a{  color: var(--text-secondary) !important;}
 /*--------------------------------------------------------------
@@ -3409,7 +3409,7 @@ section,
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.40);
+  background: rgba(0, 0, 0, 0.4);
   z-index: 1;
 }
 .hero-badges .badge-pill {
