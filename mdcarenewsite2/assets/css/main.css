@@ -503,12 +503,12 @@ a:hover {
 --------------------------------------------------------------*/
 .header {
   color: var(--default-color);
-  background-color: rgb(225,225,225,0.4);
+  /* background-color: rgb(225,225,225,0.4); */
   padding: 20px 0;
   transition: all 0.5s;
   z-index: 997;
   /* background: rgb(225,225,225,.8); */
-      box-shadow: 0px 0px 5px rgba(0, 0, 0, .5) !important;
+      /* box-shadow: 0px 0px 5px rgba(0, 0, 0, .5) !important; */
 }
 .scrolled .header{ background: #fff;}
 .header .logo {
@@ -4113,7 +4113,7 @@ section,
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(252, 249, 249, 0.2);
     z-index: 1;
 }
 .hero-content {
@@ -4129,12 +4129,12 @@ section,
 );  */
 height: 100vh;
  /* background: linear-gradient(180deg, #def0fd 30%, #bfe4fe 100%, #d9eefd 40%);  */
-    padding:7% 3%;
+    padding:5% 5% 0% 1%;
 
 }
 .hero-badges {
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
 }
 .hero-badges span{ display: flex; align-items: center; justify-content: center;}
 .badge-pill i {
