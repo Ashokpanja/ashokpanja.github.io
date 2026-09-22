@@ -4273,17 +4273,36 @@ height: 100vh;
   opacity: 1;
 }
 
-/* =========================================
-  MDCARE Modules Section - DESIGN V3
-========================================= */
-
-
-
-
+/* featurest css */
 
 /* =========================================
-   HEADING
+   MDCARE Modules Section — DESIGN V4
+   "Chart list" concept: two color-coded record
+   lists (Advantages in blue, Core Modules in teal)
+   instead of a grid of identical SaaS cards.
 ========================================= */
+
+.mdcare-modules-v3 {
+  --ink: #0d2438;
+  --slate: #5b6c80;
+  --mist: #f3f7fa;
+  --line: #dde5ed;
+  --paper: #ffffff;
+
+  --advantage: #1475b8;
+  --advantage-soft: #e7f2fa;
+  --module:  #292966;
+  --module-soft: #e5f6f3;
+
+  background: var(--mist);
+  padding: 100px 40px;
+}
+
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
 
 
 
@@ -4293,81 +4312,160 @@ height: 100vh;
 }
 
 
-
-
-
 .modules-v3-heading p,
 .section-title > p {
   margin: 0;
-
-  color: #718398;
-
+  color: var(--slate);
   font-size: 16px;
   line-height: 1.7;
 }
 
-/* Small eyebrow label sitting above the grid — this used to be a stray
-   <h2>MDCare Advantages</h2> placed INSIDE .modules-v3-grid, which made
-   it a 10th grid item and broke the 3/2/1 column layout at every
-   breakpoint. It now sits outside the grid as its own element. */
+
+/* =========================================
+   COLUMN HEADERS
+========================================= */
+
+.mdcare-modules-v3 .row {
+  --col-accent: var(--advantage);
+  --col-accent-soft: var(--advantage-soft);
+}
+
+.mdcare-modules-v3 .col-lg-6.border-start {
+  --col-accent: var(--module);
+  
+}
+
 .modules-v3-eyebrow {
-text-align: center;
-  color: #000;
-  margin: 0 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin: 0 0 8px;
+  text-align: left;
+
+  color: var(--col-accent);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.modules-v3-eyebrow::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+  flex-shrink: 0;
+}
+
+.modules-v3-eyebrow + p {
+  margin: 0 0 28px;
+  max-width: 42ch;
+
+  color: var(--slate);
+  font-size: 14.5px;
+  line-height: 1.6;
+}
+
+.col-lg-6.border-start {
+  border-left: 1px solid var(--line) !important;
+  padding-left: 48px;
+}
+
+.col-lg-6:first-child {
+  padding-right: 48px;
 }
 
 
 /* =========================================
-   GRID
+   GRID → RECORD LIST
 ========================================= */
 
 .modules-v3-grid {
-  display: grid;
+  display: flex;
+  flex-direction: column;
 
-  grid-template-columns: repeat(1, 1fr);
-
-  gap: 20px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
 }
 
 
 /* =========================================
-   CARD
+   ROW (was CARD)
 ========================================= */
 
 .module-v3 {
   position: relative;
   display: grid;
-  grid-template-columns: 58px 1fr 30px;
+  grid-template-columns: 46px 1fr 22px;
   align-items: center;
-  column-gap: 10px;
-  padding: 10px;
-  background: #ffffff;
-  border: 1px solid #e0e8ef;
-  border-radius: 12px;
+  column-gap: 16px;
+
+  padding: 18px 22px;
+  border-bottom: 1px solid var(--line);
+
   text-decoration: none;
-  transition: box-shadow .2s ease, transform .2s ease; width: 70%;
+  background: var(--paper);
+  transition: background-color .15s ease;
 }
 
-.module-v3:hover {
-  box-shadow: 0 10px 25px rgba(16, 44, 72, .08);
-  /* transform: translateY(-2px); */
-} 
+.modules-v3-grid .module-v3:last-child {
+  border-bottom: none;
+}
+
+.module-v3:hover,
+.module-v3:focus-visible {
+  background: var(--mist);
+}
+
+.module-v3:focus-visible {
+  outline: 2px solid var(--col-accent);
+  outline-offset: -2px;
+}
 
 
-/* =========================================
-   NUMBER (kept for optional future use — add a
-   <span class="module-v3-number">01</span> in the markup
-   and restore a 42px column above to use it)
-========================================= */
+/* Left accent rule — appears on hover/focus rather than sitting on
+   every row at rest, so the list reads calm until you interact. */
+.module-v3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 14px;
+  bottom: 14px;
+  width: 3px;
+  border-radius: 0 3px 3px 0;
 
-.module-v3-number {
-  color: #b5c1cc;
+  background: var(--col-accent);
+  opacity: 0;
+  transition: opacity .15s ease;
+}
 
-  font-size: 14px;
+.module-v3:hover::before,
+.module-v3:focus-visible::before {
+  opacity: 1;
+}
 
-  font-weight: 700;
 
-  letter-spacing: 1px;
+/* Trailing chevron, drawn without touching the markup */
+.module-v3:not(.d-flex)::after {
+  content: "";
+  justify-self: end;
+  width: 7px;
+  height: 7px;
+
+  border-top: 2px solid var(--slate);
+  border-right: 2px solid var(--slate);
+  transform: rotate(45deg);
+  opacity: .3;
+
+  transition: opacity .15s ease, transform .15s ease;
+}
+
+.module-v3:hover:not(.d-flex)::after,
+.module-v3:focus-visible:not(.d-flex)::after {
+  opacity: .8;
+  transform: translateX(2px) rotate(45deg);
 }
 
 
@@ -4376,24 +4474,16 @@ text-align: center;
 ========================================= */
 
 .module-v3-icon {
-  width: 58px;
-  height: 58px;
-
+  width: 44px;
+  height: 44px;
   display: flex;
-
   align-items: center;
   justify-content: center;
 
-  border-radius: 12px;
-
-  background: #edf7fc;
-
-  border: 1px solid #d8ebf5;
-
-  color: #1475b8;
-
-  font-size: 24px;
-
+  border-radius: 10px;
+  background: var(--col-accent-soft);
+  color: var(--col-accent);
+  font-size: 19px;
   flex-shrink: 0;
 }
 
@@ -4403,101 +4493,59 @@ text-align: center;
 ========================================= */
 
 .module-v3-info h3 {
-  margin: 0 0 6px;
-
-  color: #102c48;
-
-  font-size: 17px;
-
-  font-weight: 700;
+  margin: 0;
+  color: var(--ink);
+  font-size: 15.5px;
+  font-weight: 600;
+  line-height: 1.4;
 }
 
 .module-v3-info p {
-  margin: 0;
-
-  color: #4a5b6d;
-
-  font-size: 14px;
-
+  margin: 6px 0 0;
+  color: var(--slate);
+  font-size: 13.5px;
   line-height: 1.5;
 }
 
 
 /* =========================================
-   ARROW
+   "EXPLORE" ROW — closing CTA row of each list
 ========================================= */
 
-.module-v3-link {
-  width: 30px;
-  height: 30px;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 50%;
-
-  background: #f1f5f8;
-
-  color: #7890a4;
-
-  font-size: 13px;
-
-  flex-shrink: 0;
+.module-v3.d-flex {
+  grid-template-columns: 1fr;
+  padding: 16px 22px;
+  background: var(--col-accent);
+  border-bottom: none;
 }
 
-
-/* =========================================
-   AI FEATURE CARD
-========================================= */
-/* 
-.module-v3:first-child {
-  background: #edf8fe;
-
-  border-color: #b9dced;
-} */
-
-.module-v3:first-child .module-v3-number {
-  color: #1475b8;
-}
-
-/* .module-v3:first-child .module-v3-icon {
-  background: #1475b8;
-
-  border-color: #1475b8;
-
+.module-v3.d-flex .module-v3-info h3 {
   color: #ffffff;
-} */
+  font-size: 14.5px;
+  font-weight: 600;
+}
 
-.module-v3:first-child .module-v3-info h3 {
-  color: #09639e;
+.module-v3.d-flex:hover,
+.module-v3.d-flex:focus-visible {
+  background: color-mix(in srgb, var(--col-accent) 88%, black);
+}
+
+.module-v3.d-flex::before {
+  display: none;
 }
 
 
 /* =========================================
-   BOTTOM ACCENT
+   NUMBER (unused by current markup — kept for
+   optional future use as in the original file)
 ========================================= */
 
-.module-v3::before {
-  content: "";
-
-  position: absolute;
-
-  left: 0;
-  top: 25px;
-  bottom: 25px;
-
-  width: 3px;
-
-  background: var(--bg-orange);
-
-  border-radius: 0 3px 3px 0;
+.module-v3-number {
+  color: #b5c1cc;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
-
-/* .module-v3:first-child::before {
-  background: #1475b8;
-} */
 
 
 /* =========================================
@@ -4510,15 +4558,21 @@ text-align: center;
     padding: 80px 25px;
   }
 
-  .modules-v3-heading h2,
-  .section-title h2 {
-    font-size: 34px;
+  .mdcare-modules-v3 .section-title h2 {
+    font-size: 32px;
   }
 
-  .modules-v3-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .col-lg-6.border-start {
+    border-left: none !important;
+    border-top: 1px solid var(--line);
+    padding-left: 0;
+    padding-top: 48px;
+    margin-top: 48px;
   }
 
+  .col-lg-6:first-child {
+    padding-right: 0;
+  }
 }
 
 
@@ -4529,17 +4583,15 @@ text-align: center;
 @media (max-width: 650px) {
 
   .mdcare-modules-v3 {
-    padding: 65px 18px;
+    padding: 60px 16px;
   }
 
-  .modules-v3-heading,
-  .section-title {
+  .mdcare-modules-v3 .section-title {
     margin-bottom: 40px;
   }
 
-  .modules-v3-heading h2,
-  .section-title h2 {
-    font-size: 29px;
+  .mdcare-modules-v3 .section-title h2 {
+    font-size: 27px;
   }
 
   .modules-v3-heading p,
@@ -4547,58 +4599,64 @@ text-align: center;
     font-size: 15px;
   }
 
-  .modules-v3-grid {
-    grid-template-columns: 1fr;
-  }
-
   .module-v3 {
-    grid-template-columns: 52px 1fr 28px;
-
+    grid-template-columns: 40px 1fr 18px;
     column-gap: 12px;
-
-    /* Fixed min-height was clipping cards whose description text wrapped
-       to more lines on narrow screens. */
-    min-height: auto;
-
-    padding: 20px 18px 20px 24px;
+    padding: 15px 16px;
   }
 
   .module-v3-icon {
-    width: 52px;
-    height: 52px;
-
-    font-size: 21px;
+    width: 40px;
+    height: 40px;
+    font-size: 17px;
   }
 
   .module-v3-info h3 {
-    font-size: 16px;
+    font-size: 14.5px;
   }
 
   .module-v3-info p {
-    font-size: 12px;
+    font-size: 12.5px;
   }
-
 }
 
 
 /* =========================================
-   EXTRA-NARROW PHONES
+   REDUCED MOTION
 ========================================= */
 
-@media (max-width: 360px) {
-
-  .module-v3 {
-    grid-template-columns: 46px 1fr;
+@media (prefers-reduced-motion: reduce) {
+  .module-v3,
+  .module-v3::before,
+  .module-v3::after,
+  .module-v3.d-flex {
+    transition: none;
   }
-
-  .module-v3-link {
-    display: none;
-  }
-
 }
 
-
 /* end Features section */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* MDCARE Modules Section end */
 .testimonial-item {
