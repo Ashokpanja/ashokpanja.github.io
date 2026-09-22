@@ -3412,15 +3412,15 @@ section,
   z-index: 1;
 } */
 .hero-badges .badge-pill {
-      display: flex;
+        display: flex;
     border: 1px solid rgba(255, 255, 255, .3);
     color: #000000;
     font-size: 12px;
     font-weight: 600;
     padding: 5px 14px;
     border-radius: 8px;
-    margin-right: 8px;
-    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-bottom: 35px;
     background: #f8fafc;
 }
 /* =========================================================
@@ -3894,6 +3894,7 @@ section,
 
 .home-slider-s-ul{
   width: 100%;
+  margin-bottom: 35px;
 }
   .home-slider-s-ul li {  list-style: none; float: left; font-size: 16px; font-weight: bold; }
 .home-slider-s-ul li {
