@@ -588,11 +588,11 @@ a:hover {
   --nav-color: #3a3939;
   --nav-hover-color: #00aeef;
 }
-/* .logo-normal{ display: none;}
+ .logo-normal{ display: none;}
 .logo-w{ display: none;}
 .index-page .logo-w{ display: block;}
 .index-page.scrolled .logo-normal{ display: block;}
-.index-page.scrolled .logo-w { display: none;} */
+.index-page.scrolled .logo-w { display: none;} 
 
 .navmenu .dropdown ul a:hover, .navmenu .dropdown ul .active:hover, .navmenu .dropdown ul li:hover>a{  color: var(--text-secondary) !important;}
 /*--------------------------------------------------------------
@@ -4113,7 +4113,7 @@ section,
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(252, 249, 249, 0.2);
+    /* background: rgba(252, 249, 249, 0.2); */
     z-index: 1;
 }
 .hero-content {
@@ -4129,7 +4129,7 @@ section,
 );  */
 height: 100vh;
  /* background: linear-gradient(180deg, #def0fd 30%, #bfe4fe 100%, #d9eefd 40%);  */
-    padding:5% 5% 0% 1%;
+    padding:10% 4% 0% 1%;
 
 }
 .hero-badges {
