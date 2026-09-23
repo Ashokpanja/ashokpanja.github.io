@@ -3938,7 +3938,7 @@ section,
 .mdcare-ai-section {
   width: 100%;
   padding: 0;
-  background: #dbf1ff;
+  background: #eaf7ff;
 }
 
 .mdcare-ai-container {
@@ -4348,18 +4348,18 @@ height: 100vh;
   font-weight: 700;
 }
 
-.modules-v3-eyebrow::before {
+/* .modules-v3-eyebrow::before {
   content: "";
   width: 8px;
   height: 8px;
   border-radius: 50%;
   background: currentColor;
   flex-shrink: 0;
-}
+} */
 
 .modules-v3-eyebrow + p {
   margin: 0 0 28px;
-  max-width: 42ch;
+
 
   color: var(--slate);
   font-size: 14.5px;
@@ -4402,7 +4402,7 @@ height: 100vh;
   align-items: center;
   column-gap: 16px;
 
-  padding: 18px 22px;
+  padding: 10px 22px;
   border-bottom: 1px solid var(--line);
 
   text-decoration: none;
@@ -4735,10 +4735,175 @@ height: 100vh;
 
 
 
+/* call to action section start */
+    .cta-section {
+    position: relative;
+    overflow: hidden;
+    padding: 90px 20px;
+    background:
+    radial-gradient(circle at 10% 20%, rgb(170 223 243), transparent 30%), radial-gradient(circle at 90% 80%, rgb(169 169 233), transparent 30%), linear-gradient(135deg, #f8faff 0%, #f5f3ff 50%, #eef8ff 100%);
+  }
 
+  .cta-content {
+    position: relative;
+    z-index: 2;
+ 
+    margin: auto;
+  }
 
+  .cta-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    margin-bottom: 22px;
 
+    border: 1px solid rgba(99, 102, 241, 0.15);
+    border-radius: 50px;
 
+    background: rgba(255, 255, 255, 0.7);
+    color: #4f46e5;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    box-shadow: 0 5px 20px rgba(79, 70, 229, 0.06);
+    backdrop-filter: blur(10px);
+  }
+
+  .cta-title {
+    color: #111827;
+    font-size: clamp(2.2rem, 5vw, 2rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+    margin-bottom: 20px;
+  }
+
+  .cta-description {
+    max-width: 650px;
+    margin: 0 auto 32px;
+
+    color: #64748b;
+    font-size: 18px;
+    line-height: 1.7;
+  }
+
+  .cta-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  .cta-btn-primary {
+    padding: 13px 28px;
+    border: 0;
+    border-radius: 10px;
+
+    background: #4f46e5;
+    color: #fff;
+
+    font-weight: 700;
+    text-decoration: none;
+
+    box-shadow: 0 10px 25px rgba(79, 70, 229, 0.22);
+    transition: all 0.3s ease;
+  }
+
+  .cta-btn-primary:hover {
+    background: #4338ca;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 14px 30px rgba(79, 70, 229, 0.28);
+  }
+
+  .cta-btn-outline {
+    padding: 12px 28px;
+    border: 1px solid #d9def5;
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.75);
+    color: #374151;
+
+    font-weight: 600;
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+  }
+
+  .cta-btn-outline:hover {
+    background: #fff;
+    border-color: #a5b4fc;
+    color: #4f46e5;
+    transform: translateY(-3px);
+  }
+
+  .cta-note {
+    margin-top: 22px;
+    color: #94a3b8;
+    font-size: 14px;
+  }
+
+  /* Decorative circles */
+  .cta-shape {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .cta-shape-1 {
+    width: 300px;
+    height: 300px;
+    top: -160px;
+    left: -100px;
+    background: rgba(129, 140, 248, 0.12);
+  }
+
+  .cta-shape-2 {
+    width: 400px;
+    height: 400px;
+    right: -180px;
+    bottom: -220px;
+    background: rgba(56, 189, 248, 0.10);
+  }
+
+  .cta-shape-3 {
+    width: 100px;
+    height: 100px;
+    right: 15%;
+    top: 15%;
+
+    border: 1px solid rgba(99, 102, 241, 0.12);
+    background: rgba(255, 255, 255, 0.25);
+  }
+
+  @media (max-width: 576px) {
+    .cta-section {
+      padding: 65px 18px;
+    }
+
+    .cta-title {
+      letter-spacing: -0.8px;
+    }
+
+    .cta-description {
+      font-size: 16px;
+    }
+
+    .cta-buttons {
+      flex-direction: column;
+    }
+
+    .cta-btn-primary,
+    .cta-btn-outline {
+      width: 100%;
+      max-width: 300px;
+      text-align: center;
+    }
+  }
+/* call to action section end */
 
 
 
