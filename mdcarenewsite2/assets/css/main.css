@@ -138,7 +138,7 @@
   align-items: center;
   gap: 8px;
   padding: 8px 16px;
-  margin-bottom: 22px;
+ 
   border-radius: 50px;
   background: var(--primary-soft);
   color: var(--primary-color);
@@ -317,7 +317,7 @@ h6 {
   align-items: center;
   gap: 8px;
   padding: 8px 16px;
-  margin-bottom: 22px;
+  
   border-radius: 50px;
   background: var(--primary-soft);
   color: var(--primary-color);
@@ -1279,7 +1279,7 @@ section,
   align-items: center;
   gap: 8px;
   padding: 8px 16px;
-  margin-bottom: 22px;
+ 
   border-radius: 50px;
   background: #eaf2ff;
   color: #2563eb;
@@ -1307,7 +1307,7 @@ section,
 }
 
 .about-content p {
-  margin-bottom: 18px;
+  margin-bottom: 5px;
   color: #64748b;
   font-size: 15px;
   line-height: 1.9;
@@ -1413,7 +1413,7 @@ section,
 
 .about-card {
   height: 100%;
-  padding: 30px 26px;
+  padding: 0px 26px;
   /* border: 1px solid #e2e8f0; */
   border-radius: 14px;
   /* background: #ffffff; */
@@ -3991,7 +3991,7 @@ section,
 }
 
 .mdcare-ai-content h2 {
-  margin: 0 0 25px;
+  
 
   font-size: 34px;
   line-height: 1.25;
@@ -4299,7 +4299,7 @@ height: 100vh;
   --module-soft: #e5f6f3;
 
   background: var(--mist);
-  padding: 100px 40px;
+ 
 }
 
 
@@ -4322,6 +4322,8 @@ height: 100vh;
   color: var(--slate);
   font-size: 16px;
   line-height: 1.7;
+      margin: 0 auto;
+      width: 600px;
 }
 
 
@@ -4347,7 +4349,7 @@ height: 100vh;
   margin: 0 0 8px;
   text-align: left;
 
-  color: var(--col-accent);
+  color: var(--secondary-color);
   font-size: 24px;
   font-weight: 700;
 }
@@ -4486,7 +4488,7 @@ height: 100vh;
 
   border-radius: 10px;
   background: var(--col-accent-soft);
-  color: var(--col-accent);
+  color: var(--secondary-color);
   font-size: 19px;
   flex-shrink: 0;
 }
@@ -4498,7 +4500,7 @@ height: 100vh;
 
 .module-v3-info h3 {
   margin: 0;
-  color: var(--primary-color);
+  color: var(--secondary-color);
   font-size: 15.5px;
   font-weight: 600;
   line-height: 1.4;
@@ -4519,7 +4521,7 @@ height: 100vh;
 .module-v3.d-flex {
   grid-template-columns: 1fr;
   padding: 16px 22px;
-  background: var(--col-accent);
+  background: var(--secondary-color);
   border-bottom: none;
 }
 
@@ -4910,6 +4912,32 @@ height: 100vh;
       text-align: center;
     }
   }
+  /* 1. Ensure the parent section spans full viewport width without horizontal overflow */
+.cta-section {
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+  overflow: hidden;
+  padding: 90px 20px;
+  background: url(../img/Contact-bg.png) no-repeat center center / cover;
+}
+
+/* 2. Standardize container padding so text aligns neatly without overflowing on small screens */
+.cta-section .container {
+  width: 100%;
+  max-width: 1200px; /* Adjust to match your design system breakpoint */
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* 3. (Optional Fix) Clean up description padding to maintain align-left grid */
+.cta-description {
+  max-width: 650px;
+  color: #64748b;
+  font-size: 18px;
+  line-height: 1.7;
+  padding-left: 0; /* Changed from 2% to keep strict vertical alignment with header */
+}
 /* call to action section end */
 
 
