@@ -107,10 +107,10 @@
   color: #fff !important;
 }
 
-.btn-primary:hover {
+/* .btn-primary:hover {
   background: var(--secondary-color) !important;
   border-color: var(--secondary-color) !important;
-}
+} */
 
 
 /* =========================
@@ -290,10 +290,10 @@ h6 {
   color: #fff !important;
 }
 
-.btn-primary:hover {
+/* .btn-primary:hover {
   background: var(--secondary-color) !important;
   border-color: var(--secondary-color) !important;
-}
+} */
 
 
 .btn-secondary {
@@ -553,7 +553,11 @@ a:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 15%);
 }
 
-@media (max-width: 1200px) {
+@media (min-width: 1200px) {
+  .slider-home .slider-home-bg {
+
+  background-position-y:-200px !important;
+}
   .header .logo {
     order: 1;
   }
@@ -939,11 +943,11 @@ a:hover {
 .footer .copyright {
   padding-top: 25px;
   padding-bottom: 25px;
-  background-color: color-mix(in srgb, var(--default-color), transparent 95%);
+  background-color: #fff;
 }
 
 .footer .copyright p {
-  margin-bottom: 0; color: #fff;
+  margin-bottom: 0; color: #000; font-weight: bold;
 }
 
 .footer .credits {
@@ -3220,10 +3224,10 @@ section,
   color: var(--contrast-color);
 }
 
-.comment-form form .btn-primary:hover {
+/* .comment-form form .btn-primary:hover {
   color: var(--contrast-color);
   background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
-}
+} */
 
 /*--------------------------------------------------------------
 # Starter Section Section
@@ -4102,8 +4106,8 @@ section,
   height: 100%;
   object-fit: cover;
   z-index: 1;
-  background: url(../../assets/img/slider/Home.png); background-repeat: no-repeat; background-size: cover; 
-  background-position-y:-250px ;
+  background: url(../../assets/img/slider/homemain.png); background-repeat: no-repeat; background-size: cover; 
+ 
 }
 
 
@@ -4139,7 +4143,7 @@ section,
 );  */
 height: 100vh;
  /* background: linear-gradient(180deg, #def0fd 30%, #bfe4fe 100%, #d9eefd 40%);  */
-    padding:5% 4% 0% 1%;
+    padding:7% 0% 0% 4%;
 
 }
 .hero-badges {
@@ -4740,8 +4744,10 @@ height: 100vh;
     position: relative;
     overflow: hidden;
     padding: 90px 20px;
-    background:
+    /* background:
     radial-gradient(circle at 10% 20%, rgb(170 223 243), transparent 30%), radial-gradient(circle at 90% 80%, rgb(169 169 233), transparent 30%), linear-gradient(135deg, #f8faff 0%, #f5f3ff 50%, #eef8ff 100%);
+   */
+   background: url(../img/Contact-bg.png);
   }
 
   .cta-content {
@@ -4782,16 +4788,17 @@ height: 100vh;
 
   .cta-description {
     max-width: 650px;
-    margin: 0 auto 32px;
+    
 
     color: #64748b;
     font-size: 18px;
     line-height: 1.7;
+    padding-left: 2%;
   }
 
   .cta-buttons {
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     gap: 14px;
     flex-wrap: wrap;
@@ -4812,12 +4819,12 @@ height: 100vh;
     transition: all 0.3s ease;
   }
 
-  .cta-btn-primary:hover {
+  /* .cta-btn-primary:hover {
     background: #4338ca;
     color: #fff;
     transform: translateY(-3px);
     box-shadow: 0 14px 30px rgba(79, 70, 229, 0.28);
-  }
+  } */
 
   .cta-btn-outline {
     padding: 12px 28px;
