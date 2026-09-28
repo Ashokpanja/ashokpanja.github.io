@@ -1,23 +1,108 @@
+/* =========================================================
+   MDCARE — GLOBAL DESIGN TOKENS
+   Single source of truth for the complete stylesheet
+========================================================= */
 
-/* Fonts */
 :root {
-  --default-font: "Open Sans",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Montserrat",  sans-serif;
-  --nav-font: "Poppins",  sans-serif;
+  /* -------------------------
+     Fonts
+  ------------------------- */
+  --default-font: "Open Sans", system-ui, -apple-system, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans",
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+
+  --heading-font: "Montserrat", sans-serif;
+  --nav-font: "Poppins", sans-serif;
+
+  /* -------------------------
+     Brand Colors
+  ------------------------- */
+  --primary-color: #00aeef;
+  --secondary-color: #292966;
+  --accent-color: var(--primary-color);
+    --gold-primary: #f5b027;
+  /* -------------------------
+     Text Colors
+  ------------------------- */
+  --heading-color: var(--secondary-color);
+  --text-primary: var(--secondary-color);
+  --text-secondary: var(--primary-color);
+  --default-color: #555555;
+  --muted-color: #64748b;
+  --contrast-color: #ffffff;
+
+  /* -------------------------
+     Background / Surface
+  ------------------------- */
+  --background-color: #ffffff;
+  --surface-color: #ffffff;
+  --section-background: #f8fafc;
+  --light-background: #f9f9f9;
+  --dark-background: var(--secondary-color);
+--bs-border-radius-pill: 50rem;
+  /* -------------------------
+     Navigation
+  ------------------------- */
+  --nav-color: var(--secondary-color);
+  --nav-hover-color: var(--primary-color);
+  --nav-mobile-background-color: #ffffff;
+  --nav-dropdown-background-color: #ffffff;
+  --nav-dropdown-color: var(--secondary-color);
+  --nav-dropdown-hover-color: var(--primary-color);
+
+  /* -------------------------
+     Brand Tints
+  ------------------------- */
+  --primary-light: color-mix(in srgb, var(--primary-color), transparent 90%);
+  --primary-soft: color-mix(in srgb, var(--primary-color), transparent 70%);
+  --secondary-light: color-mix(in srgb, var(--secondary-color), transparent 90%);
+  --secondary-soft: color-mix(in srgb, var(--secondary-color), transparent 70%);
+
+  /* -------------------------
+     Borders
+  ------------------------- */
+  --border-color: #e2e8f0;
+  --border-light: #edf2f7;
+  --line-color: #dde5ed;
+
+  /* -------------------------
+     Status Colors
+  ------------------------- */
+  --success-color: #059652;
+  --error-color: #df1529;
+  --warning-color: #f8931e;
+
+  /* -------------------------
+     Legacy / Compatibility
+  ------------------------- */
+  --text-orange: var(--warning-color);
+  --bg-orange: var(--warning-color);
+
+  /* -------------------------
+     Shadows
+  ------------------------- */
+  --shadow-sm: 0 3px 15px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 15px 35px rgba(0, 0, 0, 0.10);
+
+  /* -------------------------
+     Border Radius
+  ------------------------- */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 50px;
+
+  /* -------------------------
+     Global Motion
+  ------------------------- */
+  --transition: all 0.3s ease;
+
+  scroll-behavior: smooth;
+      --gold-gradient: linear-gradient(135deg, #ffe58f 0%, #f5b027 45%, #d98205 100%);
 }
 
-
-/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-
-/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
-:root {
-  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --text-orange:#ff8900;
-  --bg-orange:#ff8900;
- }
-
-/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
   --background-color: #f9f9f9;
@@ -32,57 +117,9 @@
   --contrast-color: #ffffff;
 }
 
-:root {
-  /* =========================
-     BRAND COLORS
-  ========================= */
-  --primary-color: #00aeef;
-  --secondary-color: #292966;
 
-  /* =========================
-     TEXT COLORS
-  ========================= */
-  --heading-color: var(--secondary-color);
-  --text-primary: var(--secondary-color);
-  --text-secondary: var(--primary-color);
-  --default-color: #555555;
-  --contrast-color: #ffffff;
-
-  /* =========================
-     BACKGROUND COLORS
-  ========================= */
-  --background-color: #ffffff;
-  --surface-color: #ffffff;
-
-  /* =========================
-     LIGHT COLORS
-  ========================= */
-  --primary-light: color-mix(
-    in srgb,
-    var(--primary-color),
-    transparent 90%
-  );
-
-  --primary-soft: color-mix(
-    in srgb,
-    var(--primary-color),
-    transparent 70%
-  );
-
-  --secondary-light: color-mix(
-    in srgb,
-    var(--secondary-color),
-    transparent 90%
-  );
-
-  --secondary-soft: color-mix(
-    in srgb,
-    var(--secondary-color),
-    transparent 70%
-  );
-}
 .text-orange{color:var(--text-orange) !important;}
-.bg-orange{ background: var(--bg-orange) !important;}
+.bg-orange{background: var(--gold-gradient);}
 /* =========================
    ABOUT HEADING
 ========================= */
@@ -96,7 +133,13 @@
   letter-spacing: -1.5px;
 }
 
-
+.text-gold-gradient {
+    background: var(--gold-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    text-shadow: 0 0 25px rgba(245, 176, 39, 0.2);
+}
 /* =========================
    PRIMARY BUTTON
 ========================= */
@@ -106,11 +149,6 @@
   border-color: var(--primary-color) !important;
   color: #fff !important;
 }
-
-/* .btn-primary:hover {
-  background: var(--secondary-color) !important;
-  border-color: var(--secondary-color) !important;
-} */
 
 
 /* =========================
@@ -146,29 +184,9 @@
   font-weight: 600;
   letter-spacing: 0.5px;
 }
-
-
-/* =========================
-   SERVICE ICON
-========================= */
-
 .services .service-item .icon {
   color: var(--primary-color);
 }
-
-/* .services .service-item .icon:before {
-  position: absolute;
-  content: "";
-  height: 30px;
-  width: 30px;
-  background: var(--primary-soft);
-  border-radius: 50%;
-  z-index: 1;
-  bottom: -15px;
-  right: -15px;
-  transition: 0.3s;
-} */
-
 .services .service-item:hover .icon:before {
   background: var(--primary-color);
 }
@@ -185,12 +203,6 @@
 .services .service-item:hover h3 {
   color: var(--primary-color);
 }
-
-
-/* =========================
-   LINKS
-========================= */
-
 a {
   color: var(--primary-color);
 }
@@ -198,11 +210,6 @@ a {
 a:hover {
   color: var(--secondary-color);
 }
-
-
-/* =========================
-   HEADINGS
-========================= */
 
 h1,
 h2,
@@ -212,12 +219,6 @@ h5,
 h6 {
   color: var(--secondary-color);
 }
-
-
-/* =========================
-   ICONS
-========================= */
-
 .icon-primary {
   color: var(--primary-color);
 }
@@ -225,21 +226,9 @@ h6 {
 .icon-secondary {
   color: var(--secondary-color);
 }
-
-
-/* =========================
-   PRIMARY BACKGROUND
-========================= */
-
 .bg-primary {
   background-color: var(--primary-color) !important;
 }
-
-
-/* =========================
-   SECONDARY BACKGROUND
-========================= */
-
 .bg-secondary {
   background-color: var(--secondary-color) !important;
 }
@@ -402,8 +391,8 @@ h6 {
   border: solid 1px #00aeef !important;
 }
 .btn-primary{
-background: #013d5c !important;
-  border: solid 1px #013d5c !important;
+background: #292966 !important;
+  border: solid 1px #f5b02799 !important;
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -422,9 +411,7 @@ background: #013d5c !important;
 }
 
 /* Smooth scroll */
-:root {
-  scroll-behavior: smooth;
-}
+
 
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
@@ -843,7 +830,7 @@ a:hover {
 --------------------------------------------------------------*/
 .footer {
   color: var(--default-color);
-  background-color: #013d5c;
+  background-color: #020714;
   font-size: 14px;
   position: relative;
 }
@@ -943,11 +930,15 @@ a:hover {
 .footer .copyright {
   padding-top: 25px;
   padding-bottom: 25px;
-  background-color: #fff;
+ 
 }
 
 .footer .copyright p {
-  margin-bottom: 0; color: #000; font-weight: bold;
+  margin-bottom: 0; color: #fff; font-weight: normal; font-size: 16px;
+}
+.text-white-50 {
+    --bs-text-opacity: 1;
+    color: rgba(255, 255, 255, .5) !important;
 }
 
 .footer .credits {
@@ -1083,8 +1074,9 @@ section,
 .section {
   color: var(--default-color);
   /* background-color: #edfaff; */
-  background: radial-gradient(circle at 10% 20%, rgba(32, 129, 255, 0.06), transparent 30%),
-    #f8fafc;
+  background:radial-gradient(ellipse 75% 55% at 85% 15%, rgba(14, 165, 233, 0.03) 0%, transparent 65%),
+        radial-gradient(ellipse 60% 40% at 15% 85%, rgba(99, 102, 241, 0.02) 0%, transparent 70%),
+        linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
   padding: 20px 0px;
   scroll-margin-top: 98px;
   overflow: clip;
@@ -1262,12 +1254,6 @@ section,
 /*--------------------------------------------------------------
 # Modern About Section
 --------------------------------------------------------------*/
-
-.about {
- 
-  background: #f8fafc;
-}
-
 /* Left Content */
 
 .about-content {
@@ -1275,17 +1261,17 @@ section,
 }
 
 .about-label { font-weight: bold;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 16px;
- 
-  border-radius: 50px;
-  background: #eaf2ff;
-  color: #2563eb;
-  font-size: 16px;
-
-  letter-spacing: 0.5px;
+ font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 50px;
+    background: #f8fafc;
+    color: #b45309;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    border: 1px solid #fde68a;
 }
 
 .about-label i {
@@ -1420,9 +1406,24 @@ section,
   transition: all 0.3s ease;
 }
 .Trusted {
-    border-radius: 50px;
+   overflow: hidden;
 }
-.about-card-icon {
+.Trusted .about-card {
+  position: relative; /* Essential for positioning the ::after element */
+  padding-right: 15px; /* Adds space before the line */
+}
+
+.Trusted .about-card::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%); /* Centers the line vertically */
+  width: 1px; /* Line thickness */
+  height: 70%; /* Adjust height percentage as needed */
+  background-color: rgba(255, 255, 255, 0.2); /* Soft white line for dark backgrounds */
+}
+.Trusted .about-card-icon {
   /* width: 52px;
   height: 52px; */
   display: flex;
@@ -1436,21 +1437,21 @@ section,
   transition: all 0.3s ease;
 }
 
-.about-card h3 {
+.Trusted .about-card h3 {
   margin-bottom: 12px;
   color: #fff;
   font-size: 19px;
   font-weight: 600;
 }
 
-.about-card p {
+.Trusted .about-card p {
   margin: 0;
   color: #fff;
   font-size: 14px;
   line-height: 1.8;
 }
 
-.about-card:hover {
+.Trusted .about-card:hover {
   border-color: #bfdbfe;
   transform: translateY(-6px);
   box-shadow: 0 15px 35px rgba(37, 99, 235, 0.08);
@@ -1576,6 +1577,97 @@ section,
   font-weight: 700;
   color: color-mix(in srgb, var(--default-color), transparent 40%);
 }
+.section-contact-bg {
+    position: relative;
+    background-color: #030818;
+    background-image: radial-gradient(circle at 82% 45%, rgba(245, 176, 39, 0.2) 0%, transparent 60%), radial-gradient(circle at 20% 80%, rgba(14, 165, 233, 0.18) 0%, transparent 55%), linear-gradient(180deg, rgba(3, 8, 22, 0.88) 0%, rgba(4, 12, 32, 0.65) 50%, rgba(2, 6, 18, 0.94) 100%), url(Call_3.png), url(Call_2.png), url(Call.png);
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
+}
+.gold-wave-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.85;
+    overflow: hidden;
+}
+.relative-content {
+    position: relative;
+    z-index: 2;
+}
+.contact-cta-card {
+    position: relative;
+    background-color: rgba(5, 14, 38, 0.88);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    background-image: linear-gradient(90deg, rgba(3, 8, 22, 0.97) 0%, rgba(4, 12, 34, 0.92) 48%, rgba(6, 18, 48, 0.42) 75%, rgba(6, 18, 48, 0.1) 100%), url(Call_3.png), url(Call_2.png), url(Call.png);
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
+    border: 1.5px solid rgba(245, 176, 39, 0.45);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 25px 65px rgba(0, 0, 0, 0.85), 0 0 35px rgba(245, 176, 39, 0.2);
+    min-height: 420px;
+}
+.align-items-center {
+    align-items: center !important;
+}
+.shimmer-card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -150%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(60deg, transparent 35%, rgba(255, 235, 168, 0.12) 50%, transparent 65%);
+    transform: rotate(25deg);
+    pointer-events: none;
+    animation: cardShimmerGlint 9s infinite ease-in-out;
+}
+.section-tag-gold {
+    display: inline-block;
+    background: rgba(245, 176, 39, 0.12);
+    color: #ffd875;
+    border: 1px solid rgba(245, 176, 39, 0.4);
+    padding: 5px 16px;
+    border-radius: 9999px;
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-shadow: 0 0 14px rgba(245, 176, 39, 0.18);
+}
+.text-gold-gradient {
+    background: var(--gold-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    text-shadow: 0 0 25px rgba(245, 176, 39, 0.2);
+}
+.circle-icon-btn-luxury {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(13, 34, 88, 0.8);
+    border: 1px solid rgba(245, 176, 39, 0.35);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffde8a;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+}
+
+
+
+
 
 /*--------------------------------------------------------------
 # Services Section
@@ -1621,10 +1713,6 @@ section,
   z-index: 2;
   position: relative; 
 }
-:root {
-  --accent-color: #00aeef;
-}
-
 
 
 /* Service Icon Background */
@@ -1644,9 +1732,7 @@ section,
   right: -5px;
   transition: 0.3s;
 } */
-:root {
-  --accent-color: #00aeef;
-}
+
 .services .service-item:hover .icon:before {
   background: var(--accent-color);
 }
@@ -3742,8 +3828,6 @@ section,
 }
 
 
-
-
 /* Reimagine your section start */
 
 
@@ -3907,11 +3991,17 @@ section,
   width: 100%;
   margin-bottom: 35px;
 }
-  .home-slider-s-ul li {  list-style: none; float: left; font-size: 16px; font-weight: bold; }
+
 .home-slider-s-ul li {
   position: relative;
-  display: inline-block;
-  padding: 0px 12px; color: var(--text-orange);
+ 
+  padding: 0px 12px; 
+    background: var(--gold-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  
+    text-shadow: 0 0 25px rgba(245, 176, 39, 0.2); font-weight: bold;
+    list-style: none; float: left; font-size: 20px; font-weight: bold; 
 }
 .home-slider-s-ul li::after {
   content: "";
@@ -3938,7 +4028,14 @@ section,
 /* ================================
    MDCare AI Section
 ================================ */
-
+.Trusted {
+  /* Dark base color matching Bootstrap's bg-secondary or custom dark color */
+  background-color: #1a1e21; 
+  /* Subtle radial dot pattern using inline SVG */
+  background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-position: center;
+}
 .mdcare-ai-section {
   width: 100%;
   padding: 0;
@@ -3964,10 +4061,6 @@ section,
 
 .mdcare-ai-content {
   padding: 10px 70px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 
   
 }
@@ -4106,10 +4199,9 @@ section,
   height: 100%;
   object-fit: cover;
   z-index: 1;
-  background: url(../../assets/img/slider/homemain.png); background-repeat: no-repeat; background-size: cover; 
+  background: url(../../assets/img/slider/heromain4.jpg); background-repeat: no-repeat; background-size: cover; 
  
 }
-
 
 
 /* Caption Content */
@@ -4121,17 +4213,17 @@ section,
   align-items: start;
   text-align: left;
   padding: 0;
-  padding-top: 7%;
+  padding-top: 15%;
 }
 .slider-home::after {
     content: "";
     position: absolute;
     inset: 0;
-    /* background: rgba(252, 249, 249, 0.2); */
+    background: rgb(0 0 0 / 30%);
     z-index: 1;
 }
 .hero-content {
-  min-height: 100vh;
+ 
 
   /* background:
    linear-gradient(90deg, rgb(191 228 254) 100%, rgba(216, 239, 254, 0.95) 30%, rgba(216, 239, 254, 0.45) 60%, rgba(216, 239, 254, 0.05) 100%) center / cover no-repeat; */
@@ -4141,10 +4233,15 @@ section,
   #bfe4fe 30%,
   #d9eefd 100%
 );  */
-height: 100vh;
+
  /* background: linear-gradient(180deg, #def0fd 30%, #bfe4fe 100%, #d9eefd 40%);  */
     padding:7% 0% 0% 4%;
 
+}
+.hero-content {
+    background: rgba(85, 133, 175, 0.5);
+    border-radius: 10px;
+    padding: 20px;
 }
 .hero-badges {
     display: flex;
@@ -4157,7 +4254,7 @@ height: 100vh;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: #0879d9;
+  background: var(--gold-gradient);
   color: white;
   font-size: 16px;
   padding: 5px; margin-right: 5px;
@@ -4301,13 +4398,20 @@ height: 100vh;
   background: var(--mist);
  
 }
-
+.advantage-s-l-main{
+      background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05), 0 8px 10px -6px rgba(15, 23, 42, 0.02);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.text-gold {
+    color: var(--gold-primary) !important;
+}
 
 /* =========================================
    SECTION HEADING
 ========================================= */
-
-
 
 
 .modules-v3-label i,
@@ -4368,7 +4472,7 @@ height: 100vh;
 
 
   color: var(--slate);
-  font-size: 14.5px;
+  font-size: 13px;
   line-height: 1.6;
 }
 
@@ -4390,10 +4494,10 @@ height: 100vh;
   display: flex;
   flex-direction: column;
 
-  background: var(--paper);
-  border: 1px solid var(--line);
+ 
+ 
   border-radius: 14px;
-  overflow: hidden;
+  
 }
 
 
@@ -4409,10 +4513,12 @@ height: 100vh;
   column-gap: 16px;
 
   padding: 10px 22px;
-  border-bottom: 1px solid var(--line);
+      background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    transition: all 0.25s ease; margin-bottom: 5px;
 
   text-decoration: none;
-  background: var(--paper);
+  background: #f8fafc;
   transition: background-color .15s ease;
 }
 
@@ -4454,26 +4560,24 @@ height: 100vh;
 
 
 /* Trailing chevron, drawn without touching the markup */
-.module-v3:not(.d-flex)::after {
-  content: "";
-  justify-self: end;
-  width: 7px;
-  height: 7px;
 
-  border-top: 2px solid var(--slate);
-  border-right: 2px solid var(--slate);
-  transform: rotate(45deg);
-  opacity: .3;
-
-  transition: opacity .15s ease, transform .15s ease;
+.btn-gold-shimmer {
+    background: var(--gold-gradient);
+    color: #050d24;
+    font-weight: 700;
+    border: none;
+    border-radius: 9999px;
+    padding: 0.78rem 2rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 6px 24px rgba(245, 176, 39, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.6);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
 }
-
-.module-v3:hover:not(.d-flex)::after,
-.module-v3:focus-visible:not(.d-flex)::after {
-  opacity: .8;
-  transform: translateX(2px) rotate(45deg);
-}
-
 
 /* =========================================
    ICON
@@ -4487,10 +4591,10 @@ height: 100vh;
   justify-content: center;
 
   border-radius: 10px;
-  background: var(--col-accent-soft);
+  background: var(--secondary-color);
   color: var(--secondary-color);
   font-size: 19px;
-  flex-shrink: 0;
+  flex-shrink: 0; color: var(--gold-primary) !important;
 }
 
 
@@ -4644,26 +4748,6 @@ height: 100vh;
 .right-s-Features h3{     color: var(--secondary-color)}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* MDCARE Modules Section end */
 .testimonial-item {
   height: 100%;
@@ -4738,7 +4822,6 @@ height: 100vh;
     filter: blur(70px);
     border-radius: 50%;
 }
-
 
 
 /* call to action section start */
@@ -4941,77 +5024,6 @@ height: 100vh;
 /* call to action section end */
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*--------------------------------------------------------------
 # Responsive Design
 --------------------------------------------------------------*/
@@ -5134,22 +5146,10 @@ height: 100vh;
     width: 12%;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.circle-icon-btn-luxury:hover {
+    background: var(--gold-gradient);
+    color: #04091a;
+    transform: scale(1.1);
+    border-color: var(--gold-primary);
+    box-shadow: 0 0 20px rgba(245, 176, 39, 0.6);
+}
