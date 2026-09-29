@@ -1112,7 +1112,27 @@ section,
   background: var(--accent-color);
   display: inline-block;
 } 
+.mdcare-ai-section {
+  width: 100%;
+  padding: 0;
+  background: url('../img/MDCareai2.png') no-repeat center / cover;
+  position: relative;
+}
 
+/* Dark Overlay */
+.mdcare-ai-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(253, 253, 253, 0.6);
+  z-index: 1;
+}
+
+/* Elevate Content above Overlay */
+.mdcare-ai-container {
+  position: relative;
+  z-index: 2;
+}
 .section-title h2:before {
   margin: 0 15px 10px 0;
 }
@@ -4039,7 +4059,7 @@ section,
 .mdcare-ai-section {
   width: 100%;
   padding: 0;
-  background: #eaf7ff;
+ background: url('../img/MDCareai2.png') no-repeat center / cover;
 }
 
 .mdcare-ai-container {
