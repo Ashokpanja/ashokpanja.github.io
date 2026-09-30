@@ -16,18 +16,15 @@
 <!-- NAVBAR -->
 
 <!-- HERO -->
-<header class="hero-section">
+<header class="hero-section" id="mainHeader">
 
   <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-mdcare">
+  <nav class="navbar navbar-expand-lg navbar-mdcare" id="mainNavbar">
     <div class="container">
 
       <a class="navbar-brand navbar-brand-mdcare" href="#">
-        <img
-          src="assets/img/logo-w.png"
-          class="img-fluid"
-          alt="MDCare"
-        />
+        <img src="assets/img/logo-w.png" class="img-fluid d-none" alt="MDCare" />
+        <img src="assets/img/logo.png" class="img-fluid d-none" alt="MDCare" />
       </a>
 
       <button
@@ -82,6 +79,34 @@
     </div>
   </nav>
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const header = document.getElementById("mainHeader");
+  const navbar = document.getElementById("mainNavbar");
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 50) {
+      header.classList.add("scrolled");
+      navbar.classList.add("fixed-top");
+    } else {
+      header.classList.remove("scrolled");
+      navbar.classList.remove("fixed-top");
+    }
+  });
+});
+</script>
+
+<script>
+window.addEventListener("scroll", function () {
+  const header = document.querySelector(".hero-section");
+
+  if (window.scrollY > 50) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
+});
+</script>
 
   <!-- HERO CONTENT -->
   <div class="container-fluid hero-content">

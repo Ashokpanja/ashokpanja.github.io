@@ -786,10 +786,62 @@ border-radius:50%;  display:flex; flex-direction:column;
     z-index: 1;
     pointer-events: none;
 }
+.hero-section.scrolled .navbar-mdcare {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1030;
+  background: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+.navbar-mdcare {
+  transition: all 0.3s ease;
+  z-index: 1030;
+}
 
+.navbar-mdcare.fixed-top {
+  background: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  animation: slideDown 0.3s ease;
+}
 
+.hero-section.scrolled {
+  padding-top: 0;
+}
 
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
 
+  to {
+    transform: translateY(0);
+  }
+}
+.scrolled .navbar-mdcare .nav-link{ color: #0d356b; }
+.scrolled .navbar-mdcare .nav-link.active {
+    color: var(--gold);
+}
+/* Default: show first logo */
+header .navbar-brand-mdcare img:nth-child(1) {
+    display: block !important;
+}
+
+/* Default: hide second logo */
+header .navbar-brand-mdcare img:nth-child(2) {
+    display: none !important;
+}
+
+/* When scrolled: hide first logo */
+.hero-section.scrolled .navbar-brand-mdcare img:nth-child(1) {
+    display: none !important;
+}
+
+/* When scrolled: show second logo */
+.hero-section.scrolled .navbar-brand-mdcare img:nth-child(2) {
+    display: block !important;
+}
 
 
 
