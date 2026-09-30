@@ -64,17 +64,270 @@
   .navbar-brand-mdcare{ color:#fff; font-weight:800; font-size:1.4rem; letter-spacing:.5px; }
   .navbar-brand-mdcare small{ display:block; font-size:.6rem; font-weight:400; letter-spacing:1px; color:#b9c2d3; }
 
-  /* HERO */
-  .hero-section{
-    /* background: radial-gradient(circle at 70% 20%, #123061 0%, var(--navy) 55%, #081527 100%); */
-    background: url(../img/slider/finel.jpeg) no-repeat; height:100vh;
-    position:relative; overflow:hidden; color:#fff; background-size: cover;
+
+ 
+  .slider-trf::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgb(0 0 0 / 40%);
+    z-index: -1;
+}
+
+/* ========================================
+   HERO SECTION
+======================================== */
+
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+
+  background-image: url("../img/slider/main.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  color: #fff;
+}
+
+
+/* ========================================
+   DARK OVERLAY
+======================================== */
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.42);
+
+  z-index: 0;
+}
+
+
+/* ========================================
+   NAVBAR
+======================================== */
+
+.navbar-mdcare {
+  position: relative;
+  z-index: 10;
+
+  padding: 18px 0;
+}
+
+.navbar-brand-mdcare img {
+  width: 180px;
+}
+
+
+/* NAV LINKS */
+
+.navbar-mdcare .nav-link {
+  position: relative;
+
+  margin-left: 25px;
+
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+
+  transition: all 0.3s ease;
+}
+
+
+
+
+
+.navbar-mdcare .nav-link:hover::after,
+.navbar-mdcare .nav-link.active::after {
+  width: 100%;
+}
+
+
+/* ========================================
+   HERO CONTENT
+======================================== */
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* ========================================
+   HERO TITLE
+======================================== */
+
+.hero-title {
+  margin-bottom: 20px;
+
+  color: #fff;
+
+  font-size: clamp(42px, 5vw, 72px);
+  line-height: 1.08;
+  font-weight: 700;
+  letter-spacing: -1.5px;
+}
+
+
+/* ========================================
+   GRADIENT TEXT
+======================================== */
+
+
+
+/* ========================================
+   DESCRIPTION
+======================================== */
+
+.hero-sub {
+  max-width: 680px;
+
+  color: rgba(255, 255, 255, 0.90);
+
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+
+/* ========================================
+   BADGES
+======================================== */
+
+.pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 9px 15px;
+
+ 
+  border-radius: 50px;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  backdrop-filter: blur(8px);
+
+  color: #fff;
+
+  font-size: 13px;
+  font-weight: 500;
+}
+
+
+
+
+/* ========================================
+   HERO LINKS
+======================================== */
+
+.hero-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.hero-links a {
+  color: var(--gold-2);
+  text-decoration: none;
+
+  transition: 0.3s ease;
+}
+
+.hero-links a:hover {
+  color: #00aeef;
+}
+
+.hero-links span {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+
+/* ========================================
+   DEMO BUTTON
+======================================== */
+
+
+
+.btn-gold:hover {
+  background: #292966;
+  color: #fff;
+
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 174, 239, 0.25);
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 991px) {
+
+  .navbar-mdcare {
+    padding: 15px 20px;
   }
-  .hero-section::before{
-    content:""; position:absolute; inset:0;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600"><path d="M0 400 Q200 300 400 400 T800 400 V600 H0 Z" fill="rgba(255,255,255,0.03)"/></svg>');
-    background-size: cover; opacity:.6;
+
+  .navbar-brand-mdcare img {
+    width: 150px;
   }
+
+  .navbar-mdcare .nav-link {
+    margin-left: 0;
+    padding: 10px 0;
+  }
+
+  .navbar-mdcare .nav-link::after {
+    display: none;
+  }
+
+  .hero-content {
+    padding: 80px 25px 60px;
+  }
+
+  .hero-title {
+    font-size: 46px;
+  }
+
+  .hero-sub {
+    font-size: 16px;
+  }
+
+}
+
+
+@media (max-width: 576px) {
+
+  .hero-section {
+    background-position: center;
+  }
+
+  .hero-content {
+    padding: 50px 20px;
+  }
+
+  .hero-title {
+    font-size: 38px;
+    letter-spacing: -0.5px;
+  }
+
+  .pill-badge {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  .hero-links {
+    font-size: 14px;
+  }
+
+}
   .hero-section .content{ position:relative; z-index:2; }
   .hero-title{ font-size: 45px; font-weight:800; line-height:1.15; }
   .hero-title .accent{ color: var(--gold); }
@@ -411,7 +664,7 @@ border-radius:50%;  display:flex; flex-direction:column;
 .section-shimmer-bg {
     position: relative;
     background-color: var(--bg-midnight-deep);
-    background-image: radial-gradient(ellipse 65% 50% at 15% 30%, rgba(245, 176, 39, 0.09) 0%, transparent 65%), radial-gradient(ellipse 60% 45% at 85% 70%, rgba(13, 34, 88, 0.5) 0%, transparent 70%), radial-gradient(ellipse 80% 60% at 50% 0%, rgba(18, 43, 107, 0.4) 0%, transparent 75%);
+    /* background-image: radial-gradient(ellipse 65% 50% at 15% 30%, rgba(245, 176, 39, 0.09) 0%, transparent 65%), radial-gradient(ellipse 60% 45% at 85% 70%, rgba(13, 34, 88, 0.5) 0%, transparent 70%), radial-gradient(ellipse 80% 60% at 50% 0%, rgba(18, 43, 107, 0.4) 0%, transparent 75%); */
 }
 .gold-wave-overlay {
     position: absolute;
@@ -502,7 +755,7 @@ border-radius:50%;  display:flex; flex-direction:column;
 .border-top{ border-top: solid 1px #2d2d2d !important;}
 .section-shimmer-bg::before {
     left: -8%;
-    top: 4%;
+    top: -16%;
     width: 46%;
     height: 62%;
     background: repeating-linear-gradient(162deg, transparent 0 7px, rgba(240, 189, 85, .22) 7px 8px, transparent 8px 14px);
@@ -511,13 +764,28 @@ border-radius:50%;  display:flex; flex-direction:column;
     transform: rotate(-8deg);
 }
 
-.section-shimmer-bg::before, .banner::after {
+.section-shimmer-bg::before{
     content: "";
     position: absolute;
     z-index: 1;
     pointer-events: none;
 }
+.section-shimmer-bg::after {right: -20%;
+    width: 46%;
+    height: 192%;
+    background: repeating-linear-gradient(164deg, transparent 0 7px, rgba(240, 189, 85, .22) 7px 8px, transparent 8px 14px);
+    /* -webkit-mask-image: radial-gradient(ellipse at 20% 40%, #000 0%, transparent 70%); */
+    mask-image: radial-gradient(ellipse at 50% 40%, #000 0%, transparent 70%);
+    transform: rotate(-8deg);
+    top: 50%;
 
+}
+.section-shimmer-bg::after{
+    content: "";
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+}
 
 
 
