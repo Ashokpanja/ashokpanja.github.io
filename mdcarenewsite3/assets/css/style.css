@@ -211,7 +211,7 @@ img {
   position: relative;
   margin-left: 25px;
   color: #fff;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 500;
   transition: color 0.3s ease;
 }
@@ -708,7 +708,7 @@ img {
   height: 38px;
   min-width: 38px;
   border-radius: 8px;
-  background: #fff;
+  background: #ffe5bd;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -737,6 +737,7 @@ img {
 
 .panel-modules .icon {
   color: #3468c2;
+  background: #e2edff;
 }
 
 /* TESTIMONIALS SECTION */
@@ -835,7 +836,7 @@ img {
 
 @media (min-width: 1200px) {
   .hero-title {
-    font-size: 64px;
+    font-size: 50px;
   }
 }
 
