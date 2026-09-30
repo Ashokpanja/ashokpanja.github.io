@@ -1,686 +1,707 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MDCare — Simplifying Healthcare</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link href="assets/css/style.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certified EMR, Web based Electronic Medical Records | MDCARE EMR/PMS</title>
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/css/style.css" rel="stylesheet" />
+  <link href="assets/img/favicon.png" rel="icon" />
 </head>
+
 <body>
-
-<!-- NAVBAR -->
-
-<!-- HERO -->
-<header class="hero-section" id="mainHeader">
-
-  <!-- NAVBAR -->
+  <!-- HERO -->
+  
+<header id="mainHeader" class="hero-section">
   <nav class="navbar navbar-expand-lg navbar-mdcare" id="mainNavbar">
     <div class="container">
-
       <a class="navbar-brand navbar-brand-mdcare" href="#">
-        <img src="assets/img/logo-w.png" class="img-fluid d-none" alt="MDCare" />
-        <img src="assets/img/logo.png" class="img-fluid d-none" alt="MDCare" />
+        <!-- White Logo for dark background -->
+        <img src="assets/img/logo-w.png" class="img-fluid" alt="MDCare Light Logo" />
+        <!-- Colored Logo for light background on scroll -->
+        <img src="assets/img/logo.png" class="img-fluid" alt="MDCare Dark Logo" />
       </a>
-
-      <button
-        class="navbar-toggler bg-light"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navMenu"
-        aria-controls="navMenu"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+        aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
-      <div
-        class="collapse navbar-collapse justify-content-end"
-        id="navMenu"
-      >
+      <div class="collapse navbar-collapse justify-content-end" id="navMenu">
         <ul class="navbar-nav align-items-lg-center">
-
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Home</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#about">About Us</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#features">Features</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#">MDCare AI</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#">Resources</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#">Portal</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
-
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">MDCare AI</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Resources</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Portal</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
       </div>
-
     </div>
   </nav>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
+ <script>
+  document.addEventListener("DOMContentLoaded", function () {
   const header = document.getElementById("mainHeader");
   const navbar = document.getElementById("mainNavbar");
+  
+  let ticking = false;
 
   window.addEventListener("scroll", function () {
-    if (window.scrollY > 50) {
-      header.classList.add("scrolled");
-      navbar.classList.add("fixed-top");
-    } else {
-      header.classList.remove("scrolled");
-      navbar.classList.remove("fixed-top");
+    if (!ticking) {
+      window.requestAnimationFrame(function () {
+        const isScrolled = window.scrollY > 50;
+        
+        if (header) header.classList.toggle("scrolled", isScrolled);
+        if (navbar) navbar.classList.toggle("fixed-top", isScrolled);
+
+        ticking = false;
+      });
+      ticking = true;
     }
   });
 });
-</script>
-
-<script>
-window.addEventListener("scroll", function () {
-  const header = document.querySelector(".hero-section");
-
-  if (window.scrollY > 50) {
-    header.classList.add("scrolled");
-  } else {
-    header.classList.remove("scrolled");
-  }
-});
-</script>
-
-  <!-- HERO CONTENT -->
-  <div class="container-fluid hero-content">
-    <div class="row align-items-center" style="padding-top:8%;">
-
-      <div class="col-lg-6 ps-lg-5">
-
-        <!-- BADGES -->
-        <div class="d-flex flex-wrap gap-2 mb-4">
-
-          <span class="pill-badge">
-            <i class="fa-solid fa-circle-check"></i>
-            MIPS Support
-          </span>
-
-          <span class="pill-badge">
-            <i class="fa-solid fa-circle-check"></i>
-            ONC-Certified Health IT
-          </span>
-
-          <span class="pill-badge">
-            <i class="fa-solid fa-circle-check"></i>
-            HIPAA Compliant
-          </span>
-
-        </div>
-
-
-        <!-- TITLE -->
-        <h1 class="hero-title">
-          Simplifying Your Practice.
-          <br>
-
-          <span class="gradient-text">
-            One Connected Platform.
-          </span>
-        </h1>
-
-
-        <!-- DESCRIPTION -->
-        <p class="hero-sub my-3">
-          MDCare is a web-based, ONC-certified EMR and practice
-          management platform built to bring your everyday practice
-          needs together in one place.
-        </p>
-
-
-        <!-- LINKS -->
-        <div class="hero-links mb-4 mt-4">
-
-          <a href="#">EMR</a>
-          <span>|</span>
-
-          <a href="#">Billing</a>
-          <span>|</span>
-
-          <a href="#">AR</a>
-          <span>|</span>
-
-          <a href="#">Labs</a>
-          <span>|</span>
-
-          <a href="#">eRx</a>
-
-        </div>
-
-
-        <!-- BUTTON -->
-        <a href="#contact" class="btn btn-gold">
-          Request a Demo
-          <i class="fa-solid fa-arrow-right ms-1"></i>
-        </a>
-
-      </div>
-
-    </div>
-  </div>
-
-</header>
-
-<!-- ABOUT -->
-<section class="about-section" id="about">
-  <div class="container">
-    <div class="row align-items-center gy-5">
-      <div class="col-lg-7">
-    
-        <span class="section-tag"><i class="fa-solid fa-users"></i>About Us</span>
-        <h2 class="heading mt-3">Technology that Connects<br><span class="accent">Every Part of your Practice</span></h2>
-        <p class="text-muted mt-3" style="max-width:520px;">MDCare is a comprehensive healthcare technology platform designed to support the clinical, administrative, and business needs of medical practices.</p>
-        <p class="text-muted" style="max-width:520px;">From EMR and practice management to billing, revenue cycle, labs, interoperability, and more — MDCare brings essential healthcare workflows into a connected platform.</p>
-        <a href="#" class="btn btn-navy mt-2">Read More <i class="fa-solid fa-arrow-right ms-1"></i></a>
-      </div>
-      <div class="col-lg-5 text-center">
-        <div class="badge-circle">
-          <div class="badge-circle-inner">
-          <img src="assets/img/EHR.png" class="img-fluid w-100">
+ </script>
+    <!-- HERO CONTENT -->
+    <div class="container-fluid hero-content">
+      <div class="row align-items-center" style="padding-top: 8%">
+        <div class="col-lg-6 ps-lg-5">
+          <!-- BADGES -->
+          <div class="d-flex flex-wrap gap-2 mb-4">
+            <span class="pill-badge">
+              <i class="bi bi-check-circle-fill"></i>
+              MIPS Support
+            </span>
+            <span class="pill-badge">
+              <i class="bi bi-check-circle-fill"></i>
+              ONC-Certified Health IT
+            </span>
+            <span class="pill-badge">
+              <i class="bi bi-check-circle-fill"></i>
+              HIPAA Compliant
+            </span>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CERTIFICATIONS BANNER -->
-
-<section class="banner" aria-labelledby="tc-title">
-  <div class="glow"></div>
-
-  <div class="badge">
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M12 2 4 5.2v6.1c0 4.6 3.2 8.7 8 10.7 4.8-2 8-6.100 8-10.700V5.200L12 2Z" fill="#06214a"/>
-      <path d="m8.300 12.100 2.700 2.700 4.800-5" fill="none" stroke="#f0bd55" stroke-width="2.200" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-    Trusted
-  </div>
-
-  <h1 id="tc-title">Technology &amp; <span class="text-c">Certifications</span></h1>
-
-  <p class="intro">
-    MDCare combines certified health IT and integrated healthcare technologies to support secure, connected, and efficient practice workflows.
-  </p>
-
-  <div class="features">
-
-    <!-- ONC -->
-    <article class="feature">
-      <div class="visual">
-        <div class="onc" role="img" aria-label="ONC Health IT Certified">
-          <div class="onc-mark">
-            ONC
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 2.900 6.300 6.900.8-5.100 4.700 1.400 6.800L12 17.100 5.900 20.600l1.400-6.800L2.200 9.100l6.900-.8L12 2Z" fill="#f0bd55"/></svg>
-          </div>
-          <div class="onc-rule"></div>
-          <div class="onc-text"><strong>Health IT</strong><small>CERTIFIED</small></div>
-        </div>
-      </div>
-      <p>ONC-certified health IT designed to support modern healthcare workflows and interoperability.</p>
-    </article>
-
-    <!-- Interoperability -->
-    <article class="feature">
-      <div class="visual">
-        <svg class="icon-gold" viewBox="0 0 96 96" fill="none" aria-hidden="true">
-          <defs>
-            <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stop-color="#f8d98f"/><stop offset="1" stop-color="#d9992a"/>
-            </linearGradient>
-          </defs>
-          <path d="M28 72H26C16 72 8 65 8 56s8-16 18-16c1.500 0 3 .2 4.400.6C32.500 30 40 22 50 22c11 0 19.500 8 21 18.500C80 41 88 47.500 88 56.500 88 65.500 80 72 71 72h-3"
-                stroke="url(#g1)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M40 74V52m0 0-7 7m7-7 7 7" stroke="url(#g1)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M56 50v22m0 0-7-7m7 7 7-7" stroke="url(#g1)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </div>
-      <p>Interoperability assistance designed to improve data efficiency and streamline practice workflows.</p>
-    </article>
-
-    <!-- Secure email -->
-    <article class="feature">
-      <div class="visual">
-        <svg class="icon-gold" viewBox="0 0 96 96" fill="none" aria-hidden="true">
-          <defs>
-            <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stop-color="#f8d98f"/><stop offset="1" stop-color="#d9992a"/>
-            </linearGradient>
-          </defs>
-          <path d="M48 8 18 19v26c0 19 12.500 34 30 43 17.500-9 30-24 30-43V19L48 8Z" stroke="url(#g2)" stroke-width="5" stroke-linejoin="round"/>
-          <path d="M48 16 25 24.500V45c0 15 9.500 27.500 23 35 13.500-7.500 23-20 23-35V24.500L48 16Z" fill="#0a2c5e" stroke="url(#g2)" stroke-width="2"/>
-          <path d="m35 47 9.500 9.500L62 38" stroke="#fff" stroke-width="5.500" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </div>
-      <p>Secure email communication designed for healthcare workflows and protected information exchange.</p>
-    </article>
-
-    <!-- Drummond -->
-    <article class="feature">
-      <div class="visual">
-        <div class="drummond" role="img" aria-label="Drummond certified">
-          <svg viewBox="0 0 80 80" aria-hidden="true">
-            <defs>
-              <radialGradient id="g3" cx=".35" cy=".3" r=".9">
-                <stop offset="0" stop-color="#fbe3a2"/><stop offset=".6" stop-color="#eeb748"/><stop offset="1" stop-color="#c98a1e"/>
-              </radialGradient>
-            </defs>
-            <circle cx="40" cy="40" r="38" fill="url(#g3)"/>
-            <circle cx="40" cy="40" r="31" fill="none" stroke="rgba(255,255,255,.45)" stroke-width="1.500"/>
-            <path d="m24 41 11 11 22-24" fill="none" stroke="#06214a" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          <span>Drummond<br>certified</span>
-        </div>
-      </div>
-      <p>Secure digital intake, management and your workflows for convenient document exchange.</p>
-    </article>
-
-  </div>
-</section>
-
-
-<!-- WHY MDCARE -->
-<section class="why-section">
-  <div class="container">
-    <div class="text-center mb-5">
-      <span class="section-tag"><i class="fa-solid fa-lightbulb"></i> Why MDCARE</span>
-      <h2 class="heading mt-3">Simplifying Healthcare <span class="accent">Empowering Practices</span></h2>
-      <p class="text-muted mx-auto" style="max-width:600px;">A modern, all in one platform designed to help your practice work smarter, stay compliant, and focus on what matters most — your patients.</p>
-    </div>
-    <div class="row g-4">
-      <div class="col-md-6">
-        <div class="feature-row-card">
-          <div class="icon-box"><i class="fa-solid fa-desktop"></i></div>
-          <div><h6>All-in-One Platform</h6><p>EMR, billing, AR, labs, eRx, and practice management in one connected system.</p></div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="feature-row-card">
-          <div class="icon-box"><i class="fa-solid fa-gear"></i></div>
-          <div><h6>Flexible &amp; Customizable</h6><p>Adapt workflows and functionality to your specialty and practice needs.</p></div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="feature-row-card">
-          <div class="icon-box"><i class="fa-solid fa-mobile-screen"></i></div>
-          <div><h6>Anywhere, Anywhere Access</h6><p>A web-based platform designed for seamless access across devices.</p></div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="feature-row-card">
-          <div class="icon-box"><i class="fa-solid fa-share-nodes"></i></div>
-          <div><h6>Connected &amp; Interoperable</h6><p>Built around healthcare standards including HL7, FHIR, DICOM, and more.</p></div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="feature-row-card">
-          <div class="icon-box"><i class="fa-solid fa-shield"></i></div>
-          <div><h6>Secure &amp; Compliance-Ready</h6><p>Designed with healthcare security, privacy, and regulatory requirements in mind.</p></div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="feature-row-card">
-          <div class="icon-box"><i class="fa-solid fa-chart-line"></i></div>
-          <div><h6>Built to Scale</h6><p>From small practices to multi-specialty organizations, MDCare grows with you.</p></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- AI SECTION -->
-<section class="ai-section">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-6">
-        <div class="d-flex flex-wrap gap-2 mb-3">
-          <span class="ai-flow-pill"><i class="fa-solid fa-microphone"></i> Voice Dictation</span>
-          <i class="fa-solid fa-arrow-right text-secondary align-self-center"></i>
-          <span class="ai-flow-pill"><i class="fa-solid fa-microchip"></i> AI Processing</span>
-          <i class="fa-solid fa-arrow-right text-secondary align-self-center"></i>
-          <span class="ai-flow-pill"><i class="fa-solid fa-file-lines"></i> Clinical Notes</span>
-        </div>
-        <img src="assets/img/mdcareai-l-side.png" class="ai-mock-img img-fluid" alt="Nurse using MDCare AI voice dictation with laptop showing AI generated clinical notes">
-      </div>
-      <div class="col-lg-6 ps-lg-5">
-        <span class=" section-tag"><i class="fa-solid fa-bolt"></i> MDCare AI</span>
-        <h2 class="mt-2">Everything Your Practice Needs.<br><span class="accent">Connected In One platform</span></h2>
-        <p class="lead-text my-3">From clinical documentation and e-prescribing to billing, patient engagement, and reporting, MDCare brings essential healthcare workflows together in one connected system.</p>
-        <p class="fw-semibold text-white mb-2">Key Highlights:</p>
-        <div class="row">
-          <div class="col-6">
-            <div class="check-item"><i class="fa-solid fa-circle-check"></i> AI-Powered Assistance</div>
-            <div class="check-item"><i class="fa-solid fa-circle-check"></i> Improved Accuracy</div>
-          </div>
-          <div class="col-6">
-            <div class="check-item"><i class="fa-solid fa-circle-check"></i> Faster Documentation</div>
-            <div class="check-item"><i class="fa-solid fa-circle-check"></i> More Timed Accuracy</div>
-          </div>
-        </div>
-        <a href="#" class="btn btn-gold mt-2">Explore More <i class="fa-solid fa-arrow-right ms-1"></i></a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FEATURES -->
-<section class="features-section" id="features">
-  <div class="container">
-    <div class="text-center mb-5">
-      <span class="section-tag"><i class="fa-solid fa-star"></i> Features</span>
-      <h2 class="heading mt-3">Everything Your Practice Needs.<br><span class="accent">Connected In One Platform</span></h2>
-      <p class="text-muted mx-auto" style="max-width:600px;">From clinical documentation and e-prescribing to billing, patient engagement, and reporting, MDCare brings essential healthcare workflows together in one connected system.</p>
-    </div>
-    <div class="row g-4">
-      <div class="col-lg-6">
-        <div class="feature-panel">
-          <div class="panel-title" style="    background: #fff0d8;"><i class="fa-solid fa-users text-warning"></i> Advantages</div>
-          <div class="feature-list-item">
-            <div class="icon"><i class="fa-solid fa-file-medical"></i></div>
-            <div><h6>Clinical Decision Support</h6><p>Evidence-based insights to improve clinical outcomes.</p></div>
-            <i class="fa-solid fa-chevron-right chev"></i>
-          </div>
-          <div class="feature-list-item">
-            <div class="icon"><i class="fa-solid fa-chart-simple"></i></div>
-            <div><h6>Automated Coding &amp; Reporting</h6><p>Streamline documentation and maximize reimbursements.</p></div>
-            <i class="fa-solid fa-chevron-right chev"></i>
-          </div>
-          <div class="feature-list-item">
-            <div class="icon"><i class="fa-solid fa-prescription-bottle-medical"></i></div>
-            <div><h6>E-prescribing</h6><p>Safe, fast, and compliant e-prescribing workflows.</p></div>
-            <i class="fa-solid fa-chevron-right chev"></i>
-          </div>
-          <div class="feature-list-item">
-            <div class="icon"><i class="fa-solid fa-user-group"></i></div>
-            <div><h6>Patient Engagement</h6><p>Improve communication and patient satisfaction.</p></div>
-            <i class="fa-solid fa-chevron-right chev"></i>
-          </div>
-          <div class="feature-list-item">
-            <div class="icon"><i class="fa-solid fa-gear"></i></div>
-            <div><h6>Workflow Optimization</h6><p>Reduce manual tasks and increase practice efficiency.</p></div>
-            <i class="fa-solid fa-chevron-right chev"></i>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="feature-panel panel-modules">
-          <div class="panel-title"><i class="fa-solid fa-cubes" style="color:#3468c2;"></i> Core Modules</div>
-          <div class="feature-list-item">
-            <div class="icon"><i class="fa-solid fa-stethoscope"></i></div>
-            <div><h6>EMR</h6><p>Comprehensive electronic medical records.</p></div>
-            <i class="fa-solid fa-chevron-right chev"></i>
-          </div>
-          <div class="feature-list-item">
-            <div class="icon"><i class="fa-solid fa-gear"></i></div>
-            <div><h6>Practice Management</h6><p>Scheduling, billing, and revenue cycle management.</p></div>
-            <i class="fa-solid fa-chevron-right chev"></i>
-          </div>
-          <div class="feature-list-item">
-            <div class="icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
-            <div><h6>Medical Billing</h6><p>Claims, payments, and AR management.</p></div>
-            <i class="fa-solid fa-chevron-right chev"></i>
-          </div>
-          <div class="feature-list-item">
-            <div class="icon"><i class="fa-solid fa-user"></i></div>
-            <div><h6>Patient</h6><p>Patient records, engagement and self-service tools.</p></div>
-            <i class="fa-solid fa-chevron-right chev"></i>
-          </div>
-          <div class="feature-list-item">
-            <div class="icon"><i class="fa-solid fa-chart-column"></i></div>
-            <div><h6>Reporting &amp; Analytics</h6><p>Actionable insights to help your practice grow.</p></div>
-            <i class="fa-solid fa-chevron-right chev"></i>
-          </div>
-          <div class="feature-list-item">
-            <div class="icon"><i class="fa-solid fa-share-nodes"></i></div>
-            <div><h6>Interoperability</h6><p>Built around healthcare standards including HL7, FHIR, DICOM, and more.</p></div>
-            <i class="fa-solid fa-chevron-right chev"></i>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="text-center mt-3">
-      <a href="#" class="btn btn-navy">Explore Features <i class="fa-solid fa-arrow-right ms-1"></i></a>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-
- <!-- TESTIMONIALS & CLINICAL METRICS (Light Medical Interior Background Image) -->
-    <section id="testimonials" class="section-testimonials-light-bg py-4 position-relative overflow-hidden">
-      <!-- Decorative Ambient Silk Ribbons & Stardust Overlay -->
-      <svg class="position-absolute top-0 start-0 w-100 h-100 pointer-events-none" viewBox="0 0 1440 600" fill="none" preserveAspectRatio="none">
-        <defs>
-          <linearGradient id="testiCyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.35"/>
-            <stop offset="50%" stop-color="#93c5fd" stop-opacity="0.2"/>
-            <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.05"/>
-          </linearGradient>
-          <linearGradient id="testiGoldGrad" x1="0%" y1="100%" x2="100%" y2="0%">
-            <stop offset="0%" stop-color="#f5b027" stop-opacity="0.35"/>
-            <stop offset="60%" stop-color="#ffd875" stop-opacity="0.2"/>
-            <stop offset="100%" stop-color="#ffffff" stop-opacity="0.05"/>
-          </linearGradient>
-        </defs>
-        <!-- Flowing artistic waves matching Trusted.png aesthetic -->
-        <path d="M-60,90 C260,20 480,240 850,90 C1100,-20 1280,140 1520,70" stroke="url(#testiCyanGrad)" stroke-width="5" fill="none"/>
-        <path d="M-40,130 C280,60 520,280 890,110 C1150,-5 1310,170 1550,95" stroke="url(#testiGoldGrad)" stroke-width="2" fill="none"/>
-        <path d="M-50,480 C320,530 650,360 980,480 C1200,560 1350,420 1500,460" stroke="url(#testiGoldGrad)" stroke-width="2.5" fill="none"/>
-        <path d="M-30,510 C340,560 680,390 1010,510 C1230,590 1380,450 1530,490" stroke="url(#testiCyanGrad)" stroke-width="4.5" fill="none"/>
-        <!-- Soft stardust particles -->
-        <circle cx="160" cy="80" r="2.5" fill="#f5b027" opacity="0.45"/>
-        <circle cx="220" cy="140" r="2" fill="#38bdf8" opacity="0.5"/>
-        <circle cx="1280" cy="110" r="3" fill="#f5b027" opacity="0.4"/>
-        <circle cx="1340" cy="160" r="2" fill="#38bdf8" opacity="0.5"/>
-        <circle cx="200" cy="490" r="2.5" fill="#38bdf8" opacity="0.45"/>
-        <circle cx="1250" cy="510" r="2.5" fill="#f5b027" opacity="0.45"/>
-      </svg>
-
-      <div class="container  relative-content">
-        <div class="text-center mb-5">
-          <span class="section-tag-gold-light mb-2">Testimonials</span>
-          <h2 class="fw-bold fs-2 heading">
-            Trusted by Physicians. <span class="accent">Proven in Practice.</span>
-          </h2>
-          <p class="text-secondary mx-auto" style="max-width: 580px;">
-            Hear how clinical leaders transformed their operations and care quality with MDCARE.
+          <!-- TITLE -->
+          <h1 class="hero-title">
+            Simplifying Your Practice.
+            <br />
+            <span class="gradient-text"> One Connected Platform. </span>
+          </h1>
+          <!-- DESCRIPTION -->
+          <p class="hero-sub my-3">
+            MDCare is a web-based, ONC-certified EMR and practice management platform built to bring your everyday
+            practice needs together in one place.
           </p>
+          <!-- LINKS -->
+          <div class="hero-links mb-4 mt-4">
+            <a href="#">EMR</a>
+            <span>|</span>
+            <a href="#">Billing</a>
+            <span>|</span>
+            <a href="#">AR</a>
+            <span>|</span>
+            <a href="#">Labs</a>
+            <span>|</span>
+            <a href="#">eRx</a>
+          </div>
+          <!-- BUTTON -->
+          <a href="#contact" class="btn btn-gold"> Request a Demo <i class="bi bi-arrow-right ms-1"></i> </a>
         </div>
+      </div>
+    </div>
+  </header>
 
-        <!-- 3 Doctor Cards in Clean Theme -->
-        <div class="row g-4 mb-2">
-          <!-- Card 1: Dr. Sarah Lin -->
-          <div class="col-md-4">
-            <div class="light-testimonial-card p-4 h-100 d-flex flex-column justify-content-between shimmer-card">
-              <div>
-                <div class="d-flex align-items-center gap-3 mb-3">
-                  <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=150&q=80" alt="Dr. Sarah Lin" class="rounded-circle object-fit-cover border border-secondary border-opacity-25" style="width: 52px; height: 52px;" onerror="this.src='https://placehold.co/100x100/102144/ffffff?text=SL'">
-                  <div>
-                    <h6 class="mb-0 fw-bold text-dark small">Dr. Sarah Lin, MD</h6>
-                    <small class="text-gold fw-bold" style="font-size: 0.76rem;">Cardiology Specialist</small>
-                  </div>
-                </div>
-                <div class="text-gold small mb-2">
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                </div>
-                <p class="text-secondary small mb-4" style="line-height: 1.7;">
-                  "MDCARE is by far the most intuitive EHR we've integrated. Claims rejection dropped significantly within the first 90 days, and our medical staff saves roughly 2 hours daily on charting."
-                </p>
-              </div>
-              <div class="pt-3 border-top d-flex justify-content-between align-items-center" style="border-color: #e2e8f0 !important;">
-                <span class="text-muted" style="font-size: 0.72rem;"></span>
-                <span class="status-badge-verified-light">Verified Clinician</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 2: Dr. David Patel -->
-          <div class="col-md-4">
-            <div class="light-testimonial-card p-4 h-100 d-flex flex-column justify-content-between shimmer-card">
-              <div>
-                <div class="d-flex align-items-center gap-3 mb-3">
-                  <img src="https://images.unsplash.com/photo-1622902046580-2b47f47f5471?auto=format&fit=crop&w=150&q=80" alt="Dr. David Patel" class="rounded-circle object-fit-cover border border-secondary border-opacity-25" style="width: 52px; height: 52px;" onerror="this.src='https://placehold.co/100x100/102144/ffffff?text=DP'">
-                  <div>
-                    <h6 class="mb-0 fw-bold text-dark small">Dr. David Patel, DO</h6>
-                    <small class="text-gold fw-bold" style="font-size: 0.76rem;">Family Medicine Practice</small>
-                  </div>
-                </div>
-                <div class="text-gold small mb-2">
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                </div>
-                <p class="text-secondary small mb-4" style="line-height: 1.7;">
-                  "Migrating 10 years of patient charts felt intimidating until MDCARE handled the transition. The tablet interface and voice charting enable me to focus directly on patients instead of typing."
-                </p>
-              </div>
-              <div class="pt-3 border-top d-flex justify-content-between align-items-center" style="border-color: #e2e8f0 !important;">
-                <span class="text-muted" style="font-size: 0.72rem;"></span>
-                <span class="status-badge-verified-light">Verified Clinician</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 3: Dr. Michael Chen -->
-          <div class="col-md-4">
-            <div class="light-testimonial-card p-4 h-100 d-flex flex-column justify-content-between shimmer-card">
-              <div>
-                <div class="d-flex align-items-center gap-3 mb-3">
-                  <img src="https://images.unsplash.com/photo-1594824813572-c5132d721b5e?auto=format&fit=crop&w=150&q=80" alt="Dr. Michael Chen" class="rounded-circle object-fit-cover border border-secondary border-opacity-25" style="width: 52px; height: 52px;" onerror="this.src='https://placehold.co/100x100/102144/ffffff?text=MC'">
-                  <div>
-                    <h6 class="mb-0 fw-bold text-dark small">Dr. Michael Chen, MD</h6>
-                    <small class="text-gold fw-bold" style="font-size: 0.76rem;">Internal Medicine Clinic</small>
-                  </div>
-                </div>
-                <div class="text-gold small mb-2">
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                </div>
-                <p class="text-secondary small mb-4" style="line-height: 1.7;">
-                  "The billing intelligence and automated clearinghouse integration transformed our revenue cycle. Days in accounts receivable dropped dramatically within our first fiscal quarter."
-                </p>
-              </div>
-              <div class="pt-3 border-top d-flex justify-content-between align-items-center" style="border-color: #e2e8f0 !important;">
-                <span class="text-muted" style="font-size: 0.72rem;"></span>
-                <span class="status-badge-verified-light">Verified Clinician</span>
-              </div>
+  <!-- ABOUT -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="row align-items-center gy-5">
+        <div class="col-lg-7">
+          <span class="section-tag"><i class="bi bi-people-fill"></i>About Us</span>
+          <h2 class="heading mt-3">
+            Technology that Connects<br /><span class="accent">Every Part of your Practice</span>
+          </h2>
+          <p class="text-muted mt-3" style="max-width: 520px">
+            MDCare is a comprehensive healthcare technology platform designed to support the clinical, administrative,
+            and business needs of medical practices.
+          </p>
+          <p class="text-muted" style="max-width: 520px">
+            From EMR and practice management to billing, revenue cycle, labs, interoperability, and more — MDCare brings
+            essential healthcare workflows into a connected platform.
+          </p>
+          <a href="#" class="btn btn-navy mt-2">Read More <i class="bi bi-arrow-right ms-1"></i></a>
+        </div>
+        <div class="col-lg-5 text-center">
+          <div class="badge-circle">
+            <div class="badge-circle-inner">
+              <img src="assets/img/EHR.png" class="img-fluid w-100" />
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- CONTACT & CALL TO ACTION (Preserved in Dark Midnight Navy) -->
-    <section id="contact" class="section-shimmer-bg py-4 position-relative overflow-hidden">
-      <!-- Wave Ribbon -->
-      <svg class="gold-wave-overlay" viewBox="0 0 1440 450" fill="none" preserveAspectRatio="none">
-        <path d="M-50,220 C320,100 680,320 1150,160 C1320,100 1440,240 1550,180" stroke="url(#heroGoldGradient1)" stroke-width="2" fill="none" opacity="0.4"/>
+  <!-- Technology & Certifications BANNER -->
+
+  <section class="banner" aria-labelledby="tc-title">
+    <div class="glow"></div>
+
+    <div class="badge">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 2 4 5.2v6.1c0 4.6 3.2 8.7 8 10.7 4.8-2 8-6.100 8-10.700V5.200L12 2Z" fill="#06214a" />
+        <path d="m8.300 12.100 2.700 2.700 4.800-5" fill="none" stroke="#f0bd55" stroke-width="2.200"
+          stroke-linecap="round" stroke-linejoin="round" />
       </svg>
+      Trusted
+    </div>
 
-      <div class="container  relative-content">
-        <div class="rounded-4 text-white position-relative overflow-hidden shimmer-card" >
-          <div class="row align-items-center g-4">
-            <div class="col-lg-12 d-flex flex-direction" style="    flex-direction: column;
-    align-items: center;
-    justify-content: center;">
-              <h2 class="fw-bold fs-2 mb-2">
-                Experience MDCARE for <span class="text-gold-gradient">your practice</span>
-              </h2>
-              <p class="text-gold fw-semibold mb-2 fs-6">Start your 6-month Free Trial today.</p>
+    <h1 id="tc-title">Technology &amp; <span class="text-c">Certifications</span></h1>
 
-              <div class="d-flex flex-wrap align-items-center gap-3">
-                <a href="#contact-sales" class="btn btn-gold-shimmer px-4 py-2">
-                  Contact Us <i class="bi bi-arrow-right"></i>
-                </a>
-               
-              </div>
-               <div class="d-inline-flex gap-2 p-2 rounded-pill mt-4" style="background: rgba(8, 20, 48, 0.85); border: 1px solid rgba(245, 176, 39, 0.35);">
-                <a href="tel:+18005550199" class="circle-icon-btn-luxury" title="Phone">
-                  <i class="bi bi-telephone-fill"></i>
-                </a>
-                <a href="mailto:support@mdcare.health" class="circle-icon-btn-luxury" title="Email">
-                  <i class="bi bi-envelope-fill"></i>
-                </a>
-               
-                <a href="#support" class="circle-icon-btn-luxury" title="Support">
-                  <i class="bi bi-headset"></i>
-                </a>
-               
-              </div>
+    <p class="intro">
+      MDCare combines certified health IT and integrated healthcare technologies to support secure, connected, and
+      efficient practice workflows.
+    </p>
+
+    <div class="features">
+      <!-- ONC -->
+      <article class="feature">
+        <div class="visual">
+          <div class="onc" role="img" aria-label="ONC Health IT Certified">
+            <div class="onc-mark">
+              ONC
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="m12 2 2.900 6.300 6.900.8-5.100 4.700 1.400 6.800L12 17.100 5.900 20.600l1.400-6.800L2.200 9.100l6.900-.8L12 2Z"
+                  fill="#f0bd55" />
+              </svg>
             </div>
+            <div class="onc-rule"></div>
+            <div class="onc-text"><strong>Health IT</strong><small>CERTIFIED</small></div>
+          </div>
+        </div>
+        <p>ONC-certified health IT designed to support modern healthcare workflows and interoperability.</p>
+      </article>
 
-            
+      <!-- Interoperability -->
+      <article class="feature">
+        <div class="visual">
+          <svg class="icon-gold" viewBox="0 0 96 96" fill="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#f8d98f" />
+                <stop offset="1" stop-color="#d9992a" />
+              </linearGradient>
+            </defs>
+            <path
+              d="M28 72H26C16 72 8 65 8 56s8-16 18-16c1.500 0 3 .2 4.400.6C32.500 30 40 22 50 22c11 0 19.500 8 21 18.500C80 41 88 47.500 88 56.500 88 65.500 80 72 71 72h-3"
+              stroke="url(#g1)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M40 74V52m0 0-7 7m7-7 7 7" stroke="url(#g1)" stroke-width="5" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <path d="M56 50v22m0 0-7-7m7 7 7-7" stroke="url(#g1)" stroke-width="5" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </div>
+        <p>
+          Interoperability assistance designed to improve data efficiency and streamline practice workflows.
+        </p>
+      </article>
+
+      <!-- Secure email -->
+      <article class="feature">
+        <div class="visual">
+          <svg class="icon-gold" viewBox="0 0 96 96" fill="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#f8d98f" />
+                <stop offset="1" stop-color="#d9992a" />
+              </linearGradient>
+            </defs>
+            <path d="M48 8 18 19v26c0 19 12.500 34 30 43 17.500-9 30-24 30-43V19L48 8Z" stroke="url(#g2)"
+              stroke-width="5" stroke-linejoin="round" />
+            <path d="M48 16 25 24.500V45c0 15 9.500 27.500 23 35 13.500-7.500 23-20 23-35V24.500L48 16Z" fill="#0a2c5e"
+              stroke="url(#g2)" stroke-width="2" />
+            <path d="m35 47 9.500 9.500L62 38" stroke="#fff" stroke-width="5.500" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </div>
+        <p>
+          Secure email communication designed for healthcare workflows and protected information exchange.
+        </p>
+      </article>
+
+      <!-- Drummond -->
+      <article class="feature">
+        <div class="visual">
+          <div class="drummond" role="img" aria-label="Drummond certified">
+            <svg viewBox="0 0 80 80" aria-hidden="true">
+              <defs>
+                <radialGradient id="g3" cx=".35" cy=".3" r=".9">
+                  <stop offset="0" stop-color="#fbe3a2" />
+                  <stop offset=".6" stop-color="#eeb748" />
+                  <stop offset="1" stop-color="#c98a1e" />
+                </radialGradient>
+              </defs>
+              <circle cx="40" cy="40" r="38" fill="url(#g3)" />
+              <circle cx="40" cy="40" r="31" fill="none" stroke="rgba(255,255,255,.45)" stroke-width="1.500" />
+              <path d="m24 41 11 11 22-24" fill="none" stroke="#06214a" stroke-width="7" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+            <span>Drummond<br />certified</span>
+          </div>
+        </div>
+        <p>Secure digital intake, management and your workflows for convenient document exchange.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- WHY MDCARE -->
+  <section class="why-section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="section-tag"><i class="bi bi-lightbulb-fill"></i> Why MDCARE</span>
+        <h2 class="heading mt-3">
+          Simplifying Healthcare <span class="accent">Empowering Practices</span>
+        </h2>
+        <p class="text-muted mx-auto" style="max-width: 600px">
+          A modern, all in one platform designed to help your practice work smarter, stay compliant, and focus on what
+          matters most — your patients.
+        </p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="feature-row-card">
+            <div class="icon-box"><i class="bi bi-display"></i></div>
+            <div>
+              <h6>All-in-One Platform</h6>
+              <p>EMR, billing, AR, labs, eRx, and practice management in one connected system.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="feature-row-card">
+            <div class="icon-box"><i class="bi bi-gear-fill"></i></div>
+            <div>
+              <h6>Flexible &amp; Customizable</h6>
+              <p>Adapt workflows and functionality to your specialty and practice needs.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="feature-row-card">
+            <div class="icon-box"><i class="bi bi-phone"></i></div>
+            <div>
+              <h6>Anywhere, Anywhere Access</h6>
+              <p>A web-based platform designed for seamless access across devices.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="feature-row-card">
+            <div class="icon-box"><i class="bi bi-share"></i></div>
+            <div>
+              <h6>Connected &amp; Interoperable</h6>
+              <p>Built around healthcare standards including HL7, FHIR, DICOM, and more.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="feature-row-card">
+            <div class="icon-box"><i class="bi bi-shield-fill-check"></i></div>
+            <div>
+              <h6>Secure &amp; Compliance-Ready</h6>
+              <p>Designed with healthcare security, privacy, and regulatory requirements in mind.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="feature-row-card">
+            <div class="icon-box"><i class="bi bi-graph-up-arrow"></i></div>
+            <div>
+              <h6>Built to Scale</h6>
+              <p>From small practices to multi-specialty organizations, MDCare grows with you.</p>
+            </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
+  <!-- AI SECTION -->
+  <section class="ai-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <div class="d-flex flex-wrap gap-2 mb-3">
+            <span class="ai-flow-pill"><i class="bi bi-mic-fill"></i> Voice Dictation</span>
+            <i class="bi bi-arrow-right text-secondary align-self-center"></i>
+            <span class="ai-flow-pill"><i class="bi bi-cpu-fill"></i> AI Processing</span>
+            <i class="bi bi-arrow-right text-secondary align-self-center"></i>
+            <span class="ai-flow-pill"><i class="bi bi-file-earmark-text"></i> Clinical Notes</span>
+          </div>
+          <img src="assets/img/mdcareai-l-side.png" class="ai-mock-img img-fluid"
+            alt="Nurse using MDCare AI voice dictation with laptop showing AI generated clinical notes" />
+        </div>
+        <div class="col-lg-6 ps-lg-5">
+          <span class="section-tag"><i class="bi bi-lightning-fill"></i> MDCare AI</span>
+          <h2 class="mt-2">
+            Everything Your Practice Needs.<br /><span class="accent">Connected In One platform</span>
+          </h2>
+          <p class="lead-text my-3">
+            From clinical documentation and e-prescribing to billing, patient engagement, and reporting, MDCare brings
+            essential healthcare workflows together in one connected system.
+          </p>
+          <p class="fw-semibold text-white mb-2">Key Highlights:</p>
+          <div class="row">
+            <div class="col-6">
+              <div class="check-item">
+                <i class="bi bi-check-circle-fill"></i> AI-Powered Assistance
+              </div>
+              <div class="check-item"><i class="bi bi-check-circle-fill"></i> Improved Accuracy</div>
+            </div>
+            <div class="col-6">
+              <div class="check-item">
+                <i class="bi bi-check-circle-fill"></i> Faster Documentation
+              </div>
+              <div class="check-item">
+                <i class="bi bi-check-circle-fill"></i> More Timed Accuracy
+              </div>
+            </div>
+          </div>
+          <a href="#" class="btn btn-gold mt-2">Explore More <i class="bi bi-arrow-right ms-1"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- FEATURES -->
+  <section class="features-section" id="features">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="section-tag"><i class="bi bi-star-fill"></i> Features</span>
+        <h2 class="heading mt-3">
+          Everything Your Practice Needs.<br /><span class="accent">Connected In One Platform</span>
+        </h2>
+        <p class="text-muted mx-auto" style="max-width: 600px">
+          From clinical documentation and e-prescribing to billing, patient engagement, and reporting, MDCare brings
+          essential healthcare workflows together in one connected system.
+        </p>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <div class="feature-panel">
+            <div class="panel-title" style="background: #fff0d8">
+              <i class="bi bi-people-fill text-warning"></i> Advantages
+            </div>
+            <div class="feature-list-item">
+              <div class="icon"><i class="bi bi-file-earmark-medical-fill"></i></div>
+              <div>
+                <h6>Clinical Decision Support</h6>
+                <p>Evidence-based insights to improve clinical outcomes.</p>
+              </div>
+              <i class="bi bi-chevron-right chev"></i>
+            </div>
+            <div class="feature-list-item">
+              <div class="icon"><i class="bi bi-bar-chart-fill"></i></div>
+              <div>
+                <h6>Automated Coding &amp; Reporting</h6>
+                <p>Streamline documentation and maximize reimbursements.</p>
+              </div>
+              <i class="bi bi-chevron-right chev"></i>
+            </div>
+            <div class="feature-list-item">
+              <div class="icon"><i class="bi bi-capsulebi bi-capsule"></i></div>
+              <div>
+                <h6>E-prescribing</h6>
+                <p>Safe, fast, and compliant e-prescribing workflows.</p>
+              </div>
+              <i class="bi bi-chevron-right chev"></i>
+            </div>
+            <div class="feature-list-item">
+              <div class="icon"><i class="bi bi-people-fill"></i></div>
+              <div>
+                <h6>Patient Engagement</h6>
+                <p>Improve communication and patient satisfaction.</p>
+              </div>
+              <i class="bi bi-chevron-right chev"></i>
+            </div>
+            <div class="feature-list-item">
+              <div class="icon"><i class="bi bi-gear-fill"></i></div>
+              <div>
+                <h6>Workflow Optimization</h6>
+                <p>Reduce manual tasks and increase practice efficiency.</p>
+              </div>
+              <i class="bi bi-chevron-right chev"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="feature-panel panel-modules">
+            <div class="panel-title">
+              <i class="bi bi-boxes" style="color: #3468c2"></i> Core Modules
+            </div>
+            <div class="feature-list-item">
+              <div class="icon"><i class="bi bi-heart-pulse-fill"></i></div>
+              <div>
+                <h6>EMR</h6>
+                <p>Comprehensive electronic medical records.</p>
+              </div>
+              <i class="bi bi-chevron-right chev"></i>
+            </div>
+            <div class="feature-list-item">
+              <div class="icon"><i class="bi bi-gear-fill"></i></div>
+              <div>
+                <h6>Practice Management</h6>
+                <p>Scheduling, billing, and revenue cycle management.</p>
+              </div>
+              <i class="bi bi-chevron-right chev"></i>
+            </div>
+            <div class="feature-list-item">
+              <div class="icon"><i class="bi bi-receipt"></i></div>
+              <div>
+                <h6>Medical Billing</h6>
+                <p>Claims, payments, and AR management.</p>
+              </div>
+              <i class="bi bi-chevron-right chev"></i>
+            </div>
+            <div class="feature-list-item">
+              <div class="icon"><i class="bi bi-person-fill"></i></div>
+              <div>
+                <h6>Patient</h6>
+                <p>Patient records, engagement and self-service tools.</p>
+              </div>
+              <i class="bi bi-chevron-right chev"></i>
+            </div>
+            <div class="feature-list-item">
+              <div class="icon"><i class="bi bi-bar-chart-fill"></i></div>
+              <div>
+                <h6>Reporting &amp; Analytics</h6>
+                <p>Actionable insights to help your practice grow.</p>
+              </div>
+              <i class="bi bi-chevron-right chev"></i>
+            </div>
+            <div class="feature-list-item">
+              <div class="icon"><i class="bi bi-share"></i></div>
+              <div>
+                <h6>Interoperability</h6>
+                <p>Built around healthcare standards including HL7, FHIR, DICOM, and more.</p>
+              </div>
+              <i class="bi bi-chevron-right chev"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-3">
+        <a href="#" class="btn btn-navy">Explore Features <i class="bi bi-arrow-right ms-1"></i></a>
+      </div>
+    </div>
+  </section>
 
+  <!-- TESTIMONIALS & CLINICAL METRICS (Light Medical Interior Background Image) -->
+  <section id="testimonials" class="section-testimonials-light-bg py-4 position-relative overflow-hidden">
+    <!-- Decorative Ambient Silk Ribbons & Stardust Overlay -->
+    <svg class="position-absolute top-0 start-0 w-100 h-100 pointer-events-none" viewBox="0 0 1440 600" fill="none"
+      preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="testiCyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.35" />
+          <stop offset="50%" stop-color="#93c5fd" stop-opacity="0.2" />
+          <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.05" />
+        </linearGradient>
+        <linearGradient id="testiGoldGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#f5b027" stop-opacity="0.35" />
+          <stop offset="60%" stop-color="#ffd875" stop-opacity="0.2" />
+          <stop offset="100%" stop-color="#ffffff" stop-opacity="0.05" />
+        </linearGradient>
+      </defs>
+      <!-- Flowing artistic waves matching Trusted.png aesthetic -->
+      <path d="M-60,90 C260,20 480,240 850,90 C1100,-20 1280,140 1520,70" stroke="url(#testiCyanGrad)" stroke-width="5"
+        fill="none" />
+      <path d="M-40,130 C280,60 520,280 890,110 C1150,-5 1310,170 1550,95" stroke="url(#testiGoldGrad)" stroke-width="2"
+        fill="none" />
+      <path d="M-50,480 C320,530 650,360 980,480 C1200,560 1350,420 1500,460" stroke="url(#testiGoldGrad)"
+        stroke-width="2.5" fill="none" />
+      <path d="M-30,510 C340,560 680,390 1010,510 C1230,590 1380,450 1530,490" stroke="url(#testiCyanGrad)"
+        stroke-width="4.5" fill="none" />
+      <!-- Soft stardust particles -->
+      <circle cx="160" cy="80" r="2.5" fill="#f5b027" opacity="0.45" />
+      <circle cx="220" cy="140" r="2" fill="#38bdf8" opacity="0.5" />
+      <circle cx="1280" cy="110" r="3" fill="#f5b027" opacity="0.4" />
+      <circle cx="1340" cy="160" r="2" fill="#38bdf8" opacity="0.5" />
+      <circle cx="200" cy="490" r="2.5" fill="#38bdf8" opacity="0.45" />
+      <circle cx="1250" cy="510" r="2.5" fill="#f5b027" opacity="0.45" />
+    </svg>
 
+    <div class="container relative-content">
+      <div class="text-center mb-5">
+        <span class="section-tag-gold-light mb-2">Testimonials</span>
+        <h2 class="fw-bold fs-2 heading">
+          Trusted by Physicians. <span class="accent">Proven in Practice.</span>
+        </h2>
+        <p class="text-secondary mx-auto" style="max-width: 580px">
+          Hear how clinical leaders transformed their operations and care quality with MDCARE.
+        </p>
+      </div>
 
+      <!-- 3 Doctor Cards in Clean Theme -->
+      <div class="row g-4 mb-2">
+        <!-- Card 1: Dr. Sarah Lin -->
+        <div class="col-md-4">
+          <div class="light-testimonial-card p-4 h-100 d-flex flex-column justify-content-between shimmer-card">
+            <div>
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=150&q=80"
+                  alt="Dr. Sarah Lin" class="rounded-circle object-fit-cover border border-secondary border-opacity-25"
+                  style="width: 52px; height: 52px"
+                  onerror="this.src='https://placehold.co/100x100/102144/ffffff?text=SL'" />
+                <div>
+                  <h6 class="mb-0 fw-bold text-dark small">Dr. Sarah Lin, MD</h6>
+                  <small class="text-gold fw-bold" style="font-size: 0.76rem">Cardiology Specialist</small>
+                </div>
+              </div>
+              <div class="text-gold small mb-2">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <p class="text-secondary small mb-4" style="line-height: 1.7">
+                "MDCARE is by far the most intuitive EHR we've integrated. Claims rejection dropped
+                significantly within the first 90 days, and our medical staff saves roughly 2 hours
+                daily on charting."
+              </p>
+            </div>
+            <div class="pt-3 border-top d-flex justify-content-between align-items-center"
+              style="border-color: #e2e8f0 !important">
+              <span class="text-muted" style="font-size: 0.72rem"></span>
+              <span class="status-badge-verified-light">Verified Clinician</span>
+            </div>
+          </div>
+        </div>
 
+        <!-- Card 2: Dr. David Patel -->
+        <div class="col-md-4">
+          <div class="light-testimonial-card p-4 h-100 d-flex flex-column justify-content-between shimmer-card">
+            <div>
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <img src="https://images.unsplash.com/photo-1622902046580-2b47f47f5471?auto=format&fit=crop&w=150&q=80"
+                  alt="Dr. David Patel"
+                  class="rounded-circle object-fit-cover border border-secondary border-opacity-25"
+                  style="width: 52px; height: 52px"
+                  onerror="this.src='https://placehold.co/100x100/102144/ffffff?text=DP'" />
+                <div>
+                  <h6 class="mb-0 fw-bold text-dark small">Dr. David Patel, DO</h6>
+                  <small class="text-gold fw-bold" style="font-size: 0.76rem">Family Medicine Practice</small>
+                </div>
+              </div>
+              <div class="text-gold small mb-2">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <p class="text-secondary small mb-4" style="line-height: 1.7">
+                "Migrating 10 years of patient charts felt intimidating until MDCARE handled the
+                transition. The tablet interface and voice charting enable me to focus directly on
+                patients instead of typing."
+              </p>
+            </div>
+            <div class="pt-3 border-top d-flex justify-content-between align-items-center"
+              style="border-color: #e2e8f0 !important">
+              <span class="text-muted" style="font-size: 0.72rem"></span>
+              <span class="status-badge-verified-light">Verified Clinician</span>
+            </div>
+          </div>
+        </div>
 
+        <!-- Card 3: Dr. Michael Chen -->
+        <div class="col-md-4">
+          <div class="light-testimonial-card p-4 h-100 d-flex flex-column justify-content-between shimmer-card">
+            <div>
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <img src="https://images.unsplash.com/photo-1594824813572-c5132d721b5e?auto=format&fit=crop&w=150&q=80"
+                  alt="Dr. Michael Chen"
+                  class="rounded-circle object-fit-cover border border-secondary border-opacity-25"
+                  style="width: 52px; height: 52px"
+                  onerror="this.src='https://placehold.co/100x100/102144/ffffff?text=MC'" />
+                <div>
+                  <h6 class="mb-0 fw-bold text-dark small">Dr. Michael Chen, MD</h6>
+                  <small class="text-gold fw-bold" style="font-size: 0.76rem">Internal Medicine Clinic</small>
+                </div>
+              </div>
+              <div class="text-gold small mb-2">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <p class="text-secondary small mb-4" style="line-height: 1.7">
+                "The billing intelligence and automated clearinghouse integration transformed our
+                revenue cycle. Days in accounts receivable dropped dramatically within our first
+                fiscal quarter."
+              </p>
+            </div>
+            <div class="pt-3 border-top d-flex justify-content-between align-items-center"
+              style="border-color: #e2e8f0 !important">
+              <span class="text-muted" style="font-size: 0.72rem"></span>
+              <span class="status-badge-verified-light">Verified Clinician</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- CONTACT & CALL TO ACTION (Preserved in Dark Midnight Navy) -->
+  <section id="contact" class="section-shimmer-bg py-4 position-relative overflow-hidden">
+    <!-- Wave Ribbon -->
+    <svg class="gold-wave-overlay" viewBox="0 0 1440 450" fill="none" preserveAspectRatio="none">
+      <path d="M-50,220 C320,100 680,320 1150,160 C1320,100 1440,240 1550,180" stroke="url(#heroGoldGradient1)"
+        stroke-width="2" fill="none" opacity="0.4" />
+    </svg>
 
+    <div class="container relative-content">
+      <div class="rounded-4 text-white position-relative overflow-hidden shimmer-card">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-12 d-flex flex-direction"
+            style="flex-direction: column; align-items: center; justify-content: center">
+            <h2 class="fw-bold fs-2 mb-2">
+              Experience MDCARE for <span class="text-gold-gradient">your practice</span>
+            </h2>
+            <p class="text-gold fw-semibold mb-2 fs-6">Start your 6-month Free Trial today.</p>
 
+            <div class="d-flex flex-wrap align-items-center gap-3">
+              <a href="#contact-sales" class="btn btn-gold-shimmer px-4 py-2">
+                Contact Us <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+            <div class="d-inline-flex gap-2 p-2 rounded-pill mt-4"
+              style="background: rgba(8, 20, 48, 0.85); border: 1px solid rgba(245, 176, 39, 0.35)">
+              <a href="tel:+18005550199" class="circle-icon-btn-luxury" title="Phone">
+                <i class="bi bi-telephone-fill"></i>
+              </a>
+              <a href="mailto:support@mdcare.health" class="circle-icon-btn-luxury" title="Email">
+                <i class="bi bi-envelope-fill"></i>
+              </a>
 
+              <a href="#support" class="circle-icon-btn-luxury" title="Support">
+                <i class="bi bi-headset"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <footer class="text-center py-4 border-top" style="background: #020714; color: #7f8ba3; font-size: 0.85rem">
+    &copy; 2026 MDCare. All rights reserved.
+  </footer>
 
-
-
-
-
-
-
-
-
-
-
-<footer class="text-center py-4 border-top" style="background: #020714;
-    color: #7f8ba3;
-    font-size: .85rem;">
-  &copy; 2026 MDCare. All rights reserved.
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
