@@ -115,7 +115,7 @@ img {
 
 /* TEXT GRADIENTS & BADGES */
 .gradient-text {
-  background: linear-gradient(180deg, #FFFFFF 0%, #FFE0B2 45%, #E6B15C 100%);
+  background: linear-gradient(180deg, #FFFFFF 0%, #FFE0B2 30%, #ff9d00 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -743,10 +743,7 @@ img {
 .section-testimonials-light-bg {
   position: relative;
   background:
-    radial-gradient(ellipse 70% 45% at 20% 15%, rgba(186, 230, 253, 0.45) 0%, transparent 60%),
-    radial-gradient(ellipse 65% 50% at 85% 30%, rgba(254, 240, 138, 0.25) 0%, transparent 55%),
-    radial-gradient(ellipse 80% 60% at 50% 95%, rgba(224, 242, 254, 0.55) 0%, transparent 65%),
-    linear-gradient(180deg, #f0f9ff 0%, #ffffff 45%, #f8fafc 100%);
+   radial-gradient(ellipse 70% 45% at 20% 15%, rgb(192 210 219 / 45%) 0%, transparent 60%), radial-gradient(ellipse 65% 50% at 85% 30%, rgba(254, 240, 138, 0.25) 0%, transparent 55%), radial-gradient(ellipse 80% 60% at 50% 95%, rgba(224, 242, 254, 0.55) 0%, transparent 65%), linear-gradient(180deg, #f0f9ff 0%, #ffffff 45%, #f8fafc 100%)
 }
 
 .light-testimonial-card {
@@ -824,7 +821,7 @@ img {
   border: 1px solid rgba(245, 176, 39, 0.35);
 }
 
-.border-top-dark {
+.border-top-dark ,.border-top {
   border-top: solid 1px #2d2d2d !important;
 }
 
