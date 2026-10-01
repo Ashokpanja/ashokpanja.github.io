@@ -15,7 +15,7 @@
 <body>
   <!-- HERO -->
   
-<header id="mainHeader" class="hero-section">
+<header id="mainHeader" class="hero-section fixed-top">
   <nav class="navbar navbar-expand-lg navbar-mdcare" id="mainNavbar">
     <div class="container">
       <a class="navbar-brand navbar-brand-mdcare" href="#">
@@ -63,12 +63,20 @@
   });
 });
  </script>
-    <!-- HERO CONTENT -->
-    <div class="container-fluid hero-content">
-      <div class="row align-items-center" style="padding-top: 8%">
+    
+  </header>
+<div class="main">
+
+
+
+<!-- HERO CONTENT -->
+    <div class="container-fluid hero-content hero section dark-background">
+      <img src="assets/img/main.png" class="img-fluid w-100"/>
+      <div class="container-fluid">
+ <div class="row align-items-center ">
         <div class="col-lg-12 col-xl-8 ps-lg-5">
           <!-- BADGES -->
-          <div class="d-flex flex-wrap gap-2 mb-4">
+          <div class="d-flex flex-wrap gap-2 mb-lg-4 mb-2">
             <span class="pill-badge">
               <i class="bi bi-check-circle-fill"></i>
               MIPS Support
@@ -109,9 +117,10 @@
           <a href="#contact" class="btn btn-gold"> Request a Demo <i class="bi bi-arrow-right ms-1"></i> </a>
         </div>
       </div>
+      </div>
+     
     </div>
-  </header>
-
+   
   <!-- ABOUT -->
   <section class="about-section" id="about">
     <div class="container">
@@ -121,11 +130,11 @@
           <h2 class="heading mt-3">
             Technology that Connects<br /><span class="accent">Every Part of your Practice</span>
           </h2>
-          <p class="text-muted mt-3" style="max-width: 520px">
+          <p class="text-muted mt-3" >
             MDCare is a comprehensive healthcare technology platform designed to support the clinical, administrative,
             and business needs of medical practices.
           </p>
-          <p class="text-muted" style="max-width: 520px">
+          <p class="text-muted" >
             From EMR and practice management to billing, revenue cycle, labs, interoperability, and more — MDCare brings
             essential healthcare workflows into a connected platform.
           </p>
@@ -134,7 +143,7 @@
         <div class="col-lg-5 text-center">
           <div class="badge-circle">
             <div class="badge-circle-inner">
-              <img src="assets/img/EHR.png" class="img-fluid w-100" />
+              <img src="assets/img/EHR.png" class="img-fluid w-100 " />
             </div>
           </div>
         </div>
@@ -498,11 +507,13 @@
   </section>
 
   <!-- TESTIMONIALS & CLINICAL METRICS (Light Medical Interior Background Image) -->
-  <section id="testimonials" class="section-testimonials-light-bg py-4 position-relative overflow-hidden">
-    <!-- Decorative Ambient Silk Ribbons & Stardust Overlay -->
   
-    <div class="container relative-content">
-      <div class="text-center mb-5">
+
+<section class="testimonial-section section-testimonials-light-bg  position-relative overflow-hidden" >
+
+  <div class="container">
+
+    <div class="text-center mb-5">
         <span class=" mb-2 section-tag"><i class="bi bi-chat-right-quote"></i>Testimonials</span>
         <h2 class="fw-bold fs-2 heading">
           Trusted by Physicians. <span class="accent">Proven in Practice.</span>
@@ -512,108 +523,592 @@
         </p>
       </div>
 
-      <!-- 3 Doctor Cards in Clean Theme -->
-      <div class="row g-4 mb-2">
-        <!-- Card 1: Dr. Sarah Lin -->
-        <div class="col-md-4">
-          <div class="light-testimonial-card p-4 h-100 d-flex flex-column justify-content-between shimmer-card">
-            <div>
-              <div class="d-flex align-items-center gap-3 mb-3">
-                <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=150&q=80"
-                  alt="Dr. Sarah Lin" class="rounded-circle object-fit-cover border border-secondary border-opacity-25"
-                  style="width: 52px; height: 52px"
-                  onerror="this.src='https://placehold.co/100x100/102144/ffffff?text=SL'" />
-                <div>
-                  <h6 class="mb-0 fw-bold text-dark small">Dr. Sarah Lin, MD</h6>
-                  <small class="text-gold fw-bold" style="font-size: 0.76rem">Cardiology Specialist</small>
-                </div>
+    <!-- Testimonial Carousel -->
+    <div id="testimonialSlider" class="carousel slide">
+
+      <div class="carousel-inner">
+
+        <div class="testimonial-track">
+
+
+          <!-- Card 1 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+
+              <div class="quote-icon">"</div>
+
+              <div class="stars">
+                ★★★★★
               </div>
-              <div class="text-gold small mb-2">
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-              </div>
-              <p class="text-secondary small mb-4" style="line-height: 1.7">
-                "MDCARE is by far the most intuitive EHR we've integrated. Claims rejection dropped
-                significantly within the first 90 days, and our medical staff saves roughly 2 hours
-                daily on charting."
+
+              <p class="testimonial-text">
+                “The team delivered an excellent website for our business.
+                Everything was professional, fast and exactly what we needed.”
               </p>
+
+              <div class="user-info">
+
+                <img
+                  src="https://i.pravatar.cc/120?img=12"
+                  alt="Sarah Johnson"
+                >
+
+                <div>
+                  <h5>Sarah Johnson</h5>
+                  <span>Business Owner</span>
+                </div>
+
+              </div>
+
             </div>
-           
           </div>
+
+
+          <!-- Card 2 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+
+              <div class="quote-icon">"</div>
+
+              <div class="stars">
+                ★★★★★
+              </div>
+
+              <p class="testimonial-text">
+                “Amazing experience from start to finish. The design looks
+                modern and our customers love the new website.”
+              </p>
+
+              <div class="user-info">
+
+                <img
+                  src="https://i.pravatar.cc/120?img=32"
+                  alt="Michael Brown"
+                >
+
+                <div>
+                  <h5>Michael Brown</h5>
+                  <span>Marketing Manager</span>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+
+          <!-- Card 3 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+
+              <div class="quote-icon">"</div>
+
+              <div class="stars">
+                ★★★★★
+              </div>
+
+              <p class="testimonial-text">
+                “Great communication and outstanding results. I would
+                definitely recommend their services.”
+              </p>
+
+              <div class="user-info">
+
+                <img
+                  src="https://i.pravatar.cc/120?img=47"
+                  alt="Emily Davis"
+                >
+
+                <div>
+                  <h5>Emily Davis</h5>
+                  <span>CEO, Startup</span>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+
+          <!-- Card 4 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+
+              <div class="quote-icon">"</div>
+
+              <div class="stars">
+                ★★★★★
+              </div>
+
+              <p class="testimonial-text">
+                “Very impressed with the quality of work. The entire
+                process was smooth and professional.”
+              </p>
+
+              <div class="user-info">
+
+                <img
+                  src="https://i.pravatar.cc/120?img=5"
+                  alt="David Wilson"
+                >
+
+                <div>
+                  <h5>David Wilson</h5>
+                  <span>Product Manager</span>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+
+          <!-- Card 5 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+
+              <div class="quote-icon">"</div>
+
+              <div class="stars">
+                ★★★★★
+              </div>
+
+              <p class="testimonial-text">
+                “Excellent service and great attention to detail. We are
+                extremely happy with the final result.”
+              </p>
+
+              <div class="user-info">
+
+                <img
+                  src="https://i.pravatar.cc/120?img=44"
+                  alt="Jessica Lee"
+                >
+
+                <div>
+                  <h5>Jessica Lee</h5>
+                  <span>Founder</span>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+
+          <!-- Card 6 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+
+              <div class="quote-icon">"</div>
+
+              <div class="stars">
+                ★★★★★
+              </div>
+
+              <p class="testimonial-text">
+                “The final product exceeded our expectations. Highly
+                recommended for anyone looking for quality work.”
+              </p>
+
+              <div class="user-info">
+
+                <img
+                  src="https://i.pravatar.cc/120?img=68"
+                  alt="Robert Smith"
+                >
+
+                <div>
+                  <h5>Robert Smith</h5>
+                  <span>Entrepreneur</span>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+
+          <!-- Card 7 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+
+              <div class="quote-icon">"</div>
+
+              <div class="stars">
+                ★★★★★
+              </div>
+
+              <p class="testimonial-text">
+                “Fantastic work and very easy to communicate with. The
+                results were better than we expected.”
+              </p>
+
+              <div class="user-info">
+
+                <img
+                  src="https://i.pravatar.cc/120?img=25"
+                  alt="Daniel Miller"
+                >
+
+                <div>
+                  <h5>Daniel Miller</h5>
+                  <span>Director</span>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+
+          <!-- Card 8 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+
+              <div class="quote-icon">"</div>
+
+              <div class="stars">
+                ★★★★★
+              </div>
+
+              <p class="testimonial-text">
+                “A wonderful team that truly understands the customer's
+                requirements. Very happy with their service.”
+              </p>
+
+              <div class="user-info">
+
+                <img
+                  src="https://i.pravatar.cc/120?img=23"
+                  alt="Olivia Taylor"
+                >
+
+                <div>
+                  <h5>Olivia Taylor</h5>
+                  <span>Designer</span>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+
+          <!-- Card 9 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+
+              <div class="quote-icon">"</div>
+
+              <div class="stars">
+                ★★★★★
+              </div>
+
+              <p class="testimonial-text">
+                “Professional, creative and reliable. We will definitely
+                work with them again.”
+              </p>
+
+              <div class="user-info">
+
+                <img
+                  src="https://i.pravatar.cc/120?img=11"
+                  alt="James Anderson"
+                >
+
+                <div>
+                  <h5>James Anderson</h5>
+                  <span>Business Consultant</span>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+
         </div>
 
-        <!-- Card 2: Dr. David Patel -->
-        <div class="col-md-4">
-          <div class="light-testimonial-card p-4 h-100 d-flex flex-column justify-content-between shimmer-card">
-            <div>
-              <div class="d-flex align-items-center gap-3 mb-3">
-                <img src="https://images.unsplash.com/photo-1622902046580-2b47f47f5471?auto=format&fit=crop&w=150&q=80"
-                  alt="Dr. David Patel"
-                  class="rounded-circle object-fit-cover border border-secondary border-opacity-25"
-                  style="width: 52px; height: 52px"
-                  onerror="this.src='https://placehold.co/100x100/102144/ffffff?text=DP'" />
-                <div>
-                  <h6 class="mb-0 fw-bold text-dark small">Dr. David Patel, DO</h6>
-                  <small class="text-gold fw-bold" style="font-size: 0.76rem">Family Medicine Practice</small>
-                </div>
-              </div>
-              <div class="text-gold small mb-2">
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-              </div>
-              <p class="text-secondary small mb-4" style="line-height: 1.7">
-                "Migrating 10 years of patient charts felt intimidating until MDCARE handled the
-                transition. The tablet interface and voice charting enable me to focus directly on
-                patients instead of typing."
-              </p>
-            </div>
-          
-          </div>
-        </div>
-
-        <!-- Card 3: Dr. Michael Chen -->
-        <div class="col-md-4">
-          <div class="light-testimonial-card p-4 h-100 d-flex flex-column justify-content-between shimmer-card">
-            <div>
-              <div class="d-flex align-items-center gap-3 mb-3">
-                <img src="https://images.unsplash.com/photo-1594824813572-c5132d721b5e?auto=format&fit=crop&w=150&q=80"
-                  alt="Dr. Michael Chen"
-                  class="rounded-circle object-fit-cover border border-secondary border-opacity-25"
-                  style="width: 52px; height: 52px"
-                  onerror="this.src='https://placehold.co/100x100/102144/ffffff?text=MC'" />
-                <div>
-                  <h6 class="mb-0 fw-bold text-dark small">Dr. Michael Chen, MD</h6>
-                  <small class="text-gold fw-bold" style="font-size: 0.76rem">Internal Medicine Clinic</small>
-                </div>
-              </div>
-              <div class="text-gold small mb-2">
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-              </div>
-              <p class="text-secondary small mb-4" style="line-height: 1.7">
-                "The billing intelligence and automated clearinghouse integration transformed our
-                revenue cycle. Days in accounts receivable dropped dramatically within our first
-                fiscal quarter."
-              </p>
-            </div>
-          
-          </div>
-        </div>
       </div>
-    </div>
-  </section>
 
+
+      <!-- Previous Button -->
+      <button
+        class="carousel-control-prev "
+        type="button"
+        id="testimonialPrev"
+      >
+        <span class="carousel-control-prev-icon"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+
+
+      <!-- Next Button -->
+      <button
+        class="carousel-control-next"
+        type="button"
+        id="testimonialNext"
+      >
+        <span class="carousel-control-next-icon"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+
+
+      <!-- Indicators -->
+      <div class="carousel-indicators d-none" id="testimonialIndicators"></div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const track = document.querySelector(".testimonial-track");
+  const slides = document.querySelectorAll(".testimonial-slide");
+
+  const nextButton = document.getElementById("testimonialNext");
+  const prevButton = document.getElementById("testimonialPrev");
+  const indicators = document.getElementById("testimonialIndicators");
+
+  let currentIndex = 0;
+  let autoSlide;
+
+
+  /*
+    Number of visible cards
+  */
+  function getVisibleCards() {
+
+    if (window.innerWidth <= 767) {
+      return 1;
+    }
+
+    if (window.innerWidth <= 991) {
+      return 2;
+    }
+
+    return 3;
+  }
+
+
+  /*
+    Maximum position
+  */
+  function getMaxIndex() {
+
+    return Math.max(
+      0,
+      slides.length - getVisibleCards()
+    );
+
+  }
+
+
+  /*
+    Update carousel position
+  */
+  function updateCarousel() {
+
+    const visibleCards = getVisibleCards();
+
+    const cardWidth = 100 / visibleCards;
+
+    track.style.transform =
+      `translateX(-${currentIndex * cardWidth}%)`;
+
+    updateIndicators();
+
+  }
+
+
+  /*
+    Create indicators
+  */
+  function createIndicators() {
+
+    indicators.innerHTML = "";
+
+    const maxIndex = getMaxIndex();
+
+    for (let i = 0; i <= maxIndex; i++) {
+
+      const button = document.createElement("button");
+
+      button.type = "button";
+
+      if (i === 0) {
+        button.classList.add("active");
+      }
+
+      button.addEventListener("click", function () {
+
+        currentIndex = i;
+
+        updateCarousel();
+
+        restartAutoSlide();
+
+      });
+
+      indicators.appendChild(button);
+
+    }
+
+  }
+
+
+  /*
+    Update active indicator
+  */
+  function updateIndicators() {
+
+    const buttons =
+      indicators.querySelectorAll("button");
+
+    buttons.forEach(function (button, index) {
+
+      button.classList.toggle(
+        "active",
+        index === currentIndex
+      );
+
+    });
+
+  }
+
+
+  /*
+    Next card
+  */
+  function nextSlide() {
+
+    const maxIndex = getMaxIndex();
+
+    if (currentIndex < maxIndex) {
+
+      currentIndex++;
+
+    } else {
+
+      // Go back to first card
+      currentIndex = 0;
+
+    }
+
+    updateCarousel();
+
+  }
+
+
+  /*
+    Previous card
+  */
+  function previousSlide() {
+
+    const maxIndex = getMaxIndex();
+
+    if (currentIndex > 0) {
+
+      currentIndex--;
+
+    } else {
+
+      currentIndex = maxIndex;
+
+    }
+
+    updateCarousel();
+
+  }
+
+
+  /*
+    Buttons
+  */
+  nextButton.addEventListener(
+    "click",
+    function () {
+
+      nextSlide();
+
+      restartAutoSlide();
+
+    }
+  );
+
+
+  prevButton.addEventListener(
+    "click",
+    function () {
+
+      previousSlide();
+
+      restartAutoSlide();
+
+    }
+  );
+
+
+  /*
+    Auto slide
+  */
+  function startAutoSlide() {
+
+    autoSlide = setInterval(
+      nextSlide,
+      3000
+    );
+
+  }
+
+
+  function restartAutoSlide() {
+
+    clearInterval(autoSlide);
+
+    startAutoSlide();
+
+  }
+
+
+  /*
+    Recalculate when screen size changes
+  */
+  window.addEventListener("resize", function () {
+
+    const maxIndex = getMaxIndex();
+
+    if (currentIndex > maxIndex) {
+
+      currentIndex = maxIndex;
+
+    }
+
+    createIndicators();
+
+    updateCarousel();
+
+  });
+
+
+  /*
+    Initial setup
+  */
+  createIndicators();
+
+  updateCarousel();
+
+  startAutoSlide();
+
+});
+</script>
   <!-- CONTACT & CALL TO ACTION (Preserved in Dark Midnight Navy) -->
-  <section id="contact" class="section-shimmer-bg py-4 position-relative overflow-hidden">
+  <section id="contact" class="section-shimmer-bg position-relative overflow-hidden">
     <!-- Wave Ribbon -->
     <svg class="gold-wave-overlay" viewBox="0 0 1440 450" fill="none" preserveAspectRatio="none">
       <path d="M-50,220 C320,100 680,320 1150,160 C1320,100 1440,240 1550,180" stroke="url(#heroGoldGradient1)"
@@ -653,7 +1148,7 @@
       </div>
     </div>
   </section>
-
+</div>
   <footer class="text-center py-4 border-top" style="background: #020714; color: #7f8ba3; font-size: 0.85rem">
     &copy; 2026 MDCare. All rights reserved.
   </footer>
