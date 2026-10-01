@@ -18,7 +18,7 @@
 <header id="mainHeader" class="hero-section fixed-top">
   <nav class="navbar navbar-expand-lg navbar-mdcare" id="mainNavbar">
     <div class="container">
-      <a class="navbar-brand navbar-brand-mdcare" href="#">
+      <a class="navbar-brand navbar-brand-mdcare" href="mdcare.html">
         <!-- White Logo for dark background -->
         <img src="assets/img/logo-w.png" class="img-fluid w-75" alt="MDCare Light Logo" />
         <!-- Colored Logo for light background on scroll -->
@@ -31,12 +31,12 @@
       <div class="collapse navbar-collapse justify-content-end" id="navMenu">
         <ul class="navbar-nav align-items-lg-center">
           <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
           <li class="nav-item"><a class="nav-link" href="#">MDCare AI</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Resources</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Portal</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
         </ul>
       </div>
     </div>
@@ -1152,6 +1152,30 @@ document.addEventListener("DOMContentLoaded", function () {
   <footer class="text-center py-4 border-top" style="background: #020714; color: #7f8ba3; font-size: 0.85rem">
     &copy; 2026 MDCare. All rights reserved.
   </footer>
+<a href="#" id="scroll-top"
+   class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+</a>
+<script>
+    const scrollTop = document.getElementById("scroll-top");
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 100) {
+            scrollTop.classList.add("active");
+        } else {
+            scrollTop.classList.remove("active");
+        }
+    });
+
+    scrollTop.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+</script>
 
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
