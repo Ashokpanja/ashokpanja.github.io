@@ -812,7 +812,23 @@ section, .section {
     background: #0b5ed7;
     color: #fff;
 }
-
+.scroll-top {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    right: 15px;
+    bottom: 15px;
+    z-index: 99999;
+  background: #0b5ed7;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    transition: all 0.4s;
+}
+.scroll-top.active {
+    visibility: visible;
+    opacity: 1;
+}
 @media (min-width: 1600px) {
   .hero-title {
     font-size: 64px;
