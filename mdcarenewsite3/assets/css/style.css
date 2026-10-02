@@ -1479,6 +1479,13 @@ section,
 
 /* Large: 992px – 1199.98px */
 @media (min-width: 992px) and (max-width: 1199.98px) {
+    .desktop-slide {
+                display: none;
+        }
+
+        .mobile-slide {
+                display: block !important;
+        }
   article.feature {
     height: 100%;
 }
