@@ -50,6 +50,7 @@ img {
         --nav-color: rgba(255, 255, 255, 0.5);
         --nav-hover-color: #ffffff;
 }
+
 .hero-section {
         color: var(--default-color);
         background-color: var(--background-color);
@@ -76,6 +77,7 @@ section,
         scroll-margin-top: 98px;
         overflow: clip;
 }
+
 .dark-background {
         --background-color: #060606;
         --default-color: #ffffff;
@@ -83,6 +85,7 @@ section,
         --surface-color: #252525;
         --contrast-color: #ffffff;
 }
+
 .hero img {
         position: absolute;
         inset: 0;
@@ -92,6 +95,7 @@ section,
         object-fit: cover;
         z-index: 1;
 }
+
 .hero .container-fluid {
         position: relative;
         z-index: 3;
@@ -99,15 +103,14 @@ section,
 
 .hero:before {
         content: "";
-        background: color-mix(
-                in srgb,
-                var(--background-color),
-                transparent 60%
-        );
+        background: color-mix(in srgb,
+                        var(--background-color),
+                        transparent 60%);
         position: absolute;
         inset: 0;
         z-index: 2;
 }
+
 /* BUTTONS */
 .btn-gold {
         background: rgb(240 156 67);
@@ -184,12 +187,10 @@ section,
 
 /* TEXT GRADIENTS & BADGES */
 .gradient-text {
-        background: linear-gradient(
-                180deg,
-                #ffffff 0%,
-                #ffe0b2 30%,
-                #ff9d00 100%
-        );
+        background: linear-gradient(180deg,
+                        #ffffff 0%,
+                        #ffe0b2 30%,
+                        #ff9d00 100%);
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -277,6 +278,7 @@ section,
 .navbar-brand-mdcare img:nth-child(1) {
         display: block;
 }
+
 .navbar-brand-mdcare img:nth-child(2) {
         display: none;
 }
@@ -375,11 +377,9 @@ section,
         text-align: center;
         overflow: hidden;
         isolation: isolate;
-        background: radial-gradient(
-                        70% 90% at 50% 0%,
+        background: radial-gradient(70% 90% at 50% 0%,
                         #0f3a74 0%,
-                        transparent 70%
-                ),
+                        transparent 70%),
                 linear-gradient(180deg, #0a2c5e 0%, #06214a 100%);
         border: 1px solid rgba(160, 200, 255, 0.35);
 }
@@ -397,22 +397,16 @@ section,
         top: 4%;
         width: 46%;
         height: 62%;
-        background: repeating-linear-gradient(
-                162deg,
-                transparent 0 7px,
-                rgba(240, 189, 85, 0.22) 7px 8px,
-                transparent 8px 14px
-        );
-        -webkit-mask-image: radial-gradient(
-                ellipse at 20% 40%,
-                #000 0%,
-                transparent 70%
-        );
-        mask-image: radial-gradient(
-                ellipse at 20% 40%,
-                #000 0%,
-                transparent 70%
-        );
+        background: repeating-linear-gradient(162deg,
+                        transparent 0 7px,
+                        rgba(240, 189, 85, 0.22) 7px 8px,
+                        transparent 8px 14px);
+        -webkit-mask-image: radial-gradient(ellipse at 20% 40%,
+                        #000 0%,
+                        transparent 70%);
+        mask-image: radial-gradient(ellipse at 20% 40%,
+                        #000 0%,
+                        transparent 70%);
         transform: rotate(-8deg);
 }
 
@@ -421,11 +415,9 @@ section,
         top: 0;
         width: 32%;
         height: 60%;
-        background-image: radial-gradient(
-                circle,
-                rgba(246, 213, 138, 0.85) 1.2px,
-                transparent 1.6px
-        );
+        background-image: radial-gradient(circle,
+                        rgba(246, 213, 138, 0.85) 1.2px,
+                        transparent 1.6px);
         background-size: 9px 9px;
         -webkit-mask-image: linear-gradient(200deg, #000 0%, transparent 65%);
         mask-image: linear-gradient(200deg, #000 0%, transparent 65%);
@@ -440,12 +432,10 @@ section,
         top: 18%;
         width: 42%;
         height: 3px;
-        background: linear-gradient(
-                90deg,
-                transparent,
-                rgba(246, 213, 138, 0.9),
-                transparent
-        );
+        background: linear-gradient(90deg,
+                        transparent,
+                        rgba(246, 213, 138, 0.9),
+                        transparent);
         filter: blur(1.5px);
         transform: rotate(-24deg);
         transform-origin: left center;
@@ -495,7 +485,7 @@ section,
         min-height: 220px;
 }
 
-.feature + .feature {
+.feature+.feature {
         border-left: 1px solid var(--divider);
 }
 
@@ -762,21 +752,15 @@ section,
 /* TESTIMONIALS SECTION */
 .section-testimonials-light-bg {
         position: relative;
-        background: radial-gradient(
-                        ellipse 70% 45% at 20% 15%,
+        background: radial-gradient(ellipse 70% 45% at 20% 15%,
                         rgb(192 210 219 / 45%) 0%,
-                        transparent 60%
-                ),
-                radial-gradient(
-                        ellipse 65% 50% at 85% 30%,
+                        transparent 60%),
+                radial-gradient(ellipse 65% 50% at 85% 30%,
                         rgba(254, 240, 138, 0.25) 0%,
-                        transparent 55%
-                ),
-                radial-gradient(
-                        ellipse 80% 60% at 50% 95%,
+                        transparent 55%),
+                radial-gradient(ellipse 80% 60% at 50% 95%,
                         rgba(224, 242, 254, 0.55) 0%,
-                        transparent 65%
-                ),
+                        transparent 65%),
                 linear-gradient(180deg, #f0f9ff 0%, #ffffff 45%, #f8fafc 100%);
 }
 
@@ -799,22 +783,16 @@ section,
         top: -16%;
         width: 46%;
         height: 62%;
-        background: repeating-linear-gradient(
-                162deg,
-                transparent 0 7px,
-                rgba(240, 189, 85, 0.22) 7px 8px,
-                transparent 8px 14px
-        );
-        -webkit-mask-image: radial-gradient(
-                ellipse at 20% 40%,
-                #000 0%,
-                transparent 70%
-        );
-        mask-image: radial-gradient(
-                ellipse at 20% 40%,
-                #000 0%,
-                transparent 70%
-        );
+        background: repeating-linear-gradient(162deg,
+                        transparent 0 7px,
+                        rgba(240, 189, 85, 0.22) 7px 8px,
+                        transparent 8px 14px);
+        -webkit-mask-image: radial-gradient(ellipse at 20% 40%,
+                        #000 0%,
+                        transparent 70%);
+        mask-image: radial-gradient(ellipse at 20% 40%,
+                        #000 0%,
+                        transparent 70%);
         transform: rotate(-8deg);
 }
 
@@ -823,17 +801,13 @@ section,
         top: 50%;
         width: 46%;
         height: 192%;
-        background: repeating-linear-gradient(
-                164deg,
-                transparent 0 7px,
-                rgba(240, 189, 85, 0.22) 7px 8px,
-                transparent 8px 14px
-        );
-        mask-image: radial-gradient(
-                ellipse at 50% 40%,
-                #000 0%,
-                transparent 70%
-        );
+        background: repeating-linear-gradient(164deg,
+                        transparent 0 7px,
+                        rgba(240, 189, 85, 0.22) 7px 8px,
+                        transparent 8px 14px);
+        mask-image: radial-gradient(ellipse at 50% 40%,
+                        #000 0%,
+                        transparent 70%);
         transform: rotate(-8deg);
 }
 
@@ -864,6 +838,7 @@ section,
         color: var(--contrast-color);
         line-height: 0;
 }
+
 .scroll-top {
         position: fixed;
         right: 20px;
@@ -881,6 +856,7 @@ section,
         background: var(--gold);
         color: #fff;
 }
+
 .scroll-top {
         position: fixed;
         visibility: hidden;
@@ -894,10 +870,12 @@ section,
         border-radius: 4px;
         transition: all 0.4s;
 }
+
 .scroll-top.active {
         visibility: visible;
         opacity: 1;
 }
+
 /* Desktop */
 .mobile-slide {
         display: none !important;
@@ -907,229 +885,6 @@ section,
         display: block;
 }
 
-@media (min-width: 1600px) {
-        .hero-title {
-                font-size: 64px;
-        }
-}
-
-@media (max-width: 991.98px) {
-        .navbar-mdcare {
-                padding: 12px 0;
-        }
-
-        .navbar-brand-mdcare img {
-                width: 150px;
-        }
-
-        .navbar-collapse {
-                background: var(--navy, #0b1f3a);
-                padding: 1.5rem;
-                border-radius: 12px;
-                margin-top: 10px;
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        .navbar-mdcare .nav-link {
-                margin-left: 0;
-                padding: 8px 12px;
-        }
-
-        .hero-section {
-                min-height: auto;
-                padding-bottom: 3rem;
-        }
-
-        .hero-content {
-                padding: 80px 25px 60px;
-        }
-
-        .hero-title {
-                font-size: 2.5rem;
-                letter-spacing: -0.5px;
-        }
-
-        .hero-sub {
-                font-size: 1rem;
-        }
-
-        .banner {
-                padding: 30px 20px;
-        }
-
-        .features {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 30px 15px;
-        }
-
-        .feature + .feature {
-                border-left: none;
-        }
-
-        .feature:nth-child(even) {
-                border-left: 1px solid var(--divider);
-        }
-
-        .ai-section {
-                text-align: center;
-        }
-
-        .ai-section .d-flex.flex-wrap {
-                justify-content: center;
-        }
-
-        .ai-section .ps-lg-5 {
-                padding-left: 0.75rem !important;
-                margin-top: 2rem;
-        }
-
-        .ai-section .row .col-6 {
-                text-align: left;
-        }
-
-        .feature-panel {
-                margin-bottom: 0px;
-        }
-}
-
-@media (max-width: 960px) {
-        .banner {
-                border-radius: 28px;
-        }
-
-        .features {
-                row-gap: 36px;
-        }
-
-        .feature:nth-child(3) {
-                border-left: 0;
-        }
-
-        .feature {
-                padding: 0 18px;
-                min-height: 0;
-        }
-}
-
-@media (max-width: 767.98px) {
-        .about-section,
-        .why-section,
-        .ai-section,
-        .features-section,
-        .section-testimonials-light-bg,
-        .section-shimmer-bg {
-                padding: 2.5rem 0 !important;
-        }
-
-        .heading {
-                font-size: 1.6rem;
-        }
-
-        .section-tag {
-                font-size: 14px;
-        }
-
-        .about-section {
-                text-align: center;
-        }
-
-        .about-section p.text-muted {
-                margin-left: auto;
-                margin-right: auto;
-        }
-
-        .badge-circle {
-                margin-top: 1rem;
-        }
-
-        .features {
-                grid-template-columns: 1fr;
-                gap: 25px;
-        }
-
-        .feature,
-        .feature:nth-child(even) {
-                border-left: none !important;
-                padding: 0 10px;
-                min-height: auto;
-        }
-
-        .feature + .feature {
-                border-top: 1px solid var(--divider);
-                padding-top: 25px;
-        }
-
-        .feature-row-card {
-                padding: 1rem;
-        }
-
-        .section-shimmer-bg h2 {
-                font-size: 1.5rem !important;
-                text-align: center;
-        }
-
-        .section-shimmer-bg p {
-                text-align: center;
-        }
-}
-
-@media (max-width: 575.98px) {
-        .hero-section {
-                background-position: center;
-        }
-
-        .hero-content .d-flex.flex-wrap {
-                gap: 6px !important;
-        }
-
-        .hero-links {
-                font-size: 16px;
-                gap: 5px;
-                justify-content: center;
-        }
-
-        .ai-flow-pill {
-                font-size: 9px;
-                padding: 3px;
-        }
-
-        .check-item {
-                font-size: 0.78rem;
-        }
-
-        .onc-mark {
-                font-size: 42px;
-        }
-
-        .onc-mark svg {
-                left: 50px;
-                top: -15px;
-                width: 20px;
-                height: 20px;
-        }
-
-        .onc-text strong {
-                font-size: 20px;
-        }
-
-        .onc-text small {
-                font-size: 13px;
-        }
-
-        .drummond span {
-                font-size: 22px;
-        }
-
-        .drummond svg {
-                width: 54px;
-                height: 54px;
-        }
-
-        .badge {
-                padding: 11px 28px;
-                font-size: 17px;
-        }
-}
 /* testimonial css start */
 .testimonial-section {
         overflow: hidden;
@@ -1144,6 +899,7 @@ section,
 #testimonialSlider .carousel-inner {
         overflow: hidden;
 }
+
 .testimonial-section .testimonial-track {
         display: flex;
         transition: transform 0.6s ease;
@@ -1191,7 +947,7 @@ section,
         color: #666;
         line-height: 1.8;
         font-size: 16px;
-        margin-bottom: 25px;     
+        margin-bottom: 25px;
         height: 170px;
         overflow-y: auto;
 }
@@ -1261,255 +1017,12 @@ section,
         margin-bottom: 0;
 }
 
-/* Tablet */
-@media (max-width: 991px) {
-        .testimonial-section .testimonial-slide {
-                flex: 0 0 50%;
-                max-width: 100%;
-        }
-        #testimonialSlider {
-                padding: 0 45px;
-        }
-
-        .testimonial-slide {
-                flex: 0 0 50%;
-                max-width: 50%;
-        }
-
-        .testimonial-section .testimonial-card {
-                padding: 28px;
-        }
-}
-
-/* Mobile */
-@media (max-width: 767px) {
-        .testimonial-section {
-                padding: 50px 15px;
-        }
-
-        #testimonialSlider {
-                padding: 0 5px;
-        }
-
-        .testimonial-section .testimonial-slide {
-                flex: 0 0 100%;
-                max-width: 100%;
-                padding: 8px;
-        }
-
-        .testimonial-section .testimonial-card {
-                padding: 25px;
-                min-height: 280px;
-        }
-
-        .testimonial-section .carousel-control-prev,
-        .testimonial-section .carousel-control-next {
-                display: none;
-        }
-        .badge-circle-inner img {
-                width: 50%;
-        }
-}
-
-/* Extra Small: < 576px */
-@media (max-width: 575.98px) {
-        .desktop-slide {
-                display: none;
-        }
-
-        .mobile-slide {
-                display: block !important;
-        }
-        .hero:before {
-                background: color-mix(
-                        in srgb,
-                        var(--background-color),
-                        transparent 30%
-                );
-        }
-        .pill-badge {
-                font-size: 14px;
-                padding: 6px 10px;
-                width: 100%;
-                padding-left: 20%;
-                margin-bottom: 15px;
-        }
-        a.navbar-brand.navbar-brand-mdcare {
-                width: 70%;
-        }
-        div#navMenu {
-                padding: 10px;
-        }
-        li.nav-item {
-                border-bottom: solid 1px #4e5f76;
-        }
-        .hero-content {
-                padding: 30% 0px;
-                text-align: center;
-        }
-        .hero-title {
-                margin-top: 30px;
-                font-size: 18px;
-                line-height: 1.2;
-                letter-spacing: 1.5px;
-                margin-bottom: 0px;
-        }
-        .badge-circle {
-                margin-top: 0rem;
-        }
-
-        .navbar-mdcare .nav-link {
-                font-size: 16px;
-                margin-left: 10px;
-        }
-        .badge-circle-inner img {
-                width: 75% !important;
-        }
-}
-
-/* Small: 576px – 767.98px */
-@media (min-width: 576px) and (max-width: 767.98px) {
-        .about-section p.text-muted {
-                text-align: left;
-        }
-        .hero-links {
-                justify-content: center;
-        }
-        .desktop-slide {
-                display: none;
-        }
-
-        .mobile-slide {
-                display: block !important;
-        }
-        .hero:before {
-                background: color-mix(
-                        in srgb,
-                        var(--background-color),
-                        transparent 30%
-                );
-        }
-
-        a.navbar-brand.navbar-brand-mdcare {
-                width: 70%;
-        }
-        div#navMenu {
-                padding: 10px;
-        }
-        li.nav-item {
-                border-bottom: solid 1px #4e5f76;
-        }
-        .hero-content {
-                padding: 30% 0px;
-                text-align: center;
-        }
-        .hero-title {
-                margin-top: 30px;
-                font-size: 22px;
-                line-height: 1.2;
-                letter-spacing: 1.5px;
-                margin-bottom: 0px;
-        }
-        .badge-circle {
-                margin-top: 0rem;
-        }
-
-        .navbar-mdcare .nav-link {
-                font-size: 16px;
-                margin-left: 10px;
-        }
-        .badge-circle-inner img {
-                width: 75% !important;
-        }
-}
-
-/* Medium: 768px – 991.98px */
-@media (min-width: 768px) and (max-width: 991.98px) {
-        .about-section p.text-muted {
-                text-align: left;
-        }
-        .hero-links {
-                justify-content: center;
-        }
-        .desktop-slide {
-                display: none;
-        }
-
-        .mobile-slide {
-                display: block !important;
-        }
-        .hero:before {
-                background: color-mix(
-                        in srgb,
-                        var(--background-color),
-                        transparent 30%
-                );
-        }
-
-       
-        div#navMenu {
-                padding: 10px;
-        }
-        li.nav-item {
-                border-bottom: solid 1px #4e5f76;
-        }
-        .hero-content {
-                padding: 30% 0px;
-                text-align: center;
-        }
-        .hero-title {
-                margin-top: 30px;
-                font-size: 22px;
-                line-height: 1.2;
-                letter-spacing: 1.5px;
-                margin-bottom: 0px;
-        }
-        .badge-circle {
-                margin-top: 0rem;
-        }
-
-        .navbar-mdcare .nav-link {
-                font-size: 16px;
-                margin-left: 10px;
-        }
-        .badge-circle-inner img {
-                width: 50% !important;
-        }
-}
-
-/* Large: 992px – 1199.98px */
-@media (min-width: 992px) and (max-width: 1199.98px) {
-    .desktop-slide {
-                display: none;
-        }
-
-        .mobile-slide {
-                display: block !important;
-        }
-  article.feature {
-    height: 100%;
-}
-        .navbar-mdcare .nav-link {
-                font-size: 14px;
-                margin-left: 10px;
-        }
-        .badge-circle-inner img {
-                width: 75% !important;
-        }
-}
-
-/* Extra Large: 1200px – 1399.98px */
-@media (min-width: 1200px) and (max-width: 1399.98px) {
-}
-
-/* Extra Extra Large: ≥ 1400px */
-@media (min-width: 1400px) {
-}
 
 @keyframes slideDown {
         from {
                 transform: translateY(-100%);
         }
+
         to {
                 transform: translateY(0);
         }
@@ -1518,6 +1031,7 @@ section,
 .hero-section.scrolled .navbar-brand-mdcare img:nth-child(1) {
         display: none;
 }
+
 .hero-section.scrolled .navbar-brand-mdcare img:nth-child(2) {
         display: block;
 }
@@ -1529,6 +1043,7 @@ section,
 .hero-section.scrolled .navbar-mdcare .nav-link.active {
         color: var(--gold, #d4af37);
 }
+
 .navbar-mdcare.fixed-top {
         position: fixed;
         top: 0;
