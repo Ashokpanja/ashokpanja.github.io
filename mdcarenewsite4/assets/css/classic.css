@@ -158,11 +158,23 @@ a { color: var(--navy-2); }
     padding: 170px 0 120px; color: #fff; overflow: hidden; background: var(--navy);
 }
 .hero-bg {
-    position: absolute; inset: -4% 0; will-change: transform;
+    /* position: absolute; inset: -4% 0; will-change: transform;
     background:
         radial-gradient(900px 500px at 85% 40%, rgba(46,98,170,.45), transparent 70%),
         radial-gradient(600px 400px at 10% 100%, rgba(201,151,63,.12), transparent 70%),
         linear-gradient(135deg, #07162b 0%, #0b1f3a 55%, #12305a 100%);
+        background:url(../img/bgslide.png); background-repeat: no-repeat; */
+        
+}
+.hero-bg {
+  position: absolute;
+  inset: -4% 0;
+  will-change: transform;
+
+  background-image: url("../img/bgslide1_hd.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
 }
 .hero-bg::after { content: ""; position: absolute; inset: 0; opacity: .5;
     background-image: linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
