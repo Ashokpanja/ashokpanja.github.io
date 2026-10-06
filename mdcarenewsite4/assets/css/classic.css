@@ -300,7 +300,9 @@ a { color: var(--navy-2); }
 
 /* AI */
 #ai{ padding: 0px;}
-.ai-visual { position: relative; border-radius: 4px; overflow: hidden; box-shadow: 0 24px 50px rgba(0,0,0,.4); border: 1px solid rgba(255,255,255,.12); }
+.ai-visual { position: relative; border-radius: 4px; overflow: hidden;
+     /* box-shadow: 0 24px 50px rgba(0,0,0,.4); */
+      border: 1px solid rgba(255,255,255,.12); }
 .ai-visual img { display: block; width: 100%; }
 .wave {
     position: absolute; left: 0; right: 0; bottom: 0; height: 90px; display: flex; align-items: flex-end; justify-content: center; gap: 3px; padding: 0 1rem 1rem;
@@ -339,7 +341,7 @@ a { color: var(--navy-2); }
 .feat::before { content: ""; position: absolute; left: 0; top: 0; width: 4px; height: 0; background: var(--gold); transition: height .4s ease; }
 .feat { box-shadow: 0 16px 34px rgba(11,31,58,.12); transform: translateY(-5px); }
 .feat::before { height: 100%; }
-.feat > i { font-size: 2rem; color: var(--gold); display: inline-block; margin-bottom: .8rem; transition: transform .35s ease; }
+.feat  i { font-size: 2rem; color: var(--gold); display: inline-block; margin-bottom: .8rem; transition: transform .35s ease; }
 .feat:hover > i { transform: scale(1.15); }
 .feat h3 { font-size: 1.2rem; }
 .feat p { margin: 0; color: var(--muted); font-size: .98rem; }
