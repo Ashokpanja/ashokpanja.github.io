@@ -190,50 +190,13 @@ a { color: var(--navy-2); }
     color: #fff; font-size: 1.5rem; animation: bob 2s ease-in-out infinite; text-decoration: none;
 }
 @keyframes bob { 0%,100% { transform: translate(-50%, 0); } 50% { transform: translate(-50%, 8px); } }
-
-.onc {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    color: var(--gold);
-}
-.onc-mark {
-    position: relative;
-    font-weight: 800;
-    font-size: 56px;
-    letter-spacing: -0.03em;
-    line-height: 1;
-}
-.onc-mark svg {
-    position: absolute;
-    left: 66px;
-    top: -20px;
-    width: 26px;
-    height: 26px;
-}
-.onc-rule {
-    width: 2px;
-    height: 44px;
-    background: rgba(255, 255, 255, 0.8);
-}
-.onc-text {
-    text-align: left;
-    line-height: 1.05;
-}
-.onc-text strong {
-    display: block;
-    font-size: 26px;
-    font-weight: 700;
-}
-.onc-text small {
-    display: block;
-    font-size: 17px;
-    font-weight: 500;
-    letter-spacing: 0.12em;
-}
-
-
-
+.onc{display:flex;align-items:center;gap:14px;color:var(--gold)}
+.onc-mark{position:relative;font-weight:800;font-size:56px;letter-spacing:-.03em;line-height:1}
+.onc-mark svg{position:absolute;left:66px;top:-20px;width:26px;height:26px}
+.onc-rule{width:2px;height:44px;background:rgba(255,255,255,.8)}
+.onc-text{text-align:left;line-height:1.05}
+.onc-text strong{display:block;font-size:26px;font-weight:700}
+.onc-text small{display:block;font-size:17px;font-weight:500;letter-spacing:.12em}
 @media (max-width: 767.98px) {
     .hero { padding: 130px 0 100px; }
 }
@@ -284,7 +247,18 @@ a { color: var(--navy-2); }
 @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
 
 /* Certifications */
-.cert-card{position:relative;height:100%;display:flex;flex-direction:column;align-items:center;text-align:center;padding:28px 22px 26px;background:radial-gradient(circle at 50% 0%,#12376f 0%,var(--navy) 70%);border:1px solid rgba(240,189,85,.25);border-radius:14px;transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease}.cert-card::after{content:"";position:absolute;left:20%;right:20%;bottom:-1px;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.7}.cert-card:hover{transform:translateY(-6px);border-color:var(--gold);box-shadow:0 20px 40px rgba(11,31,58,.35),0 0 0 4px rgba(240,189,85,.08)}.cert-icon{background:rgba(255,255,255,.04);border:1px solid rgba(240,189,85,.45);border-radius:18px;padding:14px 18px;min-width:130px;margin-bottom:20px}.feature .visual{height:76px;display:flex;align-items:center;justify-content:center}.icon-gold{width:70px;height:70px}.cert-body h3{font-size:1.08rem;font-weight:700;letter-spacing:.02em;color:#fff;margin:0 0 10px}.cert-body p{color:rgba(255,255,255,.72);font-size:.93rem;line-height:1.65;margin:0}.drummond{display:flex;align-items:center;gap:10px}.drummond svg{width:50px;height:50px;flex:none}.drummond span{text-align:left;font-size:18px;font-weight:700;line-height:1.1;background:linear-gradient(180deg,#f8d98f 0%,#e0a22f 100%);-webkit-background-clip:text;background-clip:text;color:transparent}.cert-card p{color:#fff}
+.cert-card{position:relative;height:100%;display:flex;flex-direction:column;align-items:center;text-align:center;padding:28px 22px 26px;background:radial-gradient(circle at 50% 0%,#12376f 0%,var(--navy) 70%);border:1px solid rgba(240,189,85,.25);border-radius:14px;transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease}
+.cert-card::after{content:"";position:absolute;left:20%;right:20%;bottom:-1px;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.7}
+.cert-card:hover{border-color:var(--gold);}
+.cert-icon{background:rgba(255,255,255,.04);border:1px solid rgba(240,189,85,.45);border-radius:18px;padding:14px 18px;min-width:130px;margin-bottom:20px}
+.feature .visual{height:76px;display:flex;align-items:center;justify-content:center}
+.icon-gold{width:70px;height:70px}
+.cert-body h3{font-size:1.08rem;font-weight:700;letter-spacing:.02em;color:#fff;margin:0 0 10px}
+.cert-body p{color:rgba(255,255,255,.72);font-size:.93rem;line-height:1.65;margin:0}
+.drummond{display:flex;align-items:center;gap:10px}
+.drummond svg{width:50px;height:50px;flex:none}
+.drummond span{text-align:left;font-size:18px;font-weight:700;line-height:1.1;background:linear-gradient(180deg,#f8d98f 0%,#e0a22f 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.cert-card p{color:#fff}
 
 /* Why */
 .why-item { display: flex; gap: 1.1rem; padding: 1.6rem; height: 100%; border: 1px solid var(--line); background: #fff; transition: border-color .3s, box-shadow .3s, transform .3s; }
