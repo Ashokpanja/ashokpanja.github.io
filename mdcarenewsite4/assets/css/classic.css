@@ -171,7 +171,7 @@ a { color: var(--navy-2); }
   inset: -4% 0;
   will-change: transform;
 
-  background-image: url("../img/bgslide1_hd.png");
+  background-image: url("../img/main1.png");
   background-repeat: no-repeat;
   background-position: right;
   background-size: cover;
