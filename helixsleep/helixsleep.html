@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Helix Midnight Luxe</title>
+<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+<div class="container py-5">
+
+
+
+ <div class="row g-4">
+  <!-- LEFT: gallery -->
+  <div class="col-lg-7">
+   <div class="gallery">
+    <div class="thumbs" id="thumbs"></div>
+    <div class="stage">
+     <img class="main" id="mainImg" alt="Helix Midnight Luxe mattress">
+     <span class="ship-pill">Free Shipping / Ships in 5-8 business days &#9432;</span>
+    
+     <div class="promo">
+      <span>25% Off <em style="font-family:Georgia,serif;font-weight:400">Sitewide</em></span>
+      <span class="code">Discount Code <b style="color:var(--blue)">PRIMETIME25</b></span>
+      <div class="arrows"><button id="prev" aria-label="Previous">&#8249;</button><button id="next" aria-label="Next">&#8250;</button></div>
+     </div>
+    </div>
+   </div>
+  </div>
+
+  <!-- RIGHT: options -->
+  <div class="col-lg-5">
+<div class="right-scrool px-3">
+   <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;<a href="#">9717 Reviews</a></div>
+   <h1>Helix Midnight Luxe</h1>
+   <p class="lead-s"><b>Buy if:</b> You're looking for our best-selling, signature mattress, crafted with deluxe lumbar support and premium comfort to relieve back pain and enhance your sleep.</p>
+   <div class="feel"><span>&#9645; &nbsp;<b>Medium</b> <i>Feel</i></span><span>&#9906; &nbsp;<b>Side</b> <i>Sleepers</i></span></div>
+
+   <div class="d-flex justify-content-between align-items-baseline mb-2">
+    <h2 class="sec">Mattress Size</h2><a href="#" class="lnk" style="font-size:12px">Need help choosing a size?</a>
+   </div>
+   <div class="size-grid" id="sizes">
+    <button class="size-btn" data-dim="38 in W × 75 in L × 13.5 in H">Twin</button>
+    <button class="size-btn" data-dim="38 in W × 80 in L × 13.5 in H">Twin XL</button>
+    <button class="size-btn" data-dim="54 in W × 75 in L × 13.5 in H">Full</button>
+    <button class="size-btn" data-dim="60 in W × 80 in L × 13.5 in H">Queen</button>
+    <button class="size-btn" data-dim="76 in W × 80 in L × 13.5 in H">King</button>
+    <button class="size-btn" data-dim="72 in W × 84 in L × 13.5 in H">CA King</button>
+    <button class="size-btn" data-dim="60 in W × 75 in L × 13.5 in H">Short Queen</button>
+    <button class="size-btn active" data-dim="72 in W × 80 in L × 13.5 in H">RV King</button>
+   </div>
+   <div class="sizeline" id="dim">72 in W × 80 in L × 13.5 in H</div>
+
+   <h2 class="sec">Sleep Hot?</h2>
+   <p class="lead-s mb-2">Select the right cooling option for you!</p>
+   <div id="cooling">
+    <div class="opt active" data-name="TENCEL™ Cover" data-add="0" data-was="0"><div><h3>TENCEL™ Cover</h3><p>A super soft, ultra-smooth, premium mattress top fabric.</p></div><div class="sel">Selected</div></div>
+    <div class="opt" data-name="GlacioTex Cooling Cover" data-add="187" data-was="249.34"><div><h3>GlacioTex Cooling Cover</h3><p>A cutting-edge top fabric that feels instantly cool when you get into bed.</p></div><div class="pr">+$187<s>+$249.34</s></div><div class="sel">Selected</div></div>
+    <div class="opt" data-name="GlacioTex Cooling Cover + CoolForce Layer" data-add="374" data-was="498.67"><div><h3>GlacioTex Cooling Cover + CoolForce Layer</h3><p>Our cooling cover plus our heat transfer layer for the ultimate cool sleep.</p></div><div class="pr">+$374<s>+$498.67</s></div><div class="sel">Selected</div></div>
+   </div>
+   <div class="hint"><div><b>Not sure how much cooling you need?</b>Compare the cooling options</div>&#9432;</div>
+   <a href="#" class="lnk">Pricing Details</a>
+
+   <h2 class="sec mt-4">Do you wake up with back pain?</h2>
+   <p class="lead-s mb-2">Choose a support layer</p>
+   <div id="support">
+    <div class="opt active" data-name="Luxe Layer" data-add="0" data-was="0"><div><h3>Luxe Layer</h3><p>Premium Responsive Foam designed to support your sleep position.</p></div><div class="sel">Selected</div></div>
+    <div class="opt" data-name="ErgoAlign® Layer" data-add="187" data-was="249.34"><div><h3>ErgoAlign® Layer</h3><p>Ideal for anyone with frequent lower back pain.</p></div><div class="pr">+$187<s>+$249.34</s></div><div class="sel">Selected</div></div>
+   </div>
+   <div class="hint"><div><b>Not sure if you need ErgoAlign support?</b>Get answers here.</div>&#9432;</div>
+   <a href="#" class="lnk">Pricing Details</a>
+
+   <!-- summary -->
+   <div class="summary">
+    <h3>Helix Midnight Luxe</h3>
+    <div class="cfg" id="cfg"></div>
+    <div class="d-flex justify-content-between align-items-center gap-2 flex-wrap">
+     <div class="price"><span id="price"></span><s id="was"></s></div>
+     <span class="off">25% off w/ code &#9432;</span>
+    </div>
+    <div class="d-flex justify-content-between mt-2"><a href="#" class="lnk">Pricing Details</a><a href="#" class="lnk">Save For Later</a></div>
+    <div class="small mt-3">As low as $78/MO Prequalify with <b>affirm</b>. <a href="#" class="lnk" style="font-size:10px">Learn more</a></div>
+    <div class="small mt-1">HSA/FSA eligible &#10052; Save an average of 30%. <a href="#" class="lnk" style="font-size:10px">Learn more</a></div>
+    <div class="zip">
+     <div class="d-flex justify-content-between mb-2" style="color:#444">In-Home Setup &amp; Removal Available <span>&#8963;</span></div>
+     <input type="text" id="zip" class="form-control" placeholder="Enter ZIP Code" maxlength="5" inputmode="numeric">
+     <a href="#" id="zipBtn" class="lnk d-inline-block mt-3 ms-2" style="font-size:12px;color:#666">Check ZIP Code</a>
+     <div id="zipMsg" class="small mt-1 ms-2"></div>
+    </div>
+    <div class="hint"><div><b style="font-size:12px">How does In-Home Delivery work?</b>Get answers here</div>&#9432;</div>
+    <button class="btn-cart" id="addCart">ADD TO CART</button>
+    <div class="text-center small mt-3">&#10033; Free Shipping / Ships in 5-8 business days</div>
+    <div class="trust">
+     <div><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 12A7 7 0 1 1 8 3a5.5 5.5 0 0 0 8 9z"/></svg>120 Night <i>Sleep Trial</i></div>
+     <div><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 2l7 3v5c0 4-3 7-7 8-4-1-7-4-7-8V5z"/></svg><i>Limited Lifetime</i> Warranty</div>
+     <div><svg width="22" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="5" width="12" height="9"/><path d="M13 8h5l3 3v3h-8"/></svg><i>Free</i> Shipping</div>
+    </div>
+   </div>
+
+
+  </div>
+ </div>
+ </div>
+
+</div>
+<div class="container-fluid p-0">
+        <div class="">
+            <section class="benefits-bar">
+
+    <div class="container">
+
+        <div class="row justify-content-center align-items-center g-4">
+
+            <!-- Benefit 1 -->
+            <div class="col-lg-4 col-md-4">
+
+                <div class="benefit-item">
+
+                    <div class="benefit-icon">
+                        <i class="bi bi-truck"></i>
+                    </div>
+
+                    <div class="benefit-text">
+                        <strong>FREE</strong>
+                        <strong>SHIPPING</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Benefit 2 -->
+            <div class="col-lg-4 col-md-4">
+
+                <div class="benefit-item">
+
+                    <div class="benefit-icon">
+                        <i class="bi bi-moon-stars"></i>
+                    </div>
+
+                    <div class="benefit-text">
+                        <strong>100 NIGHTS</strong>
+                        <strong>FREE TRIAL</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Benefit 3 -->
+            <div class="col-lg-4 col-md-4">
+
+                <div class="benefit-item">
+
+                    <div class="benefit-icon">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+
+                    <div class="benefit-text">
+                        <strong>15 YEARS</strong>
+                        <strong>WARRANTY</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="matters-section">
+
+    <div class="matters-image"></div>
+
+    <div class="matters-overlay"></div>
+
+
+    <div class="container matters-container">
+
+    
+
+        <div class="row">
+
+            <div class="col-lg-5">
+
+                <div class="matters-intro">
+
+                    <h1>
+                        What matters<br>
+                        to you most?
+                    </h1>
+
+                    <p>
+                        Know more about how this mattress
+                        performs on the aspects you care
+                        most deeply about.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             CONTENT
+        ================================================== -->
+
+        <div class="row matters-content">
+
+            <!-- LEFT CATEGORY -->
+            <div class="col-lg-5">
+
+                <div class="category-list">
+
+                    <!-- Active -->
+                    <div class="category-item active">
+
+                        <h2>Health</h2>
+
+                        <p>
+                            For the body that carries you
+                        </p>
+
+                    </div>
+
+
+                    <!-- Category -->
+                    <div class="category-item">
+
+                        <h2>Sustainability</h2>
+
+                        <p>
+                            For the planet that sustains you
+                        </p>
+
+                    </div>
+
+
+                    <!-- Category -->
+                    <div class="category-item">
+
+                        <h2>Quality</h2>
+
+                        <p>
+                            For comfort that endures
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT FEATURES -->
+            <div class="col-lg-7">
+
+                <div class="feature-box">
+
+                    <!-- Feature 1 -->
+                    <div class="feature-row">
+
+                        <div class="feature-icon">
+                            <i class="bi bi-align-bottom"></i>
+                        </div>
+
+                        <div class="feature-content">
+
+                            <h3>
+                                Firm spinal alignment
+                            </h3>
+
+                            <p>
+                                High-density organic latex provides stable
+                                support that helps maintain proper posture
+                                and balanced spinal alignment throughout
+                                the night
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Feature 2 -->
+                    <div class="feature-row">
+
+                        <div class="feature-icon">
+                            <i class="bi bi-layers"></i>
+                        </div>
+
+                        <div class="feature-content">
+
+                            <h3>
+                                Naturally breathable comfort
+                            </h3>
+
+                            <p>
+                                Open-cell organic latex allows continuous
+                                airflow, helping release trapped heat and
+                                maintaining a cooler sleep surface
+                                throughout the night
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Feature 3 -->
+                    <div class="feature-row">
+
+                        <div class="feature-icon">
+                            <i class="bi bi-brightness-high"></i>
+                        </div>
+
+                        <div class="feature-content">
+
+                            <h3>
+                                Hypoallergenic sleep environment
+                            </h3>
+
+                            <p>
+                                Organic latex naturally resists dust mites,
+                                microbes, and allergens, supporting a cleaner
+                                and healthier sleep experience
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Feature 4 -->
+                    <div class="feature-row">
+
+                        <div class="feature-icon">
+                            <i class="bi bi-person-standing"></i>
+                        </div>
+
+                        <div class="feature-content">
+
+                            <h3>
+                                Even weight distribution
+                            </h3>
+
+                            <p>
+                                Dense latex construction distributes body
+                                weight evenly, helping reduce pressure buildup
+                                and maintain a steady sleep surface
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+        </div>
+    </div>
+<div class="toast-c"><div id="toast" class="toast text-bg-dark" role="alert"><div class="toast-body">Added to cart</div></div></div>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script>
+$(function () {
+  var imgs = [
+    "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1200&q=75",
+    "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=1200&q=75",
+    "https://images.unsplash.com/photo-1540518614846-7eded433c457?w=1200&q=75",
+    "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=1200&q=75",
+    "https://images.unsplash.com/photo-1560185007-cde436f6a4d0?w=1200&q=75",
+    "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=1200&q=75"
+  ], cur = 0;
+  var BASE = 2998.66 - 0, SALE = 2249; // RV King base price (list / sale)
+  var fmt = function (n) { return "$" + n.toLocaleString("en-US", {minimumFractionDigits: n % 1 ? 2 : 0, maximumFractionDigits: 2}); };
+
+  $.each(imgs, function (i, src) {
+    $("#thumbs").append('<button data-i="' + i + '" aria-label="Image ' + (i + 1) + '"><img src="' + src.replace("w=1200", "w=200") + '" alt=""></button>');
+  });
+  function show(i) {
+    cur = (i + imgs.length) % imgs.length;
+    $("#mainImg").css("opacity", 0).off("load").one("load", function () { $(this).css("opacity", 1); }).attr("src", imgs[cur]);
+    $("#thumbs button").removeClass("active").eq(cur).addClass("active");
+  }
+  $("#thumbs").on("click", "button", function () { show($(this).data("i")); });
+  $("#prev").click(function () { show(cur - 1); });
+  $("#next").click(function () { show(cur + 1); });
+  show(0);
+
+  $("#sizes").on("click", ".size-btn", function () {
+    $(".size-btn").removeClass("active"); $(this).addClass("active");
+    $("#dim").text($(this).data("dim")); update();
+  });
+  $("#cooling, #support").on("click", ".opt", function () {
+    $(this).siblings().removeClass("active"); $(this).addClass("active"); update();
+  });
+  $(".base-chk").change(update);
+
+  function update() {
+    var add = 0, was = 0, parts = [$(".size-btn.active").text()];
+    $(".opt.active").each(function () {
+      add += +$(this).data("add"); was += +$(this).data("was");
+      var n = $(this).data("name");
+      if (n !== "TENCEL™ Cover" || true) parts.push(n);
+    });
+    $(".base-chk:checked").each(function () { add += +$(this).data("add"); was += +$(this).data("was"); parts.push($(this).data("name")); });
+    $("#price").text(fmt(SALE + add));
+    $("#was").text(fmt(BASE + was));
+    $("#cfg").text(parts.join(", "));
+  }
+  update();
+
+  $("#zipBtn").click(function (e) {
+    e.preventDefault();
+    var z = $("#zip").val();
+    $("#zipMsg").css("color", /^\d{5}$/.test(z) ? "#1a7f37" : "#c40d19")
+      .text(/^\d{5}$/.test(z) ? "In-Home Setup is available for " + z + "." : "Enter a valid 5-digit ZIP code.");
+  });
+  $("#addCart").click(function () { bootstrap.Toast.getOrCreateInstance($("#toast")[0], {delay: 2000}).show(); });
+  $(".faq").on("click", ".q", function () {
+    var open = $(this).next(".a").is(":visible");
+    $(".faq .a").slideUp(150); $(".faq .q span").text("+");
+    if (!open) { $(this).next(".a").slideDown(150); $(this).find("span").text("−"); }
+  });
+});
+</script>
+</body>
+</html>
