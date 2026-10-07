@@ -441,6 +441,7 @@
        
 /* Large: 992px – 1199.98px */
 @media (min-width: 992px) and (max-width: 1199.98px) {
+
     .desktop-slide {
                 display: none;
         }
@@ -460,10 +461,17 @@
         }
 }
 
+
 /* Extra Large: 1200px – 1399.98px */
 @media (min-width: 1200px) and (max-width: 1399.98px) {
 }
 
 /* Extra Extra Large: ≥ 1400px */
 @media (min-width: 1400px) {
+}
+
+@media (min-width: 1024px) and (max-width: 1280.98px) {
+.hero-bg{ background: url(../img/1280-1024.png) !important;}
+
+        
 }
