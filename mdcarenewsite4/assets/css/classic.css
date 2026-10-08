@@ -282,6 +282,19 @@ a { color: var(--navy-2); }
 .drummond svg{width:50px;height:50px;flex:none}
 .drummond span{text-align:left;font-size:18px;font-weight:700;line-height:1.1;background:linear-gradient(180deg,#f8d98f 0%,#e0a22f 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
 .cert-card p{color:#fff}
+.cert-card svg path[stroke],
+.cert-card svg[stroke] {
+    stroke: var(--gold) !important;
+}
+.drummond svg path[stroke="#06214a"],
+.drummond svg path {
+    stroke: #ffffff !important;
+}
+
+.cert-card svg path[fill]:not([fill="none"]):not([fill="#0a2c5e"]),
+.cert-card svg circle[fill]:not([fill="none"]) {
+    fill: var(--gold) !important;
+}
 
 /* Why */
 .why-item { display: flex; gap: 1.1rem; padding: 1.6rem; height: 100%; border: 1px solid var(--line); background: #fff; transition: border-color .3s, box-shadow .3s, transform .3s; }

@@ -184,7 +184,6 @@ section#home{background-position: right;}
     background-size: contain;
     background-position-y: -70px;
 }
-
 }
 
 /* // Extra large devices (large desktops, 1200px and up) */
@@ -192,10 +191,14 @@ section#home{background-position: right;}
 
 
  }
+
+
+
+
 @media (min-width: 1024px) and (max-width: 1280px) { 
 .navbar-classic .nav-link { font-size: 14px; padding: 7px !important;}
 .hero{ min-height: 100%; padding: 100px 0 30px 0px;}
-.hero-bg {  inset: -56px 0;  background-size: contain;background-position-y: 0px;}
+.hero-bg {  inset: -72px 0;  background-size: contain;background-position-y: 5px;}
 .pill   {   gap: .3rem; font-size: 12px;    padding: 5px 10px;}
 .hero-title {font-size: clamp(2rem, 3vw, 3rem);}
 .ai-steps li{gap:0px; padding: 5px 10px; font-size: 14px; }
@@ -210,12 +213,7 @@ section#home{background-position: right;}
 }
 
 }
+@media (min-width: 1281px) and (max-width: 1366px) { 
+.hero-bg{     background-position-y: -65px;}
 
-
-
-
-
-
-
-
-
+}
