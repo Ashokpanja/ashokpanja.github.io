@@ -179,18 +179,10 @@
 .hero-sub {font-size: 1rem;}
 .section-tag{padding: 3px 18px;}
 section#home{background-position: right;}
-.hero-bg {
- 
-    background-size: contain;
-    background-position-y: -70px;
+.hero-bg {   background-size: contain; background-position-y: -70px;}
+
+
 }
-}
-
-/* // Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) { 
-
-
- }
 
 
 
@@ -206,14 +198,16 @@ section#home{background-position: right;}
 .hero-sub {font-size: 1rem;}
 .section-tag{padding: 3px 18px;}
 section#home{background-position: right;}
-.hero-bg {
- 
-    background-size: contain;
-    background-position-y: -70px;
-}
+.hero-bg {  background-size: contain; background-position-y: -70px;}
 
 }
 @media (min-width: 1281px) and (max-width: 1366px) { 
 .hero-bg{     background-position-y: -65px;}
 
 }
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1281x) { 
+
+
+ }
