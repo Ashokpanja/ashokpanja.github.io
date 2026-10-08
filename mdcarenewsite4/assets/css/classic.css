@@ -13,7 +13,7 @@
     /* Editorial & High-Contrast Typography Stack */
     --font-body: "Playfair Display", Georgia, "Times New Roman", serif;
     --font-body: "Playfair Display", system-ui, -apple-system, sans-serif;
-    --font-mono: "JetBrains Mono", Consolas, monospace;
+    /* --font-mono: "JetBrains Mono", Consolas, monospace; */
     
     --header-h: 76px;
 }
