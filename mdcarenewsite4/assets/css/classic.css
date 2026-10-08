@@ -171,10 +171,11 @@ a { color: var(--navy-2); }
   inset: -4% 0;
   will-change: transform;
 
-  background-image: url("../img/main1.png");
+  background-image: url("../img/MDC11.png");
   background-repeat: no-repeat;
   background-position: right;
-  background-size: cover;
+  background-size: inherit;
+  background-position-y: -50%;
 }
 .hero-bg::after { content: ""; position: absolute; inset: 0; opacity: .5;
     background-image: linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
