@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Page Title</title>
+    <link rel='stylesheet' href='main.css'>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+   <link href="css/style.css" rel="stylesheet">
+    </style>
+</head>
+<body>
+    <div class="top-header">
+
+    </div>
+    <header class="md-header sticky-top">
+  <nav class="navbar navbar-expand-xl p-0" aria-label="Main navigation">
+    <div class="container-fluid">
+<a class="md-logo navbar-brand m-0 p-0" href="#" aria-label="Moondew home">
+  <img src="images/logo.svg" class="img-fluid w-100 logo-full" alt="Moondew">
+  <img src="images/logosmall.svg" class="img-fluid w-100 logo-small" alt="" aria-hidden="true">
+</a>
+
+      <ul class="navbar-nav ms-auto d-none d-xl-flex align-items-center">
+        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+
+        <!-- ============ MEGA DROPDOWN: MATTRESSES ============ -->
+        <li class="nav-item dropdown mega">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Mattresses</a>
+
+          <div class="dropdown-menu mega-menu">
+            <div class="mega-grid">
+
+              <!-- LEFT: tabs (activate on hover) -->
+              <div class="nav flex-column mega-tabs" role="tablist" aria-orientation="vertical">
+                <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#mat-ortho" type="button" role="tab" aria-selected="true">
+                  <i class="bi bi-activity lead-icon"></i> Orthopedic <i class="bi bi-chevron-right arrow"></i>
+                </button>
+                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#mat-foam" type="button" role="tab" aria-selected="false">
+                  <i class="bi bi-cloud lead-icon"></i> Memory Foam <i class="bi bi-chevron-right arrow"></i>
+                </button>
+                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#mat-spring" type="button" role="tab" aria-selected="false">
+                  <i class="bi bi-layers lead-icon"></i> Spring <i class="bi bi-chevron-right arrow"></i>
+                </button>
+                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#mat-latex" type="button" role="tab" aria-selected="false">
+                  <i class="bi bi-flower1 lead-icon"></i> Latex <i class="bi bi-chevron-right arrow"></i>
+                </button>
+              </div>
+
+              <!-- RIGHT: content -->
+              <div class="tab-content mega-content">
+                <div class="tab-pane fade show active" id="mat-ortho" role="tabpanel">
+                  <div class="mega-pane">
+                    <div>
+                      <h3>Orthopedic Mattress</h3>
+                      <p>Firm, even support that keeps your spine aligned all night.</p>
+                      <ul>
+                        <li><i class="bi bi-check-circle-fill"></i>Back-pain relief</li>
+                        <li><i class="bi bi-check-circle-fill"></i>High-density base foam</li>
+                        <li><i class="bi bi-check-circle-fill"></i>10-year warranty</li>
+                      </ul>
+                      <a href="#" class="btn btn-moon">Shop orthopedic</a>
+                    </div>
+                    <div class="mega-visual"><i class="bi bi-moon-stars"></i></div>
+                  </div>
+                </div>
+
+                <div class="tab-pane fade" id="mat-foam" role="tabpanel">
+                  <div class="mega-pane">
+                    <div>
+                      <h3>Memory Foam Mattress</h3>
+                      <p>Contours to your body and absorbs motion for undisturbed sleep.</p>
+                      <ul>
+                        <li><i class="bi bi-check-circle-fill"></i>Pressure-point relief</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Cooling gel layer</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Low motion transfer</li>
+                      </ul>
+                      <a href="#" class="btn btn-moon">Shop memory foam</a>
+                    </div>
+                    <div class="mega-visual v2"><i class="bi bi-cloud-moon"></i></div>
+                  </div>
+                </div>
+
+                <div class="tab-pane fade" id="mat-spring" role="tabpanel">
+                  <div class="mega-pane">
+                    <div>
+                      <h3>Spring Mattress</h3>
+                      <p>Bouncy, breathable comfort with pocketed springs.</p>
+                      <ul>
+                        <li><i class="bi bi-check-circle-fill"></i>Pocket spring system</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Great airflow</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Edge support</li>
+                      </ul>
+                      <a href="#" class="btn btn-moon">Shop spring</a>
+                    </div>
+                    <div class="mega-visual v3"><i class="bi bi-layers-half"></i></div>
+                  </div>
+                </div>
+
+                <div class="tab-pane fade" id="mat-latex" role="tabpanel">
+                  <div class="mega-pane">
+                    <div>
+                      <h3>Latex Mattress</h3>
+                      <p>Natural, responsive and naturally cool.</p>
+                      <ul>
+                        <li><i class="bi bi-check-circle-fill"></i>Natural latex</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Dust-mite resistant</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Long-lasting bounce</li>
+                      </ul>
+                      <a href="#" class="btn btn-moon">Shop latex</a>
+                    </div>
+                    <div class="mega-visual v4"><i class="bi bi-flower2"></i></div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </li>
+
+        <!-- ============ MEGA DROPDOWN: PILLOWS ============ -->
+        <li class="nav-item dropdown mega">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pillows</a>
+
+          <div class="dropdown-menu mega-menu">
+            <div class="mega-grid">
+              <div class="nav flex-column mega-tabs" role="tablist" aria-orientation="vertical">
+                <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#pil-foam" type="button" role="tab" aria-selected="true">
+                  <i class="bi bi-cloud lead-icon"></i> Memory Foam <i class="bi bi-chevron-right arrow"></i>
+                </button>
+                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#pil-fibre" type="button" role="tab" aria-selected="false">
+                  <i class="bi bi-wind lead-icon"></i> Fibre <i class="bi bi-chevron-right arrow"></i>
+                </button>
+                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#pil-cervical" type="button" role="tab" aria-selected="false">
+                  <i class="bi bi-person-arms-up lead-icon"></i> Cervical <i class="bi bi-chevron-right arrow"></i>
+                </button>
+              </div>
+
+              <div class="tab-content mega-content">
+                <div class="tab-pane fade show active" id="pil-foam" role="tabpanel">
+                  <div class="mega-pane">
+                    <div>
+                      <h3>Memory Foam Pillow</h3>
+                      <p>Soft support that shapes itself to your neck.</p>
+                      <ul>
+                        <li><i class="bi bi-check-circle-fill"></i>Neck &amp; shoulder comfort</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Washable cover</li>
+                      </ul>
+                      <a href="#" class="btn btn-moon">Shop pillows</a>
+                    </div>
+                    <div class="mega-visual"><i class="bi bi-cloud-moon"></i></div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="pil-fibre" role="tabpanel">
+                  <div class="mega-pane">
+                    <div>
+                      <h3>Fibre Pillow</h3>
+                      <p>Light, fluffy and easy to care for.</p>
+                      <ul>
+                        <li><i class="bi bi-check-circle-fill"></i>Hypoallergenic fill</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Machine washable</li>
+                      </ul>
+                      <a href="#" class="btn btn-moon">Shop fibre</a>
+                    </div>
+                    <div class="mega-visual v2"><i class="bi bi-wind"></i></div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="pil-cervical" role="tabpanel">
+                  <div class="mega-pane">
+                    <div>
+                      <h3>Cervical Pillow</h3>
+                      <p>Contoured shape that supports the natural curve of your neck.</p>
+                      <ul>
+                        <li><i class="bi bi-check-circle-fill"></i>Reduces neck strain</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Side &amp; back sleepers</li>
+                      </ul>
+                      <a href="#" class="btn btn-moon">Shop cervical</a>
+                    </div>
+                    <div class="mega-visual v3"><i class="bi bi-heart-pulse"></i></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- simple dropdowns -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Toppers</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Memory Foam Topper</a></li>
+            <li><a class="dropdown-item" href="#">Gel Topper</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Kids Range</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Kids Mattress</a></li>
+            <li><a class="dropdown-item" href="#">Kids Pillow</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Accessories</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Protectors</a></li>
+            <li><a class="dropdown-item" href="#">Bedsheets</a></li>
+            <li><a class="dropdown-item" href="#">Comforters</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item"><a class="nav-link" href="#">Rest Healthie</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Store Locator</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+      </ul>
+
+      <div class="d-flex align-items-center ms-auto ms-xl-3 ">
+        <a class="md-icon-btn" href="#" aria-label="My account"><i class="bi bi-person-circle"></i></a>
+        <a class="md-icon-btn" href="#" aria-label="Wishlist"><i class="bi bi-heart-fill"></i></a>
+        <a class="md-icon-btn" href="#" aria-label="Cart"><i class="bi bi-cart-fill"></i><span class="md-badge">0</span></a>
+        <button class="md-burger" type="button" data-bs-toggle="offcanvas" data-bs-target="#mdMenu" aria-controls="mdMenu" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- ================= OFFCANVAS (mobile / tablet) ================= -->
+<div class="offcanvas offcanvas-end md-offcanvas" tabindex="-1" id="mdMenu" aria-labelledby="mdMenuLabel">
+  <div class="offcanvas-header">
+    <h2 class="offcanvas-title fs-6 text-uppercase" id="mdMenuLabel" style="color:var(--md-green)">Menu</h2>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body p-0">
+    <div class="list-group list-group-flush">
+      <a href="#" class="list-group-item">Home</a>
+      <a href="#" class="list-group-item">About</a>
+
+      <a href="#m1" class="list-group-item" data-bs-toggle="collapse" aria-expanded="false">Mattresses <i class="bi bi-chevron-down"></i></a>
+      <div class="collapse sub" id="m1"><a href="#">Orthopedic</a><a href="#">Memory Foam</a><a href="#">Spring</a><a href="#">Latex</a></div>
+
+      <a href="#m2" class="list-group-item" data-bs-toggle="collapse" aria-expanded="false">Pillows <i class="bi bi-chevron-down"></i></a>
+      <div class="collapse sub" id="m2"><a href="#">Memory Foam</a><a href="#">Fibre</a><a href="#">Cervical</a></div>
+
+      <a href="#m3" class="list-group-item" data-bs-toggle="collapse" aria-expanded="false">Toppers <i class="bi bi-chevron-down"></i></a>
+      <div class="collapse sub" id="m3"><a href="#">Memory Foam Topper</a><a href="#">Gel Topper</a></div>
+
+      <a href="#m4" class="list-group-item" data-bs-toggle="collapse" aria-expanded="false">Kids Range <i class="bi bi-chevron-down"></i></a>
+      <div class="collapse sub" id="m4"><a href="#">Kids Mattress</a><a href="#">Kids Pillow</a></div>
+
+      <a href="#m5" class="list-group-item" data-bs-toggle="collapse" aria-expanded="false">Accessories <i class="bi bi-chevron-down"></i></a>
+      <div class="collapse sub" id="m5"><a href="#">Protectors</a><a href="#">Bedsheets</a><a href="#">Comforters</a></div>
+
+      <a href="#" class="list-group-item">Rest Healthie</a>
+      <a href="#" class="list-group-item">Contact</a>
+      <a href="#" class="list-group-item">Store Locator</a>
+      <a href="#" class="list-group-item">Shop</a>
+    </div>
+  </div>
+</div>
+
+<main class="container py-5" style="min-height:100vh">
+  <h1 class="h4" style="color:var(--md-green)">Hover “Mattresses” or “Pillows” in the header</h1>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  (function () {
+    var header = document.querySelector('.md-header');
+    var threshold = 10; // px scrolled before the class is added
+    var ticking = false;
+
+    function update() {
+      header.classList.toggle('is-scrolled', window.scrollY > threshold);
+      ticking = false;
+    }
+
+    window.addEventListener('scroll', function () {
+      if (!ticking) {
+        window.requestAnimationFrame(update);
+        ticking = true;
+      }
+    }, { passive: true });
+
+    update(); // run once on load (in case the page is already scrolled)
+  })();
+</script>
+</body>
+</html>
