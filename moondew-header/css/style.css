@@ -4,8 +4,8 @@
   --md-green: #2e6b4f;
   --organ-c: #1f4d38;
   --eloris-c: #204c97;
-    --opula-c: #75002a;
-      --text-dark: #212529;
+  --opula-c: #75002a;
+  --text-dark: #212529;
   --md-header-h: 80px;
 }
 body { font-family: 'Lexend', sans-serif; }
@@ -37,14 +37,25 @@ header.md-header.sticky-top.is-scrolled .md-logo img { width: 30%; }
 .md-header .nav-link {
   color: #000; font-size: 13px; font-weight: 500; letter-spacing: .02em;
   text-transform: uppercase; padding: 45px;
+  display: inline-flex;
+  align-items: center;
 }
-.is-scrolled .nav-link{ padding:25px 0px ;}
+.is-scrolled .nav-link { padding: 25px 0px; }
 .md-header .nav-link:hover,
 .md-header .nav-link.active,
 .md-header .nav-link.show { color: var(--organ-c); }
 .md-header .nav-link:focus-visible,
 .md-icon-btn:focus-visible { outline: 2px solid var(--md-green); outline-offset: 2px; }
 .md-header .dropdown-toggle::after { display: none; }
+
+/* Dropdown Arrow Smooth Transition */
+.md-header .nav-link .bi-chevron-down {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+.md-header .dropdown.mega:hover .nav-link .bi-chevron-down {
+  transform: rotate(180deg);
+}
 
 /* simple dropdown */
 .md-header .dropdown-menu {
@@ -71,7 +82,7 @@ header.md-header.sticky-top.is-scrolled .md-logo img { width: 30%; }
 }
 .md-burger span { display: block; height: 4px; background: var(--md-green); border-radius: 1px; }
 
-/* ---------- Mega menu (full width, no tabs) ---------- */
+/* ---------- Mega menu ---------- */
 .md-header .navbar { position: static; }
 .md-header .mega-menu {
   left: 0; right: 0; top: 100%;
@@ -82,24 +93,19 @@ header.md-header.sticky-top.is-scrolled .md-logo img { width: 30%; }
   box-shadow: 0 24px 40px rgba(31,77,56,.14);
 }
 .mega-wrap {
-  display: grid; grid-template-columns:repeat(2, 1fr) 33%; gap: 2.5rem;
+  display: grid; grid-template-columns: repeat(2, 1fr) 33%; gap: 2.5rem;
   max-width: 1200px; margin: 0 auto; padding: 10px;
 }
 .mega-wrap-cards { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 960px; }
 
 /* brand column */
 .mega-brand { display: flex; align-items: center; gap: .1rem; text-decoration: none; margin: 0 0 1rem; }
-/* .mega-thumb {
-  width: 64px; height: 64px; border-radius: 50%; overflow: hidden; flex: none;
-  background: var(--md-yellow); display: grid; place-items: center;
-} */
 .mega-thumb img { width: 70%; height: 70%; object-fit: contain; }
 .mega-brand-name { font-size: 1.15rem; font-weight: 600; color: var(--organ-c); }
 .mega-links { list-style: none; min-height: 270px; margin: 0; padding: 0; border-top: 1px solid rgba(46,107,79,.15); }
 .mega-links li a {
   display: block; margin: 0; padding: .8rem 0 .8rem 0; text-decoration: none;
   border-bottom: 1px solid rgba(46,107,79,.1);
-  /* transition: padding-left .2s ease, background-color .2s ease;  */
   padding-left: .75rem; 
 }
 .mega-links strong { display: block; font-size: .9rem; font-weight: 500; color: var(--organ-c); text-transform: none; }
@@ -108,12 +114,11 @@ header.md-header.sticky-top.is-scrolled .md-logo img { width: 30%; }
 
 /* promo column */
 .mega-promo {
- /* background: var(--md-green); */
-    color: #fff;
-    padding: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: end;
+  color: #fff;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
 }
 .mega-promo > i { font-size: 2rem; color: var(--md-yellow); }
 .mega-promo h3 { font-size: 1.05rem; font-weight: 600; margin: .75rem 0 .25rem; }
@@ -121,43 +126,15 @@ header.md-header.sticky-top.is-scrolled .md-logo img { width: 30%; }
 .mega-promo .btn-moon { transition: all 0.2s ease; background: var(--md-yellow); color: var(--organ-c); margin: 0; }
 .mega-promo .btn-moon:hover { background: #fff; color: var(--organ-c); border: solid var(--organ-c) 1px; transform: translateY(-2px); }
 
-/* pillow cards */
-.mega-card {
-  display: flex; flex-direction: column; align-items: flex-start; margin: 0;
-  padding: 1.5rem; border-radius: 1.25rem; text-decoration: none;
-  background: #fff; border: 1px solid rgba(46,107,79,.15);
-  transition: background-color .2s ease, border-color .2s ease;
-}
-.mega-card:hover { background: var(--md-yellow-soft); border-color: var(--md-green); }
-.mega-icon {
-  width: 52px; height: 52px; border-radius: 50%; display: grid; place-items: center;
-  background: var(--md-yellow); color: var(--organ-c); font-size: 1.4rem; margin-bottom: 1rem;
-}
-.mega-card h3 { font-size: 1rem; font-weight: 600; color: var(--organ-c); margin-bottom: .35rem; }
-.mega-card p { font-size: .85rem; color: #5b6b63; margin-bottom: 1rem; }
-.mega-more { margin-top: auto; font-size: .82rem; font-weight: 500; color: var(--md-green); }
-.mega-more .bi { display: inline-block; transition: transform .2s ease; }
-.mega-card:hover .mega-more .bi { transform: translateX(4px); }
-
 .btn-moon {
   background: var(--md-green); color: #fff; border: 0;
   border-radius: 2rem; padding: .55rem 1.4rem; font-size: .85rem; font-weight: 500;
 }
 .btn-moon:hover { background: var(--organ-c); color: #fff; }
-.Eloris-s .mega-brand-name , .Eloris-s .mega-links strong{ color: var(--eloris-c); }
-.opula-s .mega-brand-name , .opula-s .mega-links strong{ color: var(--opula-c); }
-li.nav-item.dropdown.mega a{ cursor: pointer;}
-.sub-height-auto .mega-links{ min-height: auto; }
-
-
-
-
-
-
-
-
-
-
+.Eloris-s .mega-brand-name, .Eloris-s .mega-links strong { color: var(--eloris-c); }
+.opula-s .mega-brand-name, .opula-s .mega-links strong { color: var(--opula-c); }
+li.nav-item.dropdown.mega a { cursor: pointer; }
+.sub-height-auto .mega-links { min-height: auto; }
 
 /* ---------- Desktop hover behaviour ---------- */
 @media (min-width: 1200px) {
