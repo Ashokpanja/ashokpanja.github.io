@@ -91,7 +91,7 @@
 .top-pill{ top: 18px ;
     right: 40px ;}   
 body {
-        background-size: contain;
+        background-size: contain !important;
 
         
     }
