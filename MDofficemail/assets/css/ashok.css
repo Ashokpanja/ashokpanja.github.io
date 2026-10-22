@@ -89,7 +89,11 @@
 }
 @media (min-width: 768px) and (max-width: 1199.99px) {
 .top-pill{ top: 18px ;
-    right: 40px ;}    
+    right: 40px ;}   
+    body {
+    
+    background-position: right !important;
+} 
 }
 
 /* // Extra large devices (large desktops, 1200px and up) */
