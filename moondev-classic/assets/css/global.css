@@ -1430,11 +1430,11 @@ body:where(.page-viewcart) {
 
 @media (min-width: 1400px) {
     /* Extra Extra Large: ≥ 1400px */
-    :where(body.page-viewcart) @media (min-width: 96rem) {
+    /* :where(body.page-viewcart) @media (min-width: 96rem) {
         .container {
             max-width: 1220px;
         };
-    }
+    } */
 }
 
 /* =========================================
