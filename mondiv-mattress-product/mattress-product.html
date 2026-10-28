@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Cart</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/menu.css">
+  <link rel="stylesheet" href="assets/css/stylenew.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+</head>
+
+<body class="page-viewcart p-0">
+  <header class="site-header">
+    <div class="nav-shell"> <a class="brand" href="#" aria-label="Moondew home"><img src="img/Logo1.png"
+          style="width:100%;" /></a>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Open navigation" aria-expanded="false"><i
+          class="fa-solid fa-bars"></i></button>
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation"> <a class="nav-link" href="#">Home</a><a
+          class="nav-link" href="#">About</a>
+        <div class="nav-item" data-menu>
+          <button class="nav-link" aria-expanded="false">Mattresses <i
+              class="fa-solid fa-chevron-down chevron"></i></button>
+          <div class="mega-menu">
+            <div class="mega-inner">
+              <div class="mega-top">
+                <p class="mega-heading">Find your perfect mattresses</p>
+
+              </div>
+              <div class="mega-grid kids-grid">
+                <article class="mega-card kids-card card-organic">
+                  <a href="#" class="kids-product-link">
+                    <div class="mega-image"><img loading="lazy"
+                        src="https://moondew-dev.novatales.com/static/media/Organic%20Display%20Image.jpg.afd6c0e71c33f374b46f.jpeg"
+                        alt="Child resting comfortably on a pillow"></div>
+                    <h3>Organic Mattresses</h3>
+                    <p>Built for those who prefer balanced comfort with firmer natural support.</p>
+                  </a>
+                  <div class="kids-card-footer"><img src="img/header/org.jpg" alt="Organiq">
+                    <div class="kids-brand-copy"><a href="#" style="margin-left:0px;"><span
+                          class="kids-brand-name">ORGANIQ</span></a><span class="kids-tagline">Organic comforts in every
+                        pore</span></div><a href="#">View All</a>
+                  </div>
+                </article>
+                <article class="mega-card kids-card card-eloris">
+                  <a href="#" class="kids-product-link">
+                    <div class="mega-image"><img loading="lazy"
+                        src="https://moondew-dev.novatales.com/static/media/about_opula.6efceeaade098136ad0c.jpg"
+                        alt="Comfortable kids pillow"></div>
+                    <h3>Eloris Mattresses</h3>
+                    <p>Built for those who prefer balanced comfort with firmer natural support.</p>
+                  </a>
+                  <div class="kids-card-footer"><img src="img/header/elo.jpg" alt="Eloris">
+                    <div class="kids-brand-copy"><a href="#" style="margin-left:0px;"><span
+                          class="kids-brand-name">ELORIS</span></a><span class="kids-tagline">Smart hybrids consciously
+                        made</span></div><a href="#">View All</a>
+                  </div>
+                </article>
+                <article class="mega-card kids-card card-opula">
+                  <a href="#" class="kids-product-link">
+                    <div class="mega-image"><img loading="lazy"
+                        src="https://moondew-dev.novatales.com/static/media/home_opula.116868f7670b9d318088.jpg"
+                        alt="Child relaxing on a bed"></div>
+                    <h3>Opula Mattresses</h3>
+                    <p>Built for those who prefer balanced comfort with firmer natural support.</p>
+                  </a>
+                  <div class="kids-card-footer"><img src="img/header/opu.jpg" alt="Opula">
+                    <div class="kids-brand-copy"><a href="#" style="margin-left:0px;"><span
+                          class="kids-brand-name">OPULA</span></a><span class="kids-tagline">Elegance that
+                        endures</span></div><a href="#">View All</a>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="nav-item" data-menu>
+          <button class="nav-link" aria-expanded="false">Pillows <i
+              class="fa-solid fa-chevron-down chevron"></i></button>
+          <div class="mega-menu">
+            <div class="mega-inner">
+              <div class="mega-top">
+                <p class="mega-heading">Find your perfect Pillows</p>
+              </div>
+              <div class="mega-grid kids-grid">
+                <article class="mega-card kids-card card-eloris">
+                  <a href="#" class="kids-product-link">
+                    <div class="mega-image"><img loading="lazy"
+                        src="https://storage.googleapis.com/livoncomforts-images/d76ad780-5761-4c86-adfd-951bfd1287b9-product-1"
+                        alt="Comfortable kids pillow"></div>
+                    <h3>Eloris Pillows</h3>
+                    <p>One line ptag line</p>
+                  </a>
+                  <div class="kids-card-footer"><img src="img/header/elo.jpg" alt="Eloris">
+                    <div class="kids-brand-copy"><a href="#" style="margin-left:0px;"><span
+                          class="kids-brand-name">ELORIS</span></a><span class="kids-tagline">Smart hybrids consciously
+                        made</span></div><a href="#">View All</a>
+                  </div>
+                </article>
+                <article class="mega-card kids-card card-organic">
+                  <a href="#" class="kids-product-link">
+                    <div class="mega-image"><img loading="lazy"
+                        src="https://storage.googleapis.com/livoncomforts-images/430a13fc-94b4-4330-b0ea-7768d77aa702-product-1"
+                        alt="Child resting comfortably on a pillow"></div>
+                    <h3>Organic Pillows</h3>
+                    <p>Built for those who prefer balanced comfort with firmer natural support.</p>
+                  </a>
+                  <div class="kids-card-footer"><img src="img/header/org.jpg" alt="Organiq">
+                    <div class="kids-brand-copy"><a href="#" style="margin-left:0px;"><span
+                          class="kids-brand-name">ORGANIQ</span></a><span class="kids-tagline">Organic comforts in every
+                        pore</span></div><a href="#">View All</a>
+                  </div>
+                </article>
+
+                <article class="mega-card kids-card card-opula">
+                  <a href="#" class="kids-product-link">
+                    <div class="mega-image"><img loading="lazy"
+                        src="https://storage.googleapis.com/livoncomforts-images/b7485ead-1ef1-4832-9fd9-1a9408b1bff2-product-2"
+                        alt="Child relaxing on a bed"></div>
+                    <h3>Hybird Pillows</h3>
+                    <p>One line ptag line</p>
+                  </a>
+                  <div class="kids-card-footer"><img src="img/header/opu.jpg" alt="Opula">
+                    <div class="kids-brand-copy"><a href="#" style="margin-left:0px;"><span
+                          class="kids-brand-name">OPULA</span></a><span class="kids-tagline">Elegance that
+                        endures</span></div><a href="#">View All</a>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <a class="nav-link" href="#">Toppers</a>
+        <div class="nav-item" data-menu>
+          <button class="nav-link" aria-expanded="false">Kids Range <i
+              class="fa-solid fa-chevron-down chevron"></i></button>
+
+
+          <div class="mega-menu">
+            <div class="mega-inner">
+              <div class="mega-top">
+                <p class="mega-heading">Comfort for growing dreams</p>
+              </div>
+              <div class="mega-grid kids-grid">
+                <article class="mega-card kids-card ">
+                  <a href="#" class="kids-product-link">
+                    <div class="mega-image"><img loading="lazy"
+                        src="https://img.magnific.com/free-photo/adorable-hispanic-girl-lying-bed-with-thinking-expression-bedroom_839833-2117.jpg?t=st=1791885954~exp=1791889554~hmac=82caae6b238f894497ba997393082750360c180278146da959c6df1e1614bae0&w=1480"
+                        alt="Child resting comfortably on a pillow"></div>
+                    <h3>Kids Standard Pillow</h3>
+                    <p>Built for everyday comfort and support through the growing years.</p>
+                  </a>
+                  <div class="kids-card-footer"><img src="img/header/org.jpg" alt="Organiq">
+                    <div class="kids-brand-copy"><span class="kids-brand-name">ORGANIQ</span><span
+                        class="kids-tagline">One line ptag line</span></div><a href="#">View All</a>
+                  </div>
+                </article>
+                <article class="mega-card kids-card">
+                  <a href="#" class="kids-product-link">
+                    <div class="mega-image"><img loading="lazy"
+                        src="https://storage.googleapis.com/livoncomforts-images/0f30430c-89dd-4151-88da-ce8213a9f47f-product-2"
+                        alt="Comfortable kids pillow"></div>
+                    <h3>Kids Contour Pillow</h3>
+                    <p>Built for healthy sleep posture through the growing years.</p>
+                  </a>
+                  <div class="kids-card-footer"><img src="img/header/elo.jpg" alt="Eloris">
+                    <div class="kids-brand-copy"><span class="kids-brand-name">ELORIS</span><span
+                        class="kids-tagline">One line ptag line</span></div><a href="#">View All</a>
+                  </div>
+                </article>
+                <article class="mega-card kids-card">
+                  <a href="#" class="kids-product-link">
+                    <div class="mega-image"><img loading="lazy"
+                        src="https://img.magnific.com/free-photo/full-shot-smiley-girl-standing-bed_23-2148861194.jpg?t=st=1791886144~exp=1791889744~hmac=e2b268162ef846ca1f32333c0d2f72248781d32b5178d7fac768aa54174a319a&w=1480"
+                        alt="Child relaxing on a bed"></div>
+                    <h3>Test Kids Mattress - Dummy</h3>
+                    <p>Built for everyday comfort and support through the growing years.</p>
+                  </a>
+                  <div class="kids-card-footer"><img src="img/header/opu.jpg" alt="Opula">
+                    <div class="kids-brand-copy"><span class="kids-brand-name">OPULA</span><span
+                        class="kids-tagline">One line ptag line</span></div><a href="#">View All</a>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item" data-menu>
+          <button class="nav-link" aria-expanded="false">Accessories <i
+              class="fa-solid fa-chevron-down chevron"></i></button>
+          <div class="mega-menu">
+            <div class="mega-inner">
+              <div class="mega-top">
+                <p class="mega-heading">Finishing touches for better rest</p>
+                <a class="mega-viewall" href="#">Shop accessories <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+              <div class="mega-grid">
+                <article class="mega-card"><a href="#">
+                    <div class="mega-image"><img loading="lazy"
+                        src="https://images.unsplash.com/photo-1631679706909-1844bbd07221?auto=format&fit=crop&w=600&q=85"
+                        alt="Neutral bedding"></div>
+                    <h3>Organic Fitted Bedsheet Dummy</h3>
+                    <p>100% organic cotton for a smooth, close fit and luxurious feel.</p>
+                    <span class="mega-tag">100% ORGANIC COTTON</span>
+                  </a></article>
+                <article class="mega-card"><a href="#">
+                    <div class="mega-image"><img loading="lazy"
+                        src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=600&q=85"
+                        alt="Soft linen bed styling"></div>
+                    <h3>Organic Flat Bedsheet Dummy</h3>
+                    <p>Everyday luxury, comfort, durability and a timeless finish.</p>
+                    <span class="mega-tag">EASY EVERYDAY LUXURY</span>
+                  </a></article>
+                <article class="mega-card"><a href="#">
+                    <div class="mega-image"><img loading="lazy"
+                        src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=600&q=85"
+                        alt="Elegant mattress and bedding"></div>
+                    <h3>Mattress Toppers Dummy</h3>
+                    <p>Add an extra layer of comfort to your sleep setup.</p>
+                  </a></article>
+                <article class="mega-card"><a href="#">
+                    <div class="mega-image"><img loading="lazy"
+                        src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=600&q=85"
+                        alt="Serene home interior"></div>
+                    <h3>Sleep Essentials Dummy</h3>
+                    <p>Small details that make your bedroom feel more inviting.</p>
+                  </a></article>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="nav-link" href="#">Rest Healthie</a><a class="nav-link" href="#">Contact</a><a class="nav-link"
+          href="#">Store Locator</a><a class="nav-link" href="#">Shop</a>
+      </nav>
+      <div class="header-actions">
+        <button class="action-btn" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button class="action-btn" aria-label="My account"><i class="fa-regular fa-user"></i></button>
+        <button class="action-btn" aria-label="Shopping bag"><i class="fa-solid fa-bag-shopping"></i><span
+            class="bag-count">0</span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HYBRID MATTRESS RANGE ================= -->
+
+  <!-- ========== VIEW CART SECTION ========== -->
+
+  <div class="container py-5 viewcart-product-area">
+
+    <div class="row g-4">
+      <!-- LEFT: gallery -->
+      <div class="col-lg-8">
+        <div class="gallery">
+          <div class="thumbs" id="thumbs"></div>
+          <div class="stage">
+            <img class="main" id="mainImg" alt="Helix Midnight Luxe mattress">
+            <span class="ship-pill">Free Shipping / Ships in 5-8 business days &#9432;</span>
+
+            <div class="promo">
+              <span>25% Off <em style="font-family:Georgia,serif;font-weight:400">Sitewide</em></span>
+              <span class="code">Discount Code <b style="color:var(--blue)">PRIMETIME25</b></span>
+              <div class="arrows"><button id="prev" aria-label="Previous">&#8249;</button><button id="next"
+                  aria-label="Next">&#8250;</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: options -->
+      <div class="col-lg-4">
+        <div class="right-scrool px-3">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;<a href="#">9717 Reviews</a></div>
+          <h1>Ortho Latex Mattress</h1>
+          <p class="lead-s"><b>Buy if:</b> You're looking for our best-selling, signature mattress, crafted with deluxe
+            lumbar support and premium comfort to relieve back pain and enhance your sleep.</p>
+          <div class="feel"><span>&#9645; &nbsp;<b>Medium</b> <i>Feel</i></span><span>&#9906; &nbsp;<b>Side</b>
+              <i>Sleepers</i></span></div>
+
+          <div class="d-flex justify-content-between align-items-baseline mb-2">
+            <h2 class="sec">Mattress Size</h2><a href="#" class="lnk" style="font-size:12px">Need help choosing a
+              size?</a>
+          </div>
+          <div class="size-grid" id="sizes">
+            <button class="size-btn" data-dim="38 in W × 75 in L × 13.5 in H">Twin</button>
+            <button class="size-btn" data-dim="38 in W × 80 in L × 13.5 in H">Twin XL</button>
+            <button class="size-btn" data-dim="54 in W × 75 in L × 13.5 in H">Full</button>
+            <button class="size-btn" data-dim="60 in W × 80 in L × 13.5 in H">Queen</button>
+            <button class="size-btn" data-dim="76 in W × 80 in L × 13.5 in H">King</button>
+            <button class="size-btn" data-dim="72 in W × 84 in L × 13.5 in H">CA King</button>
+            <button class="size-btn" data-dim="60 in W × 75 in L × 13.5 in H">Short Queen</button>
+            <button class="size-btn active" data-dim="72 in W × 80 in L × 13.5 in H">RV King</button>
+          </div>
+          <div class="sizeline" id="dim">72 in W × 80 in L × 13.5 in H</div>
+
+          <h2 class="sec">Sleep Hot?</h2>
+          <p class="lead-s mb-2">Select the right cooling option for you!</p>
+          <div id="cooling">
+            <div class="opt active" data-name="TENCEL™ Cover" data-add="0" data-was="0">
+              <div>
+                <h3>TENCEL™ Cover</h3>
+                <p>A super soft, ultra-smooth, premium mattress top fabric.</p>
+              </div>
+              <div class="sel">Selected</div>
+            </div>
+            <div class="opt" data-name="GlacioTex Cooling Cover" data-add="187" data-was="249.34">
+              <div>
+                <h3>GlacioTex Cooling Cover</h3>
+                <p>A cutting-edge top fabric that feels instantly cool when you get into bed.</p>
+              </div>
+              <div class="pr">+$187<s>+$249.34</s></div>
+              <div class="sel">Selected</div>
+            </div>
+            <div class="opt" data-name="GlacioTex Cooling Cover + CoolForce Layer" data-add="374" data-was="498.67">
+              <div>
+                <h3>GlacioTex Cooling Cover + CoolForce Layer</h3>
+                <p>Our cooling cover plus our heat transfer layer for the ultimate cool sleep.</p>
+              </div>
+              <div class="pr">+$374<s>+$498.67</s></div>
+              <div class="sel">Selected</div>
+            </div>
+          </div>
+          <div class="hint">
+            <div><b>Not sure how much cooling you need?</b>Compare the cooling options</div>&#9432;
+          </div>
+          <a href="#" class="lnk">Pricing Details</a>
+
+          <h2 class="sec mt-4">Do you wake up with back pain?</h2>
+          <p class="lead-s mb-2">Choose a support layer</p>
+          <div id="support">
+            <div class="opt active" data-name="Luxe Layer" data-add="0" data-was="0">
+              <div>
+                <h3>Luxe Layer</h3>
+                <p>Premium Responsive Foam designed to support your sleep position.</p>
+              </div>
+              <div class="sel">Selected</div>
+            </div>
+            <div class="opt" data-name="ErgoAlign® Layer" data-add="187" data-was="249.34">
+              <div>
+                <h3>ErgoAlign® Layer</h3>
+                <p>Ideal for anyone with frequent lower back pain.</p>
+              </div>
+              <div class="pr">+$187<s>+$249.34</s></div>
+              <div class="sel">Selected</div>
+            </div>
+          </div>
+          <div class="hint">
+            <div><b>Not sure if you need ErgoAlign support?</b>Get answers here.</div>&#9432;
+          </div>
+          <a href="#" class="lnk">Pricing Details</a>
+
+          <!-- summary -->
+          <div class="summary">
+            <h3>Ortho Latex Mattress</h3>
+            <div class="cfg" id="cfg"></div>
+            <div class="d-flex justify-content-between align-items-center gap-2 flex-wrap">
+              <div class="price"><span id="price"></span><s id="was"></s></div>
+              <span class="off">25% off w/ code &#9432;</span>
+            </div>
+            <div class="d-flex justify-content-between mt-2"><a href="#" class="lnk">Pricing Details</a><a href="#"
+                class="lnk">Save For Later</a></div>
+            <div class="small mt-3">As low as $78/MO Prequalify with <b>affirm</b>. <a href="#" class="lnk"
+                style="font-size:10px">Learn more</a></div>
+            <div class="small mt-1">HSA/FSA eligible &#10052; Save an average of 30%. <a href="#" class="lnk"
+                style="font-size:10px">Learn more</a></div>
+            <div class="zip">
+              <div class="d-flex justify-content-between mb-2" style="color:#444">In-Home Setup &amp; Removal Available
+                <span>&#8963;</span></div>
+              <input type="text" id="zip" class="form-control" placeholder="Enter ZIP Code" maxlength="5"
+                inputmode="numeric">
+              <a href="#" id="zipBtn" class="lnk d-inline-block mt-3 ms-2" style="font-size:12px;color:#666">Check ZIP
+                Code</a>
+              <div id="zipMsg" class="small mt-1 ms-2"></div>
+            </div>
+            <div class="hint">
+              <div><b style="font-size:12px">How does In-Home Delivery work?</b>Get answers here</div>&#9432;
+            </div>
+            <button class="btn-cart" id="addCart">ADD TO CART</button>
+            <div class="text-center small mt-3">&#10033; Free Shipping / Ships in 5-8 business days</div>
+            <div class="trust">
+              <div><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M16 12A7 7 0 1 1 8 3a5.5 5.5 0 0 0 8 9z" />
+                </svg>120 Night <i>Sleep Trial</i></div>
+              <div><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M10 2l7 3v5c0 4-3 7-7 8-4-1-7-4-7-8V5z" />
+                </svg><i>Limited Lifetime</i> Warranty</div>
+              <div><svg width="22" height="20" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <rect x="1" y="5" width="12" height="9" />
+                  <path d="M13 8h5l3 3v3h-8" />
+                </svg><i>Free</i> Shipping</div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <main class="mattress-s-product">
+  <!-- Recommended products -->
+  <section class="msp-recommend py-4">
+    <div class="container-fluid msp-container">
+      <div class="msp-section-heading d-flex align-items-center justify-content-between mb-3">
+        <h2 class="msp-small-title mb-0">We Think You'll Like:</h2>
+        
+      </div>
+      <div class="msp-recommend-track" id="recommend-track">
+        <article class="msp-mini-product"><img src="assets/img/Think1.png"><h3>Nectar Premier Memory Foam Mattress</h3><p> $699 <span class="msp-old-price">$999</span></p></article>
+        <article class="msp-mini-product"><img src="assets/img/Think2.png" ><h3>Nectar Luxe Memory Foam Mattress</h3><p> $1,299 <span class="msp-old-price">$1,799</span></p></article>
+        <article class="msp-mini-product"><img src="assets/img/Think3.png"><h3>Nectar Premier Hybrid Mattress</h3><p> $999 <span class="msp-old-price">$1,399</span></p></article>
+        <article class="msp-mini-product"><img src="assets/img/Think4.png"><h3>Nectar Classic Hybrid Mattress</h3><p>$649 <span class="msp-old-price">$899</span></p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product comparison -->
+  <section class="msp-compare-section pt-5 border-bottom">
+    <div class="container-fluid msp-container">
+      <div class="text-center mb-4">
+       
+        <h2 class="msp-title">Find your <span>perfect</span> mattress</h2>
+        <div class="msp-tabs" role="tablist" aria-label="Mattress type">
+          <button class="msp-tab active" role="tab" aria-selected="true" data-product-tab="memory">Memory Foam</button>
+          <button class="msp-tab" role="tab" aria-selected="false" data-product-tab="hybrid">Hybrid</button>
+        </div>
+      </div>
+      <div class="row g-3 msp-product-grid" id="msp-product-grid">
+        <div class="col-12 col-md-6 col-xl-4">
+          <article class="msp-product-card">
+            <div class="msp-product-image"><span class="msp-badge">BEST VALUE</span><img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=90" alt="Classic memory foam mattress"><span class="msp-size-tag">Queen</span></div>
+            <div class="msp-card-body">
+              <div class="msp-rating"><span>★★★★★</span> 4.8 (23,240 reviews)</div>
+              <h3>Classic Memory Foam</h3><p class="msp-description">Our signature comfort with contouring support and a cool, restful feel.</p>
+              <div class="msp-metrics"><div><span>Comfort</span><i class="d-flex"><b style="width:50%"></b> &nbsp; <b style="width:40%"></b></i>
+              </div>
+              <div><span>Support</span><i class="d-flex"><b style="width:30%"></b> &nbsp; <b style="width:40%"></b></i></div>
+              
+              <div><span>Cooling</span><i><b style="width:65%"></b></i></div></div>
+              <div class="msp-review"><div class="msp-avatar"> <i class="bi bi-person-bounding-box"></i></div><div><strong>Ashok</strong>
+                <sub>Web Designer</sub>
+                <p class="mt-2">“The comfort and support are exactly what I needed. I wake up feeling refreshed.”</p></div></div>
+              <div class="msp-perks"><span><i class="bi bi-check-circle-fill"></i> 365-night trial</span><span><i class="bi bi-check-circle-fill"></i> Forever warranty</span></div>
+              <div class="msp-price-row"><div><small>Queen</small><strong>$699 <del>$999</del></strong></div><span class="msp-sale">Save $300</span></div>
+              <button class="msp-btn msp-btn-primary msp-add-cart">Add to Cart <i class="bi bi-arrow-right"></i></button>
+            </div>
+          </article>
+        </div>
+        <div class="col-12 col-md-6 col-xl-4">
+          <article class="msp-product-card">
+            <div class="msp-product-image"><span class="msp-badge msp-badge-blue">MOST POPULAR</span><img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=900&q=90" alt="Premier memory foam mattress"><span class="msp-size-tag">Queen</span></div>
+            <div class="msp-card-body">
+              <div class="msp-rating"><span>★★★★★</span> 4.9 (12,850 reviews)</div>
+              <h3>Premier Memory Foam</h3><p class="msp-description">Extra pressure relief with enhanced cooling for a deeper night's sleep.</p>
+              <div class="msp-metrics"><div><span>Comfort</span><i class="d-flex"><b style="width:30%"></b> &nbsp; <b style="width:40%"></b></i></div><div><span>Support</span><i><b style="width:82%"></b></i></div><div><span>Cooling</span><i><b style="width:88%"></b></i></div></div>
+              <div class="msp-review"><div class="msp-avatar">D</div><div><strong>David C.</strong><p>“Feels luxurious without being too soft. My back feels better every morning.”</p></div></div>
+              <div class="msp-perks"><span><i class="bi bi-check-circle-fill"></i> 365-night trial</span><span><i class="bi bi-check-circle-fill"></i> Pressure relief</span></div>
+              <div class="msp-price-row"><div><small>Queen</small><strong>$999 <del>$1,399</del></strong></div><span class="msp-sale">Save $400</span></div>
+              <button class="msp-btn msp-btn-outline msp-add-cart">Shop Now <i class="bi bi-arrow-right"></i></button>
+            </div>
+          </article>
+        </div>
+        <div class="col-12 col-md-6 col-xl-4">
+          <article class="msp-product-card">
+            <div class="msp-product-image"><span class="msp-badge">COOLING COMFORT</span><img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=900&q=90" alt="Luxe memory foam mattress"><span class="msp-size-tag">Queen</span></div>
+            <div class="msp-card-body">
+              <div class="msp-rating"><span>★★★★★</span> 4.8 (8,120 reviews)</div>
+              <h3>Luxe Memory Foam</h3><p class="msp-description">Premium layers and plush comfort designed to help you sleep cooler.</p>
+              <div class="msp-metrics"><div><span>Comfort</span><i><b style="width:95%"></b></i></div><div><span>Support</span><i class="d-flex"><b style="width:30%"></b> &nbsp; <b style="width:40%"></b></i></div><div><span>Cooling</span><i class="d-flex"><b style="width:40%"></b> &nbsp; <b style="width:50%"></b></i></div></div>
+              <div class="msp-review"><div class="msp-avatar">M</div><div><strong>Maria L.</strong><p>“I love how supportive it is. It feels like a hotel bed every night.”</p></div></div>
+              <div class="msp-perks"><span><i class="bi bi-check-circle-fill"></i> 365-night trial</span><span><i class="bi bi-check-circle-fill"></i> Cooling comfort</span></div>
+              <div class="msp-price-row"><div><small>Queen</small><strong>$1,299 <del>$1,799</del></strong></div><span class="msp-sale">Save $500</span></div>
+              <button class="msp-btn msp-btn-outline msp-add-cart">Shop Now <i class="bi bi-arrow-right"></i></button>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="text-center mt-4"><button class="msp-compare-btn" id="compare-btn">Compare Mattresses</button></div>
+      <p class="msp-cart-message text-center" id="cart-message" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <!-- Layers -->
+  <section class="msp-layers-section py-5 bg-white">
+    <div class="container msp-container">
+      <div class="text-center mb-5">
+        <h2 class="msp-title">Discover Layers Of Premium Comfort</h2></div>
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5">
+          <div class="msp-accordion">
+            <button class="msp-accordion-item active" aria-expanded="true"><span class="msp-accordion-icon"><i class="bi bi-snow"></i></span><span><strong>Cooling Top Cover</strong></span><i class="bi bi-dash-lg msp-plus"></i></button>
+            <div class="msp-accordion-panel open"><p>Stay comfortably cool with a breathable cover designed to move heat away from your body throughout the night.</p></div>
+            <button class="msp-accordion-item" aria-expanded="false"><span class="msp-accordion-icon"><i class="bi bi-layers"></i></span><span><strong>Pressure Relieving Memory Foam</strong></span><i class="bi bi-plus-lg msp-plus"></i></button>
+            <div class="msp-accordion-panel"><p>Responsive memory foam helps cushion shoulders, hips and other pressure points for a more relaxed sleep.</p></div>
+            <button class="msp-accordion-item" aria-expanded="false"><span class="msp-accordion-icon"><i class="bi bi-water"></i></span><span><strong>Responsive Support Foam</strong></span><i class="bi bi-plus-lg msp-plus"></i></button>
+            <div class="msp-accordion-panel"><p>A stable support layer helps distribute weight evenly and keeps your mattress feeling balanced.</p></div>
+            <button class="msp-accordion-item" aria-expanded="false"><span class="msp-accordion-icon"><i class="bi bi-shield-check"></i></span><span><strong>Motion Isolation Foam</strong></span><i class="bi bi-plus-lg msp-plus"></i></button>
+            <div class="msp-accordion-panel"><p>Designed to absorb movement so you are less likely to feel a partner shifting during the night.</p></div>
+            <button class="msp-accordion-item" aria-expanded="false"><span class="msp-accordion-icon"><i class="bi bi-box"></i></span><span><strong>Durable Bottom Cover</strong></span><i class="bi bi-plus-lg msp-plus"></i></button>
+            <div class="msp-accordion-panel"><p>The durable base helps keep the comfort layers aligned and supported over time.</p></div>
+          </div>
+        </div>
+        <div class="col-lg-7"><div class="msp-layer-visual"><img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1200&q=90" alt="Mattress layers and premium bedding"><div class="msp-layer-note note-one">01 <span>Cooling cover</span></div><div class="msp-layer-note note-two">02 <span>Comfort foam</span></div><div class="msp-layer-note note-three">03 <span>Support base</span></div></div></div>
+      </div>
+      <div class="msp-spec-toggle"><button id="spec-toggle" aria-expanded="false">Product Specs <i class="bi bi-plus-lg"></i></button><div class="msp-spec-content"><div><span>Mattress type</span><strong>Memory foam</strong></div><div><span>Feel</span><strong>Medium-firm</strong></div><div><span>Trial period</span><strong>365 nights</strong></div><div><span>Warranty</span><strong>Forever warranty</strong></div><div><span>Delivery</span><strong>Compressed in a box</strong></div></div></div>
+    </div>
+  </section>
+
+  <!-- Feel selector -->
+  <section class="msp-feel-section py-5">
+    <div class="container msp-container text-center">
+      <p class="msp-eyebrow">COMFORT THAT FITS YOU</p><h2 class="msp-title">But How Does a Nectar Classic Feel?</h2>
+      <p class="msp-section-copy mx-auto">We designed the Nectar Classic to be firm, giving you solid support with a nice cradling feel. Choose the comfort that feels right for you.</p>
+      <a href="#msp-product-grid" class="msp-text-link">Learn more about firmness <i class="bi bi-arrow-up-right"></i></a>
+      <div class="msp-feel-selector" role="group" aria-label="Choose mattress feel">
+      <img src="assets/img/Firm-bar.png" class="img-flid w-100" />  
+      </div>
+      <div class="msp-person-image"><img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=90" alt="A comfortable mattress with supportive layers"></div>
+    </div>
+  </section>
+
+  <!-- Feature rows -->
+  <section class="msp-feature-section py-5">
+    <div class="container-fluid msp-container">
+      <div class="row align-items-center g-4 msp-feature-row">
+        <div class="col-md-6"><img class="msp-feature-img" src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1100&q=90" alt="Breathable mattress material"></div>
+        <div class="col-md-6 msp-feature-copy"><h2>Ultimate Cooling Comfort</h2><p>
+          Cooling fibers woven directly into your sleeping surface keep you cool and refreshed all night long. Our unique breathable mattress design also encourages airflow, maintaining a comfortable sleep environment no matter what.
+<br/><br/>
+Want to sleep even cooler? Enhance the cooling power of your Nectar mattress by upgrading it with our NectarCool Technology, which adds even more cooling fibers.
+        </p></div>
+      </div>
+      <div class="row align-items-center g-4 msp-feature-row msp-feature-reverse">
+        <div class="col-md-6 msp-feature-copy"><h2>Goodbye Motion Transfer</h2><p>
+          Our support foam layer is designed to absorb movement, ensuring that tosses and turns on one side of the bed don’t ripple across to the other. Whether your partner wiggles around or gets up in the middle of the night, you’ll stay undisturbed in your own sleep bubble all night long.
+
+
+        </p></div>
+        <div class="col-md-6"><img class="msp-feature-img" src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1100&q=90" alt="Calm bedroom with a soft neutral palette"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust -->
+  <section class="msp-trust-section py-5">
+    <div class="container msp-container text-center">
+      <h2 class="msp-title">Trusted by <span>6 Million American Sleepers*</span></h2>
+      <div class="row g-4 mt-3">
+        <div class="col-md-4"><div class="msp-trust-icon"><i class="bi bi-hand-thumbs-up"></i></div><h3>9 out of 10</h3><p>Customers would recommend Nectar to friends and family.</p></div>
+        <div class="col-md-4"><div class="msp-trust-icon"><i class="bi bi-wind"></i></div><h3>9 out of 10</h3><p>Feel the difference with comfort and support through the night.</p></div>
+        <div class="col-md-4"><div class="msp-trust-icon"><i class="bi bi-brightness-high"></i></div><h3>9 out of 10</h3><p>Wake up feeling more rested and ready for the day.</p></div>
+      </div><small class="msp-disclaimer">*Illustrative product-page content. Update claims and reviews with verified brand information before publishing.</small>
+    </div>
+  </section>
+
+  <section class="msp-feature-section msp-lifestyle-section py-5">
+    <div class="container-fluid msp-container">
+      <div class="row align-items-center g-4 msp-feature-row">
+        <div class="col-md-6"><img class="msp-feature-img" src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1100&q=90" alt="Close-up of quilted mattress fabric"></div>
+        <div class="col-md-6 msp-feature-copy"><h2>Safer Sleep Starts Here</h2><p>
+          At Nectar, your peace of mind comes first. That’s why Nectar Classic is 100% fiberglass-free and certified by CertiPUR-US® to meet their standards for content, emissions, and durability. We’re here to help you sleep soundly, every single night.
+
+        </p></div>
+      </div>
+      <div class="row align-items-center g-4 msp-feature-row msp-feature-reverse">
+        <div class="col-md-6 msp-feature-copy"><h2>Because Great Sleep Should Last Forever</h2><p>With a 365-Night Home Trial that gives you an entire year to make sure our mattress is right for you, and a Forever Warranty™ that lasts, well, forever, you can rest easy knowing we’ve got you covered. Take your time and get comfortable – when it comes to great sleep, we’re in it for the long haul.</p></div>
+        <div class="col-md-6"><img class="msp-feature-img" src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1100&q=90" alt="Bright bedroom with a comfortable bed"></div>
+      </div>
+      <div class="row align-items-center g-4 msp-feature-row">
+        <div class="col-md-6"><img class="msp-feature-img" src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1100&q=90" alt="Mattress on a modern bed frame"></div>
+        <div class="col-md-6 msp-feature-copy"><h2>A Perfect Match</h2><p>Level up your bedroom with a bed frame that’s just as comfortable as it is stylish. Our easy-to-assemble frames are designed to work perfectly with your Nectar mattress. It’s a simple way to upgrade your space and your sleep – and at the dreamy prices we’re known for.</p><a class="msp-btn msp-btn-primary msp-inline-btn" href="#">Shop Bed Frames <i class="bi bi-arrow-right"></i></a></div>
+      </div>
+    </div>
+  </section>
+ </main>
+  <div class="toast-c">
+    <div id="toast" class="toast text-bg-dark" role="alert">
+      <div class="toast-body">Added to cart</div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script>
+    $(function () {
+      var imgs = [
+        "https://storage.googleapis.com/livoncomforts-images/031c4d31-8293-41e1-a3e6-577dd2d684e3-product-1780987691496-1-Ortho%20Latex_A.jpg",
+        "https://storage.googleapis.com/livoncomforts-images/031c4d31-8293-41e1-a3e6-577dd2d684e3-product-1780987691501-2-Ortho%20Latex_B.jpg",
+        "https://storage.googleapis.com/livoncomforts-images/ac1dee79-051e-4b3c-859d-d96aee2c67cd-product-1",
+        "https://storage.googleapis.com/livoncomforts-images/ac1dee79-051e-4b3c-859d-d96aee2c67cd-product-3",
+        "https://storage.googleapis.com/livoncomforts-images/ac1dee79-051e-4b3c-859d-d96aee2c67cd-product-6",
+        "https://storage.googleapis.com/livoncomforts-images/ac1dee79-051e-4b3c-859d-d96aee2c67cd-product-5"
+      ], cur = 0;
+      var BASE = 2998.66 - 0, SALE = 2249; // RV King base price (list / sale)
+      var fmt = function (n) { return "$" + n.toLocaleString("en-US", { minimumFractionDigits: n % 1 ? 2 : 0, maximumFractionDigits: 2 }); };
+
+      $.each(imgs, function (i, src) {
+        $("#thumbs").append('<button data-i="' + i + '" aria-label="Image ' + (i + 1) + '"><img src="' + src.replace("w=1200", "w=200") + '" alt=""></button>');
+      });
+      function show(i) {
+        cur = (i + imgs.length) % imgs.length;
+        $("#mainImg").css("opacity", 0).attr("src", imgs[cur]).on("load", function () { $(this).css("opacity", 1); });
+        $("#thumbs button").removeClass("active").eq(cur).addClass("active");
+      }
+      $("#thumbs").on("click", "button", function () { show($(this).data("i")); });
+      $("#prev").click(function () { show(cur - 1); });
+      $("#next").click(function () { show(cur + 1); });
+      show(0);
+
+      $("#sizes").on("click", ".size-btn", function () {
+        $(".size-btn").removeClass("active"); $(this).addClass("active");
+        $("#dim").text($(this).data("dim")); update();
+      });
+      $("#cooling, #support").on("click", ".opt", function () {
+        $(this).siblings().removeClass("active"); $(this).addClass("active"); update();
+      });
+      $(".base-chk").change(update);
+
+      function update() {
+        var add = 0, was = 0, parts = [$(".size-btn.active").text()];
+        $(".opt.active").each(function () {
+          add += +$(this).data("add"); was += +$(this).data("was");
+          var n = $(this).data("name");
+          if (n !== "TENCEL™ Cover" || true) parts.push(n);
+        });
+        $(".base-chk:checked").each(function () { add += +$(this).data("add"); was += +$(this).data("was"); parts.push($(this).data("name")); });
+        $("#price").text(fmt(SALE + add));
+        $("#was").text(fmt(BASE + was));
+        $("#cfg").text(parts.join(", "));
+      }
+      update();
+
+      $("#zipBtn").click(function (e) {
+        e.preventDefault();
+        var z = $("#zip").val();
+        $("#zipMsg").css("color", /^\d{5}$/.test(z) ? "#1a7f37" : "#c40d19")
+          .text(/^\d{5}$/.test(z) ? "In-Home Setup is available for " + z + "." : "Enter a valid 5-digit ZIP code.");
+      });
+      $("#addCart").click(function () { bootstrap.Toast.getOrCreateInstance($("#toast")[0], { delay: 2000 }).show(); });
+      $(".faq").on("click", ".q", function () {
+        var open = $(this).next(".a").is(":visible");
+        $(".faq .a").slideUp(150); $(".faq .q span").text("+");
+        if (!open) { $(this).next(".a").slideDown(150); $(this).find("span").text("−"); }
+      });
+    });
+  </script>
+
+  <!-- Header mega-menu scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/script.js"></script>
+
+</body>
+
+</html>
